@@ -1,0 +1,103 @@
+app-header{
+    header{
+        nav{
+            li a:not(.no-hover):hover,
+            li.open a:not(.no-hover){
+                background: $light !important;;
+            }
+            li:last-child{
+                margin-right: 15px;
+            }
+            li.dropdown .dropdown-arrow{
+                right: 16.5px !important;
+            }
+            li.dropdown.has-image .dropdown-arrow{
+                right: 22.5px !important;
+            }
+            background: $primary !important;
+            border-bottom: $primary !important;            
+            a, span, i{
+                color: $white !important;
+                cursor: pointer;
+            }
+            a.nav-image{
+                padding-top: 9px;
+                padding-bottom: 9px;
+                & > img{
+                    border-radius: 50%;
+                    height: 32px;
+                    width: 32px;
+                    vertical-align: middle;
+                }
+                div.notif-counter{
+                    position: absolute;
+                    background: rgba(173, 17, 17, 0.877);
+                    border-radius: 100%;
+                    width: 20px;
+                    height: 20px;
+                    right: 9px;
+                    top: 2px;
+                    border: 1px solid $secondary;
+                    text-align: center;
+                    user-select: none;
+                    & > .counter{
+                        margin-top: -1px;
+                        margin-right: 1px;
+                    }
+                }
+            }
+            a.icon-zmdi{
+                cursor: pointer;
+                padding-top: 12px;
+                padding-bottom: 12px;
+                i.zmdi{
+                    font-size: 24px !important;
+                }
+            }
+            .search-div{
+                padding: 9px 15px 9px 15px;
+                width: 300px;
+                div{
+                   width: 100%;
+                    border-radius: 15px;
+                    padding: 0 0 0 10px; 
+                    background: #ffffff;
+                    white-space: nowrap;
+                    input[type="search"]{                        
+                        border: transparent;
+                        background: transparent;
+                        height: 32px;
+                        width: 87%;
+                        display: inline-flex;
+                        outline: none;
+                    }
+                    button{
+                        padding: 0;
+                        background: none;
+                        width: 30px;
+                        i{
+                            color: #cccccc !important;
+                            font-size: 25px;
+                        }
+                    }
+                    button:focus, button:hover{
+                        box-shadow: none;
+                        background: none;
+                        i{
+                            color: $light !important;
+                        }
+                    }
+                }                
+            }
+
+            button.navbar-toggle{
+                border: none !important;
+                background-color: $primary !important;
+                &:hover .icon-bar{
+                    transition: all .3s ease-in-out;
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+}

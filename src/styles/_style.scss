@@ -1,0 +1,135 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body{
+    font-family: roboto;
+    font-size: 13px;
+    line-height: 1.42857143;
+    color: #333;
+}
+main{
+    margin-top: 70px;
+    margin-left: 250px !important;
+    .block-header{
+        padding: 0 22px;
+        margin-bottom: 25px;
+        position: relative;
+        h2{
+            font-size: 17px;
+            color: #777;
+            margin-top: 0px !important;
+            margin-bottom: 0px !important;
+        }
+        .actions {
+            position: absolute;
+            right: 10px;
+            top: -5px;
+            z-index: 5;
+        }
+    }
+    .main-overlay{
+        width: 100%;
+        position: fixed;
+        height: 100%;
+        top: 50px;
+        bottom: 0;
+        background: pink;
+        left: 250px;
+        visibility: hidden;
+        z-index: 8;
+        &.active{
+            visibility: visible;
+        }
+    }
+    a {cursor: pointer;}
+    a:hover{ text-decoration:  none; }
+    footer{
+        ul li {
+            display: inline;
+            padding: 10px;
+        }
+    }
+}
+
+.clear {
+    clear: both;
+}
+hr{
+    height: 2px;
+    background-color: $secondary;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+@media screen and (max-width: 1024px){
+    main{
+        margin-left: 52px !important;
+        transition-duration: .3s;
+        .main-overlay{
+            left: 52px !important;
+        }
+    }
+    main.aside-active{
+        margin-left: 250px !important;
+        transition-duration: .3s;
+    }
+}
+@media screen and (max-width: 767px){
+    main{
+        margin-left: 0px !important;
+        .main-overlay{
+            left: 0 !important;
+        }
+    }
+}
+/* Perfect Scrollbar override attributes */
+.ps__rail-y {
+    width: 5px;
+    top: 0 !important;
+    right: 2px !important;
+}
+.ps__thumb-y{
+    width: 5px !important;
+    right: 0px !important;
+}
+.ps__rail-y:focus > .ps__thumb-y, 
+.ps__rail-y:hover > .ps__thumb-y {
+    width: 5px !important;
+    right: 0px !important;
+}
+
+// typeahead
+typeahead-container h5{
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+}
+
+
+/* NOTIFY GROWL */
+.alert.alert-inverse{
+    background: #454545;
+    color: #FFF;
+    button.close:hover{
+        color: #FFF !important;       
+    }
+}
+/* sweet-alert */
+.sweet-alert {
+    border-radius: 2px;
+    padding: 10px 30px
+}
+.sweet-alert h2 {
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    z-index: 1
+}
+.sweet-alert .lead {
+    font-size: 13px
+}
+.sweet-alert .btn {
+    padding: 6px 12px;
+    font-size: 13px;
+    margin: 20px 2px 0
+}

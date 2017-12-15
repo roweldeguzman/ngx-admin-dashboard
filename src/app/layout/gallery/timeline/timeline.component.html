@@ -1,0 +1,553 @@
+<div class="block-header">
+	<h2>Photo Gallery
+		<br>
+		<small>
+			JQuery lightGallery is a lightweight jQuery lightbox gallery for displaying image and video gallery
+		</small>
+	</h2>
+
+	<ul class="actions">
+		<li>
+			<a>
+				<i class="zmdi zmdi-trending-up"></i>
+			</a>
+		</li>
+		<li>
+			<a>
+				<i class="zmdi zmdi-check-all"></i>
+			</a>
+		</li>
+		<li class="dropdown" dropdown>
+			<a dropdownToggle>
+				<i class="zmdi zmdi-more-vert"></i>
+			</a>
+
+			<ul *dropdownMenu class="dropdown-menu dropdown-menu-right">
+				<li class="dropdown-arrow"></li>
+				<li>
+					<a>Refresh</a>
+				</li>
+				<li>
+					<a>Manage Widgets</a>
+				</li>
+				<li>
+					<a>Widgets Settings</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<div class="row">
+	<div class="col-sm-12">
+		<div class="card">
+			<div class="lv-header-alt clearfix m-b-5">
+				<h2 class="lvh-label hidden-xs">19,453 Records</h2>
+			
+				<div class="lvh-search" *ngIf="listviewSearchStat" data-ng-click="listviewSearchStat">
+					<input type="text" placeholder="Start typing..." class="lvhs-input">
+			
+					<i class="lvh-search-close" (click)="listviewSearchStat = false">&times;</i>
+				</div>
+			
+				<ul class="lv-actions actions">
+					<li>
+						<a (click)="listviewSearchStat = true">
+							<i class="zmdi zmdi-search"></i>
+						</a>
+					</li>
+					<li>
+						<a>
+							<i class="zmdi zmdi-time"></i>
+						</a>
+					</li>
+			
+					<li class="dropdown" dropdown>
+						<a dropdownToggle aria-expanded="false" aria-haspopup="true">
+							<i class="zmdi zmdi-sort"></i>
+						</a>
+			
+						<ul *dropdownMenu class="dropdown-menu dropdown-menu-right">
+							<li class="dropdown-arrow"></li>
+							<li>
+								<a>Last Modified</a>
+							</li>
+							<li>
+								<a>Last Edited</a>
+							</li>
+							<li>
+								<a>Name</a>
+							</li>
+							<li>
+								<a>Date</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a>
+							<i class="zmdi zmdi-info"></i>
+						</a>
+					</li>
+					<li class="dropdown" dropdown>
+						<a dropdownToggle aria-expanded="false" aria-haspopup="true">
+							<i class="zmdi zmdi-more-vert"></i>
+						</a>
+			
+						<ul *dropdownMenu class="dropdown-menu dropdown-menu-right">
+							<li class="dropdown-arrow"></li>
+							<li>
+								<a>Refresh</a>
+							</li>
+							<li>
+								<a>Settings</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		
+			<div class="card-body card-padding">
+				<div class="p-timeline">
+					<div class="pt-line c-gray text-right">
+						<span class="d-block">2015</span>
+						05/08
+					</div>
+		
+					<div class="pt-body">
+						<h2 class="ptb-title">Mallinda's Collection</h2>
+		
+						<div class="lightbox clearfix">
+							<div data-src="./assets/media/gallery/1.jpg">
+								<div class="lightbox-item">
+									<img src="./assets/media/gallery/thumbs/1.jpg" alt="" />
+								</div>
+							</div>
+		
+							<div data-src="./assets/media/gallery/2.jpg">
+								<div class="lightbox-item">
+									<img src="./assets/media/gallery/thumbs/2.jpg" alt="" />
+								</div>
+							</div>
+		
+							<div data-src="./assets/media/gallery/3.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/3.jpg" alt="" />
+								</div>
+							</div>
+		
+							<div data-src="./assets/media/gallery/4.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/4.jpg" alt="" />
+								</div>
+							</div>
+		
+							<div data-src="./assets/media/gallery/5.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/5.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/6.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/6.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/7.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/7.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/8.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/8.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/9.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/9.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/10.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/10.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/11.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/11.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/12.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/12.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/13.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/13.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/14.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/14.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/15.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/15.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/16.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/16.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/17.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/7.jpg" alt="" />
+								</div>
+							</div>
+						</div>
+					</div>
+		
+				</div>
+		
+				<div class="p-timeline">
+					<div class="pt-line c-gray text-right">
+						<span class="d-block">2015</span>
+						10/07
+					</div>
+		
+					<div class="pt-body">
+						<h2 class="ptb-title">Trip to Orbit</h2>
+		
+						<div class="lightbox clearfix" >
+							<div data-src="./assets/media/gallery/10.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/10.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/11.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/11.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/12.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/12.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/13.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/13.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/14.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/14.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/15.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/15.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/16.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/16.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/17.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/7.jpg" alt="" />
+								</div>
+							</div>
+						</div>
+					</div>
+		
+				</div>
+		
+				<div class="p-timeline">
+					<div class="pt-line c-gray text-right">
+						<span class="d-block">2015</span>
+						12/06
+					</div>
+		
+					<div class="pt-body">
+						<h2 class="ptb-title">Purchased for print</h2>
+		
+						<div class="lightbox clearfix" >
+		
+							<div data-src="./assets/media/gallery/4.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/4.jpg" alt="" />
+								</div>
+							</div>
+		
+							<div data-src="./assets/media/gallery/5.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/5.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/6.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/6.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/7.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/7.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/8.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/8.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/9.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/9.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/10.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/10.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/11.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/11.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/12.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/12.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/13.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/13.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/14.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/14.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/15.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/15.jpg" alt="" />
+								</div>
+							</div>
+						</div>
+					</div>
+		
+				</div>
+		
+				<div class="p-timeline">
+					<div class="pt-line c-gray text-right">
+						<span class="d-block">2015</span>
+						01/06
+					</div>
+		
+					<div class="pt-body">
+						<h2 class="ptb-title">For Website</h2>
+		
+						<div class="lightbox clearfix" >
+							<div data-src="./assets/media/gallery/1.jpg">
+								<div class="lightbox-item">
+									<img src="./assets/media/gallery/thumbs/1.jpg" alt="" />
+								</div>
+							</div>
+		
+							<div data-src="./assets/media/gallery/2.jpg">
+								<div class="lightbox-item">
+									<img src="./assets/media/gallery/thumbs/2.jpg" alt="" />
+								</div>
+							</div>
+		
+							<div data-src="./assets/media/gallery/3.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/3.jpg" alt="" />
+								</div>
+							</div>
+		
+							<div data-src="./assets/media/gallery/4.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/4.jpg" alt="" />
+								</div>
+							</div>
+		
+							<div data-src="./assets/media/gallery/5.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/5.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/6.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/6.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/7.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/7.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/8.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/8.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/9.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/9.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/10.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/10.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/11.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/11.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/12.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/12.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/13.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/13.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/14.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/14.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/15.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/15.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/16.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/16.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/17.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/7.jpg" alt="" />
+								</div>
+							</div>
+		
+							<div data-src="./assets/media/gallery/4.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/4.jpg" alt="" />
+								</div>
+							</div>
+		
+							<div data-src="./assets/media/gallery/5.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/5.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/6.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/6.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/7.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/7.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/8.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/8.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/9.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/9.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/10.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/10.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/11.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/11.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/12.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/12.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/13.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/13.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/14.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/14.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/15.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/15.jpg" alt="" />
+								</div>
+							</div>
+						</div>
+					</div>
+		
+				</div>
+		
+				<div class="p-timeline">
+					<div class="pt-line c-gray text-right">
+						<span class="d-block">2015</span>
+						22/04
+					</div>
+		
+					<div class="pt-body">
+						<h2 class="ptb-title">To Print and Review</h2>
+		
+						<div class="lightbox clearfix" >
+							<div data-src="./assets/media/gallery/13.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/13.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/10.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/10.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/11.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/11.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/12.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/12.jpg" alt="" />
+								</div>
+							</div>
+							<div data-src="./assets/media/gallery/14.jpg">
+								<div class="lightbox-item p-item">
+									<img src="./assets/media/gallery/thumbs/14.jpg" alt="" />
+								</div>
+							</div>
+						</div>
+					</div>
+		
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,892 @@
+<div class="block-header">
+	<h2>UI Bootstrap</h2>
+
+	<ul class="actions">
+		<li>
+			<a>
+				<i class="zmdi zmdi-trending-up"></i>
+			</a>
+		</li>
+		<li>
+			<a>
+				<i class="zmdi zmdi-check-all"></i>
+			</a>
+		</li>
+		<li class="dropdown" dropdown>
+			<a dropdownToggle>
+				<i class="zmdi zmdi-more-vert"></i>
+			</a>
+
+			<ul *dropdownMenu class="dropdown-menu dropdown-menu-right">
+				<li class="dropdown-arrow"></li>
+				<li>
+					<a>Refresh</a>
+				</li>
+				<li>
+					<a>Manage Widgets</a>
+				</li>
+				<li>
+					<a>Widgets Settings</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+
+<div class="row">
+	<div class="col-sm-12">
+		<!-- Buttons -->
+		<div class="card">
+			<div class="card-header">
+				<h2>Buttons
+					<small>
+						<a target="_blank" class="c-gray" href="https://valor-software.com/ngx-bootstrap/#/buttons">ngx-botstrap buttons</a>
+					</small>
+				</h2>
+				<ul class="actions">
+					<li dropdown class="dropdown action-show">
+						<a dropdownToggle>
+							<i class="zmdi zmdi-more-vert"></i>
+						</a>
+						<div *dropdownMenu class="dropdown-menu pull-right">
+							<div class="dropdown-arrow"></div>
+							<p class="p-20">
+								You can put anything here
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="card-body card-padding">
+				<p>There are two directives that can make a group of buttons behave like a set of checkboxes, radio buttons, or a hybrid where radio buttons can be unchecked.</p>
+				<br/>
+				<div class="row">
+					<div class="col-sm-4">
+						<p class="f-500 c-black m-b-5">Single toggle</p>
+						<small>Default static button with two states</small><br>
+						<small class="c-gray">Status - {{ singleModel }}</small>
+						<br/><br/>
+						<button type="button" class="btn btn-primary" [(ngModel)]="singleModel" btnCheckbox btnCheckboxTrue="1" btnCheckboxFalse="0" waves-effect>
+							Single Toggle
+						</button>
+					</div>
+					<div class="col-sm-4">
+						<p class="f-500 c-black m-b-5">Checkbox</p>
+						<small>Checkbox-like buttons set with variable states</small><br>
+						<small class="c-gray">Status - {{checkModel | json}}</small>
+						<br/>
+						<br/>
+						<div class="btn-group">
+							<label class="btn btn-primary" [(ngModel)]="checkModel.left" btnCheckbox waves-effect>Left</label>
+							<label class="btn btn-primary" [(ngModel)]="checkModel.middle" btnCheckbox waves-effect>Middle</label>
+							<label class="btn btn-primary" [(ngModel)]="checkModel.right" btnCheckbox waves-effect>Right</label>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<p class="f-500 c-black m-b-5">Radio & Uncheckable Radio</p>
+						<small>Radio buttons with checked/unchecked states</small><br>
+						<small class="c-gray">Status - {{radioModel || 'null'}}</small>
+						<br/>
+						<br/>
+						<div class="btn-group">
+							<label class="btn btn-primary" [(ngModel)]="radioModel" btnRadio="Left" waves-effect>Left</label>
+							<label class="btn btn-primary" [(ngModel)]="radioModel" btnRadio="Middle" waves-effect>Middle</label>
+							<label class="btn btn-primary" [(ngModel)]="radioModel" btnRadio="Right" waves-effect>Right</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Carousel -->
+		<div class="card">
+			<div class="card-header">
+				<h2>Carousel
+					<small>
+						<a target="_blank" class="c-gray" href="https://valor-software.com/ngx-bootstrap/#/carousel">ngx-bootstrap carousel </a>
+					</small>
+				</h2>
+				<ul class="actions">
+					<li dropdown class="dropdown action-show">
+						<a dropdownToggle>
+							<i class="zmdi zmdi-more-vert"></i>
+						</a>				
+						<div *dropdownMenu class="dropdown-menu pull-right">
+							<div class="dropdown-arrow"></div>
+							<p class="p-20">
+								You can put anything here
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="card-body card-padding p-t-0">
+				<p>
+					 A slideshow component for cycling through elements—images or slides of text—like a carousel. Nested carousels are not supported.
+				</p>
+				<h2 class="c-black">Optional captions</h2>
+				<p class="c-black">
+					 Add captions to your slides easily with the <code>.carousel-caption</code> element within any
+					<code>&lt;slide&gt;</code>. Place just about any optional HTML within there and it will be automatically aligned and formatted.
+				</p>
+				<carousel>
+					<slide>
+						<img src="./assets/media/carousel/c-1.jpg" alt="First slide" style="display: block; width: 100%;">
+						<div class="carousel-caption">
+							<h3>First slide label</h3>
+							<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+						</div>
+					</slide>
+					<slide>
+						<img src="./assets/media/carousel/c-2.jpg" alt="Second slide" style="display: block; width: 100%;">
+						<div class="carousel-caption">
+							<h3>Second slide label</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div>
+					</slide>
+					<slide>
+						<img src="./assets/media/carousel/c-3.jpg" alt="Third slide" style="display: block; width: 100%;">
+						<div class="carousel-caption">
+							<h3>Third slide label</h3>
+							<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+						</div>
+					</slide>
+				</carousel>
+
+			</div>					
+		</div>
+		<!-- Collapse -->
+		<div class="card">
+			<div class="card-header">
+				<h2>Collapse
+					<small>
+						<a target="_blank" class="c-gray" href="https://valor-software.com/ngx-bootstrap/#/collapse">ngx-bootstrap collapse </a>
+					</small>
+				</h2>
+				<ul class="actions">
+					<li dropdown class="dropdown action-show">
+						<a dropdownToggle>
+							<i class="zmdi zmdi-more-vert"></i>
+						</a>
+						<div *dropdownMenu class="dropdown-menu pull-right">
+							<div class="dropdown-arrow"></div>
+							<p class="p-20">
+								You can put anything here
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="card-body card-padding p-t-0">
+
+			<button type="button" class="btn btn-primary" (click)="isCollapsed = !isCollapsed">
+				Toggle collapse
+			</button>
+			<hr>
+			<div (collapsed)="collapsed($event)" (expanded)="expanded($event)" [collapse]="isCollapsed" class="card card-block card-header">
+				<div>Nunc nec porta felis. Curabitur non fringilla ipsum, quis mollis metus. Etiam mauris elit, iaculis quis dapibus et, luctus
+				id erat. Sed ac rutrum est, a bibendum nibh. Phasellus rhoncus imperdiet neque in tincidunt. Fusce nibh tellus, laoreet a
+				orci in, auctor semper leo. Sed turpis odio, lobortis in orci et, finibus placerat nulla. Maecenas vehicula ante sit amet
+				lacus placerat, non congue nibh tristique.</div>
+			</div>
+
+			</div>
+		</div>
+		<!-- Dropdown -->
+		<div class="card">
+			<div class="card-header">
+				<h2>Dropdown
+					<small>
+						<a target="_blank" class="c-gray" href="https://valor-software.com/ngx-bootstrap/#/dropdowns">ngx-bootstrap dropdown </a>
+					</small>
+				</h2>
+				<ul class="actions">
+					<li dropdown class="dropdown action-show">
+						<a dropdownToggle>
+							<i class="zmdi zmdi-more-vert"></i>
+						</a>
+						<div *dropdownMenu class="dropdown-menu pull-right">
+							<div class="dropdown-arrow"></div>
+							<p class="p-20">
+								You can put anything here
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="card-body card-padding p-t-0">
+				<p>Dropdowns are toggleable, contextual overlays for displaying lists of links and more. They’re made interactive with the included
+				dropdown directives.</p>
+				<p>
+					 Wrap the dropdown’s toggle (your button or link) and the dropdown menu within dropdown. Dropdowns can be triggered from
+					<code>&lt;a&gt;</code>
+					or<code>&lt;button&gt;</code>elements to better fit your potential needs. <a target="_blank" href="https://valor-software.com/ngx-bootstrap/#/dropdowns ">Read more..</a>
+				</p>				
+				<br/>
+				<br/>
+				<div class="dropdown-basic-demo clearfix dropdown" dropdown [isOpen]="true">
+					<ul *dropdownMenu class="dropdown-menu" role="menu">
+						<li *ngFor="let item of items">
+							<a>{{ item.name }}</a>
+						</li>
+					</ul>
+				</div>
+				
+				<div class="dropdown-basic-demo clearfix dropdown" dropdown [isOpen]="true">
+					<ul *dropdownMenu class="dropdown-menu bgm-blue" role="menu">
+						<li *ngFor="let item of items">
+							<a class="c-white">{{ item.name }}</a>
+						</li>
+					</ul>
+				</div>
+				
+				<div class="dropdown-basic-demo clearfix dropdown" dropdown [isOpen]="true">
+					<ul *dropdownMenu class="dropdown-menu bgm-teal" role="menu">
+						<li  *ngFor="let item of items">
+							<a class="c-white">{{ item.name }}</a>
+						</li>
+					</ul>
+				</div>
+				
+				<div class="dropdown-basic-demo clearfix dropdown" dropdown [isOpen]="true">
+					<ul *dropdownMenu class="dropdown-menu bgm-orange" role="menu">
+						<li *ngFor="let item of items">
+							<a class="c-white">{{ item.name }}</a>
+						</li>
+					</ul>
+				</div>
+				
+				<div class="dropdown-basic-demo clearfix dropdown" dropdown [isOpen]="true">
+					<ul *dropdownMenu class="dropdown-menu bgm-bluegray" role="menu">
+						<li *ngFor="let item of items">
+							<a class="c-white">{{ item.name }}</a>
+						</li>
+					</ul>
+				</div>
+				
+				<div class="dropdown-basic-demo clearfix dropdown" dropdown [isOpen]="true">
+					<ul *dropdownMenu class="dropdown-menu bgm-green" role="menu">
+						<li *ngFor="let item of items">
+							<a class="c-white">{{ item.name }}</a>
+						</li>
+					</ul>
+				</div>
+				
+				<p class="f-500 c-black m-b-5">Dropdown links with icon</p>
+				<small>Adding
+					<code>.dm-icon</code> class to the
+					<code>.dropdown-menu</code> will enable extra room for icons in dropdown links.</small>
+				<br/>
+				<br/>
+				<div class="dropdown-basic-demo clearfix dropdown" dropdown [isOpen]="true">
+					<ul *dropdownMenu class="dropdown-menu dm-icon" role="menu">
+						<li *ngFor="let item of items">
+							<a>
+								<i class="zmdi zmdi-{{ item.icon }}"></i>
+								{{ item.name }}
+							</a>
+						</li>
+					</ul>
+				</div>
+				
+				<div class="dropdown-basic-demo clearfix dropdown" dropdown [isOpen]="true">
+					<ul *dropdownMenu class="dropdown-menu bgm-blue dm-icon" role="menu">
+						<li *ngFor="let item of items">
+							<a class="c-white"><i class="zmdi zmdi-{{ item.icon }}"></i>{{ item.name }}</a>
+						</li>
+					</ul>
+				</div>
+				
+				<div class="dropdown-basic-demo clearfix dropdown" dropdown [isOpen]="true">
+					<ul *dropdownMenu class="dropdown-menu bgm-teal dm-icon" role="menu">
+						<li *ngFor="let item of items">
+							<a class="c-white"><i class="zmdi zmdi-{{ item.icon }}"></i>{{ item.name }}</a>
+						</li>
+					</ul>
+				</div>
+				
+				<div class="dropdown-basic-demo clearfix dropdown" dropdown [isOpen]="true">
+					<ul *dropdownMenu class="dropdown-menu bgm-orange dm-icon" role="menu">
+						<li *ngFor="let item of items">
+							<a class="c-white"><i class="zmdi zmdi-{{ item.icon }}"></i>{{ item.name }}</a>
+						</li>
+					</ul>
+				</div>
+				
+				<div class="dropdown-basic-demo clearfix dropdown" dropdown [isOpen]="true">
+					<ul *dropdownMenu class="dropdown-menu bgm-bluegray dm-icon" role="menu">
+						<li *ngFor="let item of items">
+							<a class="c-white"><i class="zmdi zmdi-{{ item.icon }}"></i>{{ item.name }}</a>
+						</li>
+					</ul>
+				</div>
+				
+				<div class="dropdown-basic-demo clearfix dropdown" dropdown [isOpen]="true">
+					<ul *dropdownMenu class="dropdown-menu bgm-green dm-icon" role="menu">
+						<li *ngFor="let item of items">
+							<a class="c-white"><i class="zmdi zmdi-{{ item.icon }}"></i>{{ item.name }}</a>
+						</li>
+					</ul>
+				</div>
+
+				<br/>
+				<br/>
+				
+				<p class="f-500 c-black m-b-20">Alignment</p>
+				<div class="clearfix dropdown-btn-demo">
+					<div class="dropdown" dropdown>
+						<button class="dropdown-toggle btn btn-primary" dropdownToggle waves-effect>Dropdown Left</button>
+				
+						<ul *dropdownMenu class="dropdown-menu">
+							<li *ngFor="let item of items">
+								<a href="">{{ item.name }}</a>
+							</li>
+						</ul>
+					</div>
+				
+					<div class="dropdown" dropdown>
+						<button class="dropdown-toggle btn btn-primary" dropdownToggle waves-effect>Dropdown Right</button>
+				
+						<ul *dropdownMenu class="dropdown-menu pull-right">
+							<li *ngFor="let item of items">
+								<a href="">{{ item.name }}</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<br/>
+				<br/>
+				<p class="c-black f-500 m-b-20">Dropups - Trigger dropdown menus above elements</p>
+				<div class="clearfix dropdown-btn-demo">
+				
+					<div class="dropdown" dropdown [dropup]="true">
+						<button class="dropdown-toggle btn btn-primary" dropdownToggle>This is a Dropup</button>
+				
+						<ul *dropdownMenu class="dropdown-menu">
+							<li *ngFor="let item of items">
+								<a href="">{{ item.name }}</a>
+							</li>
+						</ul>
+					</div>
+				
+					<div class="dropdown dropup" dropdown [dropup]="true">
+						<button class="dropdown-toggle btn btn-primary" dropdownToggle>This is a right aligned dropup</button>
+				
+						<ul *dropdownMenu class="dropdown-menu pull-right">
+							<li *ngFor="let item of items">
+								<a href="">{{ item.name  }}</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<br/>
+				<br/>
+				
+				<p class="c-black f-500 m-b-20">Split Button Dropdowns</p>
+
+				<div class="clearfix dropdown-btn-demo">
+					<div class="btn-group dropdown" dropdown>
+						<button type="button" class="btn btn-default">Default</button>
+						<button type="button" class="btn btn-default dropdown-toggle" dropdownToggle>
+							<span class="caret"></span>
+							<span class="sr-only">Split button dropdowns</span>
+						</button>
+						<ul *dropdownMenu class="dropdown-menu">
+							<li *ngFor="let item of items">
+								<a>{{ item.name }}</a>
+							</li>
+						</ul>
+					</div>
+				
+					<div class="btn-group dropdown" dropdown>
+						<button type="button" class="btn btn-primary">Primary</button>
+						<button type="button" class="btn btn-primary dropdown-toggle" dropdownToggle waves-effect>
+							<span class="caret"></span>
+							<span class="sr-only">Split button dropdowns</span>
+						</button>
+						<ul *dropdownMenu class="dropdown-menu">
+							<li *ngFor="let item of items">
+								<a>{{ item.name }}</a>
+							</li>
+						</ul>
+					</div>
+				
+					<div class="btn-group dropdown" dropdown>
+						<button type="button" class="btn btn-info">Info</button>
+						<button type="button" class="btn btn-info dropdown-toggle" dropdownToggle waves-effect>
+							<span class="caret"></span>
+							<span class="sr-only">Split button dropdowns</span>
+						</button>
+						<ul *dropdownMenu class="dropdown-menu">
+							<li *ngFor="let item of items">
+								<a>{{ item.name }}</a>
+							</li>
+						</ul>
+					</div>
+				
+					<div class="btn-group dropdown" dropdown>
+						<button type="button" class="btn btn-success">Success</button>
+						<button type="button" class="btn btn-success dropdown-toggle" dropdownToggle waves-effect>
+							<span class="caret"></span>
+							<span class="sr-only">Split button dropdowns</span>
+						</button>
+						<ul *dropdownMenu class="dropdown-menu">
+							<li *ngFor="let item of items">
+								<a>{{ item.name }}</a>
+							</li>
+						</ul>
+					</div>
+				
+					<div class="btn-group dropdown" dropdown>
+						<button type="button" class="btn btn-warning">Warning</button>
+						<button type="button" class="btn btn-warning dropdown-toggle" dropdownToggle waves-effect>
+							<span class="caret"></span>
+							<span class="sr-only">Split button dropdowns</span>
+						</button>
+						<ul *dropdownMenu class="dropdown-menu">
+							<li *ngFor="let item of items">
+								<a>{{ item.name }}</a>
+							</li>
+						</ul>
+					</div>
+				
+					<div class="btn-group dropdown" dropdown>
+						<button type="button" class="btn btn-danger">Danger</button>
+						<button type="button" class="btn btn-danger dropdown-toggle" dropdownToggle waves-effect>
+							<span class="caret"></span>
+							<span class="sr-only">Split button dropdowns</span>
+						</button>
+						<ul *dropdownMenu class="dropdown-menu">
+							<li *ngFor="let item of items">
+								<a>{{ item.name }}</a>
+							</li>
+						</ul>
+					</div>
+				
+				</div>
+			</div>
+		</div>
+		<!-- PAGINATION -->
+		<div class="card">
+			<div class="card-header">
+				<h2>Pagination
+					<small>
+						<a target="_blank" class="c-gray" href="https://valor-software.com/ngx-bootstrap/#/pagination">ngx-bootstrap pagination </a>
+					</small>
+				</h2>
+				<ul class="actions">
+					<li dropdown class="dropdown action-show">
+						<a dropdownToggle>
+							<i class="zmdi zmdi-more-vert"></i>
+						</a>
+						<div *dropdownMenu class="dropdown-menu pull-right">
+							<div class="dropdown-arrow"></div>
+							<p class="p-20">
+								You can put anything here
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="card-body card-padding p-t-0">
+				<p><b>Pagination</b> - provide pagination links for your site or app with the multi-page pagination component, or the simpler pager
+				alternative.</p>
+				<p><b>Pager</b> - quick previous and next links for simple pagination implementations with light markup and styles. It's great for
+				simple sites like blogs or magazines.</p>
+
+
+				<p class="c-black">Default</p>
+				<br>
+				<div class="row">
+					<div class="col-xs-12 col-12">
+						<pagination [totalItems]="totalItems" [(ngModel)]="currentPage" (pageChanged)="pageChanged($event)"></pagination>
+					</div>
+					<div class="col-xs-12 col-12">
+						<pagination [boundaryLinks]="true" [totalItems]="totalItems" [(ngModel)]="currentPage" class="pagination-sm" previousText="&lsaquo;"
+						nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;"></pagination>
+					</div>
+					<div class="col-xs-12 col-12">
+						<pagination [directionLinks]="false" [boundaryLinks]="true" [totalItems]="totalItems" [(ngModel)]="currentPage"></pagination>
+					</div>
+					<div class="col-xs-12 col-12">
+						<pagination [directionLinks]="false" [totalItems]="totalItems" [(ngModel)]="currentPage" (numPages)="smallnumPages = $event"></pagination>
+					</div>
+				</div>
+				<pre class="card card-block card-header mb-3">The selected page no: {{currentPage}}/{{smallnumPages}}</pre>
+
+				<button type="button" class="btn btn-primary" waves-effect (click)="setPage(3)">Set current page to: 3</button>
+				
+				<br>
+				<br>
+				<p class="c-black">States & Limits</p>
+				<div class="row">
+					<div class="col-xs-12 col-12">
+						<pagination [totalItems]="bigTotalItems" [(ngModel)]="bigCurrentPage" [maxSize]="maxSize" class="pagination-sm" [boundaryLinks]="true"></pagination>
+					</div>
+
+					<div class="col-xs-12 col-12">
+						<pagination [totalItems]="bigTotalItems" [(ngModel)]="bigCurrentPage" [maxSize]="maxSize" class="pagination-sm" [boundaryLinks]="true"
+						[rotate]="false" (numPages)="numPages = $event"></pagination>
+					</div>
+				</div>
+
+				<pre class="card card-block card-header">Page: {{bigCurrentPage}} / {{numPages}}</pre>
+				<br>
+				<br>
+				<p class="c-black">Pager</p>
+
+				<div class="row">
+					<div class="col-xs-12 col-12 col-md-6">
+						<pagination [directionLinks]="false" [totalItems]="totalItems" [(ngModel)]="currentPage" (numPages)="smallnumPages = $event">
+						</pagination>
+					</div>
+
+					<div class="col-xs-12 col-12 col-md-6">
+						<pager [totalItems]="totalItems" [(ngModel)]="currentPage" (pageChanged)="pageChanged($event)" pageBtnClass="btn" [itemsPerPage]="10"
+						class="pull-left">
+						</pager>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!-- POP OVER -->
+		<div class="card">
+			<div class="card-header">
+				<h2>Popover
+					<small>
+						<a target="_blank" class="c-gray" href="https://valor-software.com/ngx-bootstrap/#/popover">ngx-bootstrap popover </a>
+					</small>
+				</h2>
+				<ul class="actions">
+					<li dropdown class="dropdown action-show">
+						<a dropdownToggle>
+							<i class="zmdi zmdi-more-vert"></i>
+						</a>
+						<div *dropdownMenu class="dropdown-menu pull-right">
+							<div class="dropdown-arrow"></div>
+							<p class="p-20">
+								You can put anything here
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="card-body card-padding p-t-0">
+				<p>Add small overlay content, like those found in iOS, to any element for housing secondary information.</p>
+				<p>Four directions</p>
+				<br>
+				<small>Four positioning options are available: top, right, bottom, and left aligned. Besides that, auto option may be used to detect
+				a position that fits the component on screen.</small>
+				<br>
+				<button type="button" class="btn btn-primary" waves-effect popover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+				 popoverTitle="Popover on top" placement="top">
+					Popover on top
+				</button>
+				
+				<button type="button" class="btn btn-primary" waves-effect popover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+				 popoverTitle="Popover on right" placement="right">
+					Popover on right
+				</button>
+				
+				<button type="button" class="btn btn-primary" waves-effect popover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+				 popoverTitle="Popover auto" placement="auto">
+					Popover auto
+				</button>
+				
+				<button type="button" class="btn btn-primary" waves-effect popover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+				 popoverTitle="Popover on left" placement="left">
+					Popover on left
+				</button>
+				
+				<button type="button" class="btn btn-primary" waves-effect popover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+				 popoverTitle="Popover on bottom" placement="bottom">
+					Popover on bottom
+				</button>
+				<br>
+				<br>
+				<p>Popover on Mouse Hover</p>
+				<br>
+
+				
+				<button type="button" class="btn btn-primary" waves-effect triggers="mouseenter:mouseleave" popover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+				 popoverTitle="Popover on top" placement="top">
+					Popover on top
+				</button>
+				
+				<button type="button" class="btn btn-primary" waves-effect triggers="mouseenter:mouseleave" popover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+				 popoverTitle="Popover on right" placement="right">
+					Popover on right
+				</button>
+				
+				<button type="button" class="btn btn-primary" waves-effect triggers="mouseenter:mouseleave" popover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+				 popoverTitle="Popover auto" placement="auto">
+					Popover auto
+				</button>
+				
+				<button type="button" class="btn btn-primary" waves-effect triggers="mouseenter:mouseleave" popover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+				 popoverTitle="Popover on left" placement="left">
+					Popover on left
+				</button>
+				
+				<button type="button" class="btn btn-primary" waves-effect triggers="mouseenter:mouseleave" popover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+				 popoverTitle="Popover on bottom" placement="bottom">
+					Popover on bottom
+				</button>
+			</div>
+		</div>		
+		<!-- Progressbar -->
+		<div class="card">
+			<div class="card-header">
+				<h2>Progressbar
+					<small>
+						<a target="_blank" class="c-gray" href="https://valor-software.com/ngx-bootstrap/#/progressbar">ngx-bootstrap progressbar </a>
+					</small>
+				</h2>
+				<ul class="actions">
+					<li dropdown class="dropdown action-show">
+						<a dropdownToggle>
+							<i class="zmdi zmdi-more-vert"></i>
+						</a>
+						<div *dropdownMenu class="dropdown-menu pull-right">
+							<div class="dropdown-arrow"></div>
+							<p class="p-20">
+								You can put anything here
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="card-body card-padding p-t-0">
+				<p class="c-black">Provide up-to-date feedback on the progress of a workflow or action with simple yet flexible progress bars.</p>
+
+				<h2>Static</h2>
+				<div class="row">
+					<div class="col-sm-4">
+						<progressbar [value]="55"></progressbar>
+					</div>
+					<div class="col-sm-4">
+						<progressbar class="progress-striped" [value]="22" type="warning">22%</progressbar>
+					</div>
+					<div class="col-sm-4">
+						<progressbar class="progress-striped active" max="200" [value]="166" type="danger">
+							<i>166 / 200</i>
+						</progressbar>
+					</div>
+				</div>
+				<h2>Dynamic</h2>
+
+				<progressbar [max]="max" [value]="dynamic">
+					<span style="color:white; white-space:nowrap;">{{dynamic}} / {{max}}</span>
+				</progressbar>
+
+				<small>
+					<em>No animation</em>
+				</small>
+				<progressbar [animate]="false" [value]="dynamic" type="success">
+					<b>{{dynamic}}%</b>
+				</progressbar>
+
+				<small>
+					<em>Object (changes type based on value)</em>
+				</small>
+				<progressbar class="progress-striped active" [value]="dynamic" [type]="type">
+					{{type}}
+					<i *ngIf="showWarning">!!!Watch out !!!</i>
+				</progressbar>
+				<br>
+				<button type="button" class="btn btn-sm btn-primary" (click)="random()" waves-effect>Randomize</button>
+				<br>
+				<h2>Stacked</h2>
+				<div class="row ">
+					<div class="col-sm-12">
+						<progressbar class="progress" [value]="stacked" [max]="100"></progressbar>
+					</div>
+				</div>
+				<br>
+				<button type="button" class="btn btn-sm btn-primary" (click)="randomStacked()" waves-effect>Randomize</button>
+			</div>
+		</div>
+		<!-- Tabs -->
+		<div class="card">
+			<div class="card-header">
+				<h2>Tabs
+					<small>
+						<a target="_blank" class="c-gray" href="https://valor-software.com/ngx-bootstrap/#/tabs">ngx-bootstrap tabs </a>
+					</small>
+				</h2>
+				<ul class="actions">
+					<li dropdown class="dropdown action-show">
+						<a dropdownToggle>
+							<i class="zmdi zmdi-more-vert"></i>
+						</a>
+						<div *dropdownMenu class="dropdown-menu pull-right">
+							<div class="dropdown-arrow"></div>
+							<p class="p-20">
+								You can put anything here
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="card-body card-padding p-t-0">
+				<p class="c-black">Static tabs</p>
+				<div>
+					<tabset>
+						<tab heading="Static title" id="tab1">Static content</tab>
+						<tab heading="Static Title 1">Static content 1</tab>
+						<tab heading="Static Title 2">Static content 2</tab>
+						<tab (select)="alertMe()">
+							<ng-template tabHeading>
+								<span class="badge badge-secondary">Click here!</span>
+							</ng-template>
+							I've got an HTML heading, and a select callback. Pretty cool!
+						</tab>
+					</tabset>
+				</div>
+			</div>
+			<div class="clearfix">
+				<ul class="tab-nav tn-justified" id="license-tab-parent">
+					<li class="btn-wave " [ngClass]="{'active active-tab': tabActive == 1}">
+						<a href="javascript: void(0);" id="for-tab-1" style="color: #2BA3D4;" (click)="selectTab(1)">Home</a>
+					</li>
+					<li class="btn-wave" [ngClass]="{'active active-tab': tabActive == 2}">
+						<a href="javascript: void(0);" id="for-tab-2" style="color: #2BA3D4;" (click)="selectTab(2)">Profile</a>
+					</li>
+					<li class="btn-wave" [ngClass]="{'active active-tab': tabActive == 3}">
+						<a href="javascript: void(0);" id="for-tab-2" style="color: #2BA3D4;" (click)="selectTab(3)">Message</a>
+					</li>
+				</ul>
+				<div style="position: relative">
+					<div class="tab-content p-t-10">
+						<div class="tab-pane" [ngClass]="{'active': tabActive == 1}">
+							<div class="p-l-25 p-r-25">
+								In hac habitasse platea dictumst. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos.
+								Nam eget dui. In ac felis quis tortor malesuada pretium. Phasellus consectetuer vestibulum elit. Duis lobortis massa
+								imperdiet quam. Pellentesque commodo eros a enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+								cubilia Curae; In ac dui quis mi consectetuer lacinia. Phasellus a est. Pellentesque commodo eros a enim. Cras ultricies
+								mi eu turpis hendrerit fringilla. Donec mollis hendrerit risus. Vestibulum turpis sem, aliquet eget, lobortis pellentesque,
+								rutrum eu, nisl. Praesent egestas neque eu enim. In hac habitasse platea dictumst.
+							</div>
+						</div>
+						<div class="tab-pane" [ngClass]="{'active': tabActive == 2}">
+							<div class="p-l-25 p-r-25">
+								Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Vestibulum purus quam, scelerisque ut, mollis sed,
+								nonummy id, metus. Nulla sit amet est. Praesent ac massa at ligula laoreet iaculis. Vivamus aliquet elit ac nisl. Nulla
+								porta dolor. Cras dapibus. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
+							</div>
+						</div>
+						<div class="tab-pane" [ngClass]="{'active': tabActive == 3}">
+							<div class="p-l-25 p-r-25">
+								Etiam rhoncus. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi. Cras id dui. Curabitur turpis. Etiam ut
+								purus mattis mauris sodales aliquam. Aenean viverra rhoncus pede. Nulla sit amet est. Donec mi odio, faucibus at, scelerisque
+								quis, convallis in, nisi. Praesent ac sem eget est egestas volutpat. Cras varius. Morbi mollis tellus ac sapien. In
+								enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nam ipsum risus, rutrum vitae, vestibulum eu, molestie
+								vel, lacus. Fusce vel dui.Morbi mattis ullamcorper velit. Etiam rhoncus. Phasellus leo dolor, tempus non, auctor et,
+								hendrerit quis, nisi. Cras id dui. Curabitur turpis. Etiam ut purus mattis mauris sodales aliquam. Aenean viverra rhoncus
+								pede. Nulla sit amet est. Donec mi odio, faucibus at, scelerisque quis, convallis in, nisi. Praesent ac sem eget est
+								egestas volutpat. Cras varius. Morbi mollis tellus ac sapien. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
+								justo. Nam ipsum risus, rutrum vitae, vestibulum eu, molestie vel, lacus. Fusce vel dui.
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Tooltips -->
+		<div class="card">
+			<div class="card-header">
+				<h2>Tooltip
+					<small>
+						<a target="_blank" class="c-gray" href="https://valor-software.com/ngx-bootstrap/#/tooltip">ngx-bootstrap tooltip </a>
+					</small>
+				</h2>
+			</div>
+			<div class="card-body card-padding p-t-0">
+				<p class="c-black">Tooltips Positions</p>
+				<small> Four options are available: top, right, bottom, and left aligned.</small><br>
+				<button type="button" class="btn btn-primary" tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." placement="top" containerClass="primary">
+					Tooltip on top
+				</button>
+
+				<button type="button" class="btn btn-primary" tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." placement="right" containerClass="primary">
+					Tooltip on right
+				</button>
+
+				<button type="button" class="btn btn-primary" tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." placement="auto" containerClass="primary">
+					Tooltip auto
+				</button>
+
+				<button type="button" class="btn btn-primary" tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." placement="left" containerClass="primary">
+					Tooltip on left
+				</button>
+
+				<button type="button" class="btn btn-primary" tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." placement="bottom" containerClass="primary">
+					Tooltip on bottom
+				</button>
+				<br>
+				<p class="c-black">Optional Colors Schemes</p>
+				<button type="button" class="btn bgm-black" tooltip="black" containerClass="tooltip-black">black</button>
+				<button type="button" class="btn bgm-brown" tooltip="brown" containerClass="tooltip-brown">brown</button>
+				<button type="button" class="btn bgm-pink" tooltip="pink" containerClass="tooltip-pink">brown</button>
+				<button type="button" class="btn bgm-red" tooltip="red" containerClass="tooltip-red">red</button>
+				<button type="button" class="btn bgm-blue" tooltip="blue" containerClass="tooltip-blue">blue</button>
+				<button type="button" class="btn bgm-purple" tooltip="purple" containerClass="tooltip-purple">purple</button>
+				<button type="button" class="btn bgm-deeppurple" tooltip="deeppurple" containerClass="tooltip-deeppurple">deeppurple</button>
+				<button type="button" class="btn bgm-lightblue" tooltip="lightblue" containerClass="tooltip-lightblue">lightblue</button>
+				<button type="button" class="btn bgm-cyan" tooltip="cyan" containerClass="tooltip-cyan">cyan</button>
+				<button type="button" class="btn bgm-teal" tooltip="teal" containerClass="tooltip-teal">teal</button>
+				<button type="button" class="btn bgm-green" tooltip="green" containerClass="tooltip-green">green</button>
+				<button type="button" class="btn bgm-orange" tooltip="orange" containerClass="tooltip-orange">orange</button>
+				<button type="button" class="btn bgm-lightgreen" tooltip="lightgreen" containerClass="tooltip-lightgreen">lightgreen</button>
+				<button type="button" class="btn bgm-lime" tooltip="lime" containerClass="tooltip-lime">lime</button>
+				<button type="button" class="btn bgm-yellow" tooltip="yellow" containerClass="tooltip-yellow">yellow</button>
+				<button type="button" class="btn bgm-amber" tooltip="amber" containerClass="tooltip-amber">amber</button>
+				<button type="button" class="btn bgm-gray" tooltip="gray" containerClass="tooltip-gray">gray</button>
+				<button type="button" class="btn bgm-indigo" tooltip="indigo" containerClass="tooltip-indigo">indigo</button>
+				<button type="button" class="btn bgm-bluegray" tooltip="blue gray" containerClass="tooltip-bluegray">blue gray</button>
+				
+			</div>
+		</div>
+		<!-- Typeahead -->
+		<div class="card">
+			<div class="card-header">
+				<h2>Typeahead
+					<small>
+						<a target="_blank" class="c-gray" href="https://valor-software.com/ngx-bootstrap/#/typeahead">ngx-bootstrap typeahead </a>
+					</small>
+				</h2>
+				<ul class="actions">
+					<li dropdown class="dropdown action-show">
+						<a dropdownToggle>
+							<i class="zmdi zmdi-more-vert"></i>
+						</a>
+						<div *dropdownMenu class="dropdown-menu pull-right">
+							<div class="dropdown-arrow"></div>
+							<p class="p-20">
+								You can put anything here
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="card-body card-padding p-t-0">
+				<p class="c-black">Typeahead</p>
+
+				<ng-template #customItemTemplate let-model="item" let-index="index">
+					<h5>This is: {{model | json}} Index: {{ index }}</h5>
+				</ng-template>
+
+				<pre class="card card-block card-header">Model: {{selected | json}}</pre>
+				<div class="form-group rg-float">
+					<div class="rg-line">
+						<input class="form-control input-sm" type="text" [(ngModel)]="selected" [typeahead]="states" [typeaheadItemTemplate]="customItemTemplate" rg-line>
+						<div class="rg-input-underline">
+							<span class="rg-input-ripple"></span>
+						</div>
+					</div>
+					<label class="rg-label">Type States</label>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

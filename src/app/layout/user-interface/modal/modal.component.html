@@ -1,0 +1,380 @@
+<div class="block-header">
+	<h2>Modals</h2>
+	<small>
+		<a target="_blank" class="c-gray" href="https://valor-software.com/ngx-bootstrap/#/modals">ngx-bootstrap modals </a>
+	</small>
+
+	<ul class="actions">
+		<li>
+			<a>
+				<i class="zmdi zmdi-trending-up"></i>
+			</a>
+		</li>
+		<li>
+			<a>
+				<i class="zmdi zmdi-check-all"></i>
+			</a>
+		</li>
+		<li class="dropdown" dropdown>
+			<a dropdownToggle>
+				<i class="zmdi zmdi-more-vert"></i>
+			</a>
+
+			<ul *dropdownMenu class="dropdown-menu dropdown-menu-right">
+				<li class="dropdown-arrow"></li>
+				<li>
+					<a>Refresh</a>
+				</li>
+				<li>
+					<a>Manage Widgets</a>
+				</li>
+				<li>
+					<a>Widgets Settings</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<div class="row">
+	<div class="col-sm-12">
+		<div class="card">
+			<div class="card-header">
+				<h2>
+					Default Modal
+				</h2>
+				<ul class="actions">
+					<li dropdown class="dropdown action-show">
+						<a dropdownToggle>
+							<i class="zmdi zmdi-more-vert"></i>
+						</a>
+						<div *dropdownMenu class="dropdown-menu pull-right">
+							<div class="dropdown-arrow"></div>
+							<p class="p-20">
+								You can put anything here
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		
+			<div class="card-body card-padding p-t-0">
+				<p>Modals are streamlined, but flexible, dialog prompts with the minimum required functionality and smart defaults.</p>
+				<p>
+					To be able to open modals from service, inject BsModalService to your constructor. Then, call
+					<code>.show()</code> method of modal service. Pass a TemplateRef or a component as a first argument and config as a second (optionally).
+					<code>.show()</code> method returns an instance of BsModalRef class with
+					<code>.hide()</code> method and
+					<code>content</code> property where you'll find a component which you've passed to service.
+				</p>
+				<br>
+				<br>
+		
+				<!--Large modal-->
+				<p>Small modal window have small width on screens only above 768px(boostrap3) and 576px(bootstrap4)</p>
+				<p class="c-black">Modals have two optional sizes</p>
+				<button class="btn btn-primary" (click)="rgModal.show()" waves-effect>Regular modal</button>
+				<button class="btn btn-primary" (click)="lgModal.show()" waves-effect>Large modal</button>
+				<button class="btn btn-primary" (click)="smModal.show()" waves-effect>Small modal</button>
+				<div bsModal #rgModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myRegularModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h4 class="modal-title pull-left">Large modal</h4>
+								<button type="button" class="close pull-right" (click)="rgModal.hide()" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales orci ante, sed ornare eros vestibulum ut. Ut accumsan
+								vitae eros sit amet tristique. Nullam scelerisque nunc enim, non dignissim nibh faucibus ullamcorper. Fusce pulvinar
+								libero vel ligula iaculis ullamcorper. Integer dapibus, mi ac tempor varius, purus nibh mattis erat, vitae porta nunc
+								nisi non tellus. Vivamus mollis ante non massa egestas fringilla. Vestibulum egestas consectetur nunc at ultricies.
+								Morbi quis consectetur nunc.
+							</div>
+							<div class="modal-footer">
+								<button class="btn btn-link " waves-effect (click)="rgModal.hide()">OK</button>
+								<button class="btn btn-link " waves-effect (click)="rgModal.hide()">Cancel</button>
+							</div>
+						</div>
+					</div>
+				</div>		
+				<div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-lg">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h4 class="modal-title pull-left">Large modal</h4>
+								<button type="button" class="close pull-right" (click)="lgModal.hide()" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales orci ante, sed ornare eros vestibulum ut. Ut accumsan
+								vitae eros sit amet tristique. Nullam scelerisque nunc enim, non dignissim nibh faucibus ullamcorper. Fusce pulvinar
+								libero vel ligula iaculis ullamcorper. Integer dapibus, mi ac tempor varius, purus nibh mattis erat, vitae porta nunc
+								nisi non tellus. Vivamus mollis ante non massa egestas fringilla. Vestibulum egestas consectetur nunc at ultricies.
+								Morbi quis consectetur nunc.
+							</div>
+							<div class="modal-footer">
+								<button class="btn btn-link " waves-effect (click)="lgModal.hide()">OK</button>
+								<button class="btn btn-link " waves-effect (click)="lgModal.hide()">Cancel</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div bsModal #smModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-sm">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h4 class="modal-title pull-left">Small modal</h4>
+								<button type="button" class="close pull-right" aria-label="Close" (click)="smModal.hide()">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales orci ante, sed ornare eros vestibulum ut. Ut accumsan
+								vitae eros sit amet tristique. Nullam scelerisque nunc enim, non dignissim nibh faucibus ullamcorper. Fusce pulvinar
+								libero vel ligula iaculis ullamcorper. Integer dapibus, mi ac tempor varius, purus nibh mattis erat, vitae porta nunc
+								nisi non tellus. Vivamus mollis ante non massa egestas fringilla. Vestibulum egestas consectetur nunc at ultricies.
+								Morbi quis consectetur nunc.
+							</div>
+							<div class="modal-footer">
+								<button class="btn btn-link " waves-effect (click)="smModal.hide()">OK</button>
+								<button class="btn btn-link " waves-effect (click)="smModal.hide()">Cancel</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="card-header">
+				<h2>
+					Custom Modal
+				</h2>
+				<ul class="actions">
+					<li dropdown class="dropdown action-show">
+						<a dropdownToggle>
+							<i class="zmdi zmdi-more-vert"></i>
+						</a>
+						<div *dropdownMenu class="dropdown-menu pull-right">
+							<div class="dropdown-arrow"></div>
+							<p class="p-20">
+								You can put anything here
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="card-body card-padding p-t-0">
+				<p>to enable the custom modal you just have to add class <code>custom</code> to modal parent class and a lil bit modification code</p>
+				<p>Default Entrance</p>
+				<button class="btn btn-primary" (click)="entrance = ''; crgModal.show()" waves-effect>Custome Regular modal</button>
+				<button class="btn btn-primary" (click)="entrance = ''; crgtModal.show()" waves-effect>Modal txt</button>
+				<button class="btn btn-primary" (click)="entrance = ''; modalinputModal.show()" waves-effect>Modal input</button>
+				<button class="btn btn-primary" (click)="entrance = ''; modalWithScrollModal.show()" waves-effect>Modal scroll</button>				
+				<br>
+				<br>
+				<p>IOS Entrance</p>
+				<button class="btn btn-primary" (click)="entrance = 'ios'; crgModal.show()" waves-effect>Custome Regular modal</button>
+				<button class="btn btn-primary" (click)="entrance = 'ios'; crgtModal.show()" waves-effect>Modal txt</button>
+				<button class="btn btn-primary" (click)="entrance = 'ios'; modalinputModal.show()" waves-effect>Modal input</button>
+				<button class="btn btn-primary" (click)="entrance = 'ios'; modalWithScrollModal.show()" waves-effect>Modal scroll</button>
+				<br>
+				<br>
+				<p>Android Entrance</p>
+				<button class="btn btn-primary" (click)="entrance = 'md'; crgModal.show()" waves-effect>Custome Regular modal</button>
+				<button class="btn btn-primary" (click)="entrance = 'md'; crgtModal.show()" waves-effect>Modal txt</button>
+				<button class="btn btn-primary" (click)="entrance = 'md'; modalinputModal.show()" waves-effect>Modal input</button>
+				<button class="btn btn-primary" (click)="entrance = 'md'; modalWithScrollModal.show()" waves-effect>Modal scroll</button>
+				<br>
+				<div bsModal #crgModal="bs-modal" class="modal fade custom" tabindex="-1" role="dialog" aria-labelledby="myRegularModalLabel" aria-hidden="true">
+					<div class="modal-dialog {{ entrance }}">
+						<div class="modal-content">
+							<div class="modal-header p-0">
+								<div class="modal-header-bar">
+									<button class="navbar-toggle" (click)="crgModal.hide()" waves-effect>
+										<i class="zmdi zmdi-arrow-left zmdi-hc-fw"></i>
+									</button>
+									<div class="header-title-bar">Custome Regular modal</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div bsModal #crgtModal="bs-modal" class="modal fade custom" tabindex="-1" role="dialog" aria-labelledby="myRegularModalLabel"
+				 aria-hidden="true">
+					<div class="modal-dialog {{ entrance }}">
+						<div class="modal-content">
+							<div class="modal-header p-0">
+								<div class="modal-header-bar">
+									<button class="navbar-toggle" (click)="crgtModal.hide()" waves-effect>
+										<i class="zmdi zmdi-arrow-left zmdi-hc-fw"></i>
+									</button>
+									<div class="header-title-bar">Custome Regular modal with txt</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-body">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales orci ante, sed ornare eros vestibulum ut. Ut accumsan
+									vitae eros sit amet tristique. Nullam scelerisque nunc enim, non dignissim nibh faucibus ullamcorper. Fusce pulvinar libero
+									vel ligula iaculis ullamcorper. Integer dapibus, mi ac tempor varius, purus nibh mattis erat, vitae porta nunc nisi non tellus.
+									Vivamus mollis ante non massa egestas fringilla. Vestibulum egestas consectetur nunc at ultricies. Morbi quis consectetur
+									nunc.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div bsModal #modalinputModal="bs-modal" class="modal fade custom" tabindex="-1" role="dialog" aria-labelledby="myRegularModalLabel"
+				 aria-hidden="true">
+					<div class="modal-dialog {{ entrance }}">
+						<div class="modal-content">
+							<div class="modal-header p-0">
+								<div class="modal-header-bar">
+									<button class="navbar-toggle" (click)="modalinputModal.hide()" waves-effect>
+										<i class="zmdi zmdi-arrow-left zmdi-hc-fw"></i>
+									</button>
+									<div class="header-title-bar">Modal with input</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-body has-input">
+									<div class="col-xs-12 p-t-15">
+										<div class="form-group rg-float">
+											<div class="rg-line">
+												<input class="form-control input-sm" type="text" rg-line autofocus="autofocus" id="firstName">
+												<div class="rg-input-underline">
+													<span class="rg-input-ripple"></span>
+												</div>
+											</div>
+											<label class="rg-label">First Name</label>
+										</div>
+										<div class="form-group rg-float">
+											<div class="rg-line">
+												<input class="form-control input-sm" type="text" rg-line id="lastName">
+												<div class="rg-input-underline">
+													<span class="rg-input-ripple"></span>
+												</div>
+											</div>
+											<label class="rg-label">Last Name</label>
+										</div>
+										<div class="form-group rg-float">
+											<div class="rg-line">
+												<input class="form-control input-sm" type="email" rg-line id="email">
+												<div class="rg-input-underline">
+													<span class="rg-input-ripple"></span>
+												</div>
+											</div>
+											<label class="rg-label">Email</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer has-input">
+								<button class="btn btn-primary btn-block" (click)="setData()" waves-effect>Save</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div bsModal #modalWithScrollModal="bs-modal" class="modal fade custom" tabindex="-1" role="dialog" aria-labelledby="myRegularModalLabel"
+				 aria-hidden="true">
+					<div class="modal-dialog {{ entrance }}">
+						<div class="modal-content">
+							<div class="modal-header p-0">
+								<div class="modal-header-bar">
+									<button class="navbar-toggle" (click)="modalWithScrollModal.hide()" waves-effect>
+										<i class="zmdi zmdi-arrow-left zmdi-hc-fw"></i>
+									</button>
+									<div class="header-title-bar">Modal with scroller</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-body">
+									Rowel de Guzman
+									 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales orci ante, sed ornare eros vestibulum ut. Ut accumsan
+									vitae eros sit amet tristique. Nullam scelerisque nunc enim, non dignissim nibh faucibus ullamcorper. Fusce pulvinar libero
+									vel ligula iaculis ullamcorper. Integer dapibus, mi ac tempor varius, purus nibh mattis erat, vitae porta nunc nisi non tellus.
+									Vivamus mollis ante non massa egestas fringilla. Vestibulum egestas consectetur nunc at ultricies. Morbi quis consectetur
+									nunc.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales orci ante, sed ornare eros vestibulum ut. Ut accumsan
+									vitae eros sit amet tristique. Nullam scelerisque nunc enim, non dignissim nibh faucibus ullamcorper. Fusce pulvinar libero
+									vel ligula iaculis ullamcorper. Integer dapibus, mi ac tempor varius, purus nibh mattis erat, vitae porta nunc nisi non tellus.
+									Vivamus mollis ante non massa egestas fringilla. Vestibulum egestas consectetur nunc at ultricies. Morbi quis consectetur
+									nunc.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales orci ante, sed ornare eros vestibulum ut. Ut accumsan
+									vitae eros sit amet tristique. Nullam scelerisque nunc enim, non dignissim nibh faucibus ullamcorper. Fusce pulvinar libero
+									vel ligula iaculis ullamcorper. Integer dapibus, mi ac tempor varius, purus nibh mattis erat, vitae porta nunc nisi non tellus.
+									Vivamus mollis ante non massa egestas fringilla. Vestibulum egestas consectetur nunc at ultricies. Morbi quis consectetur
+									nunc.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales orci ante, sed ornare eros vestibulum ut. Ut accumsan
+									vitae eros sit amet tristique. Nullam scelerisque nunc enim, non dignissim nibh faucibus ullamcorper. Fusce pulvinar libero
+									vel ligula iaculis ullamcorper. Integer dapibus, mi ac tempor varius, purus nibh mattis erat, vitae porta nunc nisi non tellus.
+									Vivamus mollis ante non massa egestas fringilla. Vestibulum egestas consectetur nunc at ultricies. Morbi quis consectetur
+									nunc.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales orci ante, sed ornare eros vestibulum ut. Ut accumsan
+									vitae eros sit amet tristique. Nullam scelerisque nunc enim, non dignissim nibh faucibus ullamcorper. Fusce pulvinar libero
+									vel ligula iaculis ullamcorper. Integer dapibus, mi ac tempor varius, purus nibh mattis erat, vitae porta nunc nisi non tellus.
+									Vivamus mollis ante non massa egestas fringilla. Vestibulum egestas consectetur nunc at ultricies. Morbi quis consectetur
+									nunc.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales orci ante, sed ornare eros vestibulum ut. Ut accumsan
+									vitae eros sit amet tristique. Nullam scelerisque nunc enim, non dignissim nibh faucibus ullamcorper. Fusce pulvinar libero
+									vel ligula iaculis ullamcorper. Integer dapibus, mi ac tempor varius, purus nibh mattis erat, vitae porta nunc nisi non tellus.
+									Vivamus mollis ante non massa egestas fringilla. Vestibulum egestas consectetur nunc at ultricies. Morbi quis consectetur
+									nunc.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales orci ante, sed ornare eros vestibulum ut. Ut accumsan
+									vitae eros sit amet tristique. Nullam scelerisque nunc enim, non dignissim nibh faucibus ullamcorper. Fusce pulvinar libero
+									vel ligula iaculis ullamcorper. Integer dapibus, mi ac tempor varius, purus nibh mattis erat, vitae porta nunc nisi non tellus.
+									Vivamus mollis ante non massa egestas fringilla. Vestibulum egestas consectetur nunc at ultricies. Morbi quis consectetur
+									nunc.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales orci ante, sed ornare eros vestibulum ut. Ut accumsan
+									vitae eros sit amet tristique. Nullam scelerisque nunc enim, non dignissim nibh faucibus ullamcorper. Fusce pulvinar libero
+									vel ligula iaculis ullamcorper. Integer dapibus, mi ac tempor varius, purus nibh mattis erat, vitae porta nunc nisi non tellus.
+									Vivamus mollis ante non massa egestas fringilla. Vestibulum egestas consectetur nunc at ultricies. Morbi quis consectetur
+									nunc.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales orci ante, sed ornare eros vestibulum ut. Ut accumsan
+									vitae eros sit amet tristique. Nullam scelerisque nunc enim, non dignissim nibh faucibus ullamcorper. Fusce pulvinar libero
+									vel ligula iaculis ullamcorper. Integer dapibus, mi ac tempor varius, purus nibh mattis erat, vitae porta nunc nisi non tellus.
+									Vivamus mollis ante non massa egestas fringilla. Vestibulum egestas consectetur nunc at ultricies. Morbi quis consectetur
+									nunc.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales orci ante, sed ornare eros vestibulum ut. Ut accumsan
+									vitae eros sit amet tristique. Nullam scelerisque nunc enim, non dignissim nibh faucibus ullamcorper. Fusce pulvinar libero
+									vel ligula iaculis ullamcorper. Integer dapibus, mi ac tempor varius, purus nibh mattis erat, vitae porta nunc nisi non tellus.
+									Vivamus mollis ante non massa egestas fringilla. Vestibulum egestas consectetur nunc at ultricies. Morbi quis consectetur
+									nunc.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales orci ante, sed ornare eros vestibulum ut. Ut accumsan
+									vitae eros sit amet tristique. Nullam scelerisque nunc enim, non dignissim nibh faucibus ullamcorper. Fusce pulvinar libero
+									vel ligula iaculis ullamcorper. Integer dapibus, mi ac tempor varius, purus nibh mattis erat, vitae porta nunc nisi non tellus.
+									Vivamus mollis ante non massa egestas fringilla. Vestibulum egestas consectetur nunc at ultricies. Morbi quis consectetur
+									nunc.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales orci ante, sed ornare eros vestibulum ut. Ut accumsan
+									vitae eros sit amet tristique. Nullam scelerisque nunc enim, non dignissim nibh faucibus ullamcorper. Fusce pulvinar libero
+									vel ligula iaculis ullamcorper. Integer dapibus, mi ac tempor varius, purus nibh mattis erat, vitae porta nunc nisi non tellus.
+									Vivamus mollis ante non massa egestas fringilla. Vestibulum egestas consectetur nunc at ultricies. Morbi quis consectetur
+									nunc.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales orci ante, sed ornare eros vestibulum ut. Ut accumsan
+									vitae eros sit amet tristique. Nullam scelerisque nunc enim, non dignissim nibh faucibus ullamcorper. Fusce pulvinar libero
+									vel ligula iaculis ullamcorper. Integer dapibus, mi ac tempor varius, purus nibh mattis erat, vitae porta nunc nisi non tellus.
+									Vivamus mollis ante non massa egestas fringilla. Vestibulum egestas consectetur nunc at ultricies. Morbi quis consectetur
+									nunc.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales orci ante, sed ornare eros vestibulum ut. Ut accumsan
+									vitae eros sit amet tristique. Nullam scelerisque nunc enim, non dignissim nibh faucibus ullamcorper. Fusce pulvinar libero
+									vel ligula iaculis ullamcorper. Integer dapibus, mi ac tempor varius, purus nibh mattis erat, vitae porta nunc nisi non tellus.
+									Vivamus mollis ante non massa egestas fringilla. Vestibulum egestas consectetur nunc at ultricies. Morbi quis consectetur
+									nunc.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales orci ante, sed ornare eros vestibulum ut. Ut accumsan
+									vitae eros sit amet tristique. Nullam scelerisque nunc enim, non dignissim nibh faucibus ullamcorper. Fusce pulvinar libero
+									vel ligula iaculis ullamcorper. Integer dapibus, mi ac tempor varius, purus nibh mattis erat, vitae porta nunc nisi non tellus.
+									Vivamus mollis ante non massa egestas fringilla. Vestibulum egestas consectetur nunc at ultricies. Morbi quis consectetur
+									nunc.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales orci ante, sed ornare eros vestibulum ut. Ut accumsan
+									vitae eros sit amet tristique. Nullam scelerisque nunc enim, non dignissim nibh faucibus ullamcorper. Fusce pulvinar libero
+									vel ligula iaculis ullamcorper. Integer dapibus, mi ac tempor varius, purus nibh mattis erat, vitae porta nunc nisi non tellus.
+									Vivamus mollis ante non massa egestas fringilla. Vestibulum egestas consectetur nunc at ultricies. Morbi quis consectetur
+									nunc.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales orci ante, sed ornare eros vestibulum ut. Ut accumsan
+									vitae eros sit amet tristique. Nullam scelerisque nunc enim, non dignissim nibh faucibus ullamcorper. Fusce pulvinar libero
+									vel ligula iaculis ullamcorper. Integer dapibus, mi ac tempor varius, purus nibh mattis erat, vitae porta nunc nisi non tellus.
+									Vivamus mollis ante non massa egestas fringilla. Vestibulum egestas consectetur nunc at ultricies. Morbi quis consectetur
+									nunc.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales orci ante, sed ornare eros vestibulum ut. Ut accumsan
+									vitae eros sit amet tristique. Nullam scelerisque nunc enim, non dignissim nibh faucibus ullamcorper. Fusce pulvinar libero
+									vel ligula iaculis ullamcorper. Integer dapibus, mi ac tempor varius, purus nibh mattis erat, vitae porta nunc nisi non tellus.
+									Vivamus mollis ante non massa egestas fringilla. Vestibulum egestas consectetur nunc at ultricies. Morbi quis consectetur
+									nunc.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales orci ante, sed ornare eros vestibulum ut. Ut accumsan
+									vitae eros sit amet tristique. Nullam scelerisque nunc enim, non dignissim nibh faucibus ullamcorper. Fusce pulvinar libero
+									vel ligula iaculis ullamcorper. Integer dapibus, mi ac tempor varius, purus nibh mattis erat, vitae porta nunc nisi non tellus.
+									Vivamus mollis ante non massa egestas fringilla. Vestibulum egestas consectetur nunc at ultricies. Morbi quis consectetur
+									nunc.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

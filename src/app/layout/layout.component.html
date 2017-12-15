@@ -1,0 +1,28 @@
+<app-header></app-header>
+<app-sidebar [currentState]="currentState"></app-sidebar>
+<main class="container-fluid">
+	<router-outlet></router-outlet>
+	<footer class="text-center" id="footer">
+		<span class="ng-scope">Copyright © 2015 Material Admin</span>
+		<ul class="f-menu list-unstyled">
+			<li>
+				<a routerLink="/home">Home</a>
+			</li>
+			<li>
+				<a routerLink="/about">About</a>
+			</li>
+		</ul>
+	</footer>
+	<div class="main-overlay">
+		<div class="preloader">
+			<div class="inner">
+				<span>Template is loading...</span>
+				<div class="progress-bar">
+					<div class="progress-bar_bg">
+						<div style="width: 60px" class="progress-bar-loader"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>

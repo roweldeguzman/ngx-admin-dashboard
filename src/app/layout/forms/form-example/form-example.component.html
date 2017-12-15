@@ -1,0 +1,268 @@
+<div class="block-header">
+	<h2>Form Examples</h2>
+	<ul class="actions">
+		<li>
+			<a>
+				<i class="zmdi zmdi-trending-up"></i>
+			</a>
+		</li>
+		<li>
+			<a>
+				<i class="zmdi zmdi-check-all"></i>
+			</a>
+		</li>
+		<li class="dropdown" dropdown>
+			<a dropdownToggle>
+				<i class="zmdi zmdi-more-vert"></i>
+			</a>
+
+			<ul *dropdownMenu class="dropdown-menu dropdown-menu-right">
+				<li class="dropdown-arrow"></li>
+				<li>
+					<a>Refresh</a>
+				</li>
+				<li>
+					<a>Manage Widgets</a>
+				</li>
+				<li>
+					<a>Widgets Settings</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<div class="row">
+	<div class="col-sm-12">
+		<div class="card">
+			<div class="card-header">
+				<h2>Basic Example
+					<small>Individual form controls automatically receive some global styling. All textual 'input', 'textarea', and 'select' elements
+						with .form-control are set to width: 100%; by default. Wrap labels and controls in .form-group for optimum spacing.
+					</small>
+				</h2>
+			</div>
+		
+			<div class="card-body card-padding">
+				<form role="form">
+					<div class="form-group rg-line">
+						<label for="exampleInputEmail1">Email address</label>
+						<input type="email" class="form-control input-sm" id="exampleInputEmail1" placeholder="Enter email" rg-line>
+						<div class="rg-input-underline">
+							<span class="rg-input-ripple"></span>
+						</div>
+					</div>
+					<div class="form-group rg-line">
+						<label for="exampleInputPassword1">Password</label>
+						<input type="password" class="form-control input-sm" id="exampleInputPassword1" placeholder="Password" rg-line>
+						<div class="rg-input-underline">
+							<span class="rg-input-ripple"></span>
+						</div>
+					</div>
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" value="">
+							<i class="input-helper"></i>
+							Don't forget to check me out
+						</label>
+					</div>
+		
+					<button type="submit" class="btn btn-primary btn-sm m-t-10" waves-effect>Submit</button>
+				</form>
+			</div>
+		</div>
+		
+		<div class="card">
+			<div class="card-header">
+				<h2>Inline Form
+					<small>Add '.form-inline' to your 'form' for left-aligned and inline-block controls. This only applies to forms within viewports
+						that are at least 768px wide.</small>
+				</h2>
+			</div>
+		
+			<div class="card-body card-padding">
+				<form class="row" role="form">
+					<div class="col-sm-3">
+						<div class="form-group rg-line">
+							<label class="sr-only" for="exampleInputEmail2">Email address</label>
+							<input type="email" class="form-control input-sm" id="exampleInputEmail2" placeholder="Enter email" rg-line>
+							<div class="rg-input-underline">
+								<span class="rg-input-ripple"></span>
+							</div>
+						</div>
+					</div>
+		
+					<div class="col-sm-3">
+						<div class="form-group rg-line">
+							<label class="sr-only" for="exampleInputPassword2">Password</label>
+							<input type="password" class="form-control input-sm" id="exampleInputPassword2" placeholder="Password" rg-line>
+							<div class="rg-input-underline">
+								<span class="rg-input-ripple"></span>
+							</div>
+						</div>
+					</div>
+		
+					<div class="col-sm-2">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="">
+								<i class="input-helper"></i>
+								Remember me
+							</label>
+						</div>
+					</div>
+		
+					<div class="col-sm-4">
+						<button type="submit" class="btn btn-primary btn-sm m-t-5" waves-effect>Sign in</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		
+		<div class="card">
+		
+			<form class="form-horizontal" role="form">
+				<div class="card-header">
+					<h2>Horizontal Form
+						<small>Use Bootstrap's predefined grid classes to align labels and groups of form controls in a horizontal layout by adding
+							'.form-horizontal' to the form. Doing so changes '.form-groups' to behave as grid rows, so no need for '.row'.</small>
+					</h2>
+				</div>
+		
+				<div class="card-body card-padding">
+					<div class="form-group">
+						<label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+						<div class="col-sm-10">
+							<div class="rg-line">
+								<input type="email" class="form-control input-sm" id="inputEmail3" placeholder="Email" rg-line>
+								<div class="rg-input-underline">
+									<span class="rg-input-ripple"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+						<div class="col-sm-10">
+		
+							<div class="rg-line">
+								<input type="password" class="form-control input-sm" id="inputPassword3" placeholder="Password" rg-line>
+								<div class="rg-input-underline">
+									<span class="rg-input-ripple"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" value="">
+									<i class="input-helper"></i>
+									Remember me
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<button type="submit" class="btn btn-primary btn-sm" waves-effect>Sign in</button>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+		
+		<div class="card">
+			<div class="card-header">
+				<h2>Multi Column
+					<small>Wrap inputs in grid columns, or any custom parent element, to easily enforce desired widths.</small>
+				</h2>
+			</div>
+		
+			<div class="card-body card-padding">
+				<div class="row">
+					<div class="col-xs-3">
+						<div class="rg-line form-group">
+							<input type="text" class="form-control input-sm" placeholder=".col-xs-3" rg-line>
+							<div class="rg-input-underline">
+								<span class="rg-input-ripple"></span>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-3">
+						<div class="rg-line form-group">
+							<input type="text" class="form-control input-sm" placeholder=".col-xs-3" rg-line>
+							<div class="rg-input-underline">
+								<span class="rg-input-ripple"></span>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-3">
+						<div class="rg-line form-group">
+							<input type="text" class="form-control input-sm" placeholder=".col-xs-3" rg-line>
+							<div class="rg-input-underline">
+								<span class="rg-input-ripple"></span>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-3">
+						<div class="rg-line form-group">
+							<input type="text" class="form-control input-sm" placeholder=".col-xs-3" rg-line>
+							<div class="rg-input-underline">
+								<span class="rg-input-ripple"></span>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-4">
+						<div class="rg-line form-group">
+							<input type="text" class="form-control input-sm" placeholder=".col-xs-4" rg-line>
+							<div class="rg-input-underline">
+								<span class="rg-input-ripple"></span>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-4">
+						<div class="rg-line form-group">
+							<input type="text" class="form-control input-sm" placeholder=".col-xs-4" rg-line>
+							<div class="rg-input-underline">
+								<span class="rg-input-ripple"></span>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-4">
+						<div class="rg-line form-group">
+							<input type="text" class="form-control input-sm" placeholder=".col-xs-4" rg-line>
+							<div class="rg-input-underline">
+								<span class="rg-input-ripple"></span>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-6">
+						<div class="rg-line form-group">
+							<input type="text" class="form-control input-sm" placeholder=".col-xs-6" rg-line>
+							<div class="rg-input-underline">
+								<span class="rg-input-ripple"></span>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-6">
+						<div class="rg-line form-group">
+							<input type="text" class="form-control input-sm" placeholder=".col-xs-6" rg-line>
+							<div class="rg-input-underline">
+								<span class="rg-input-ripple"></span>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12">
+						<div class="rg-line form-group">
+							<input type="text" class="form-control input-sm" placeholder=".col-xs-12" rg-line>
+							<div class="rg-input-underline">
+								<span class="rg-input-ripple"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

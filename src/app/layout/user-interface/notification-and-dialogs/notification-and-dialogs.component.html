@@ -1,0 +1,190 @@
+<div class="block-header">
+	<h2>Notifications and Dialog</h2>
+
+	<ul class="actions">
+		<li>
+			<a>
+				<i class="zmdi zmdi-trending-up"></i>
+			</a>
+		</li>
+		<li>
+			<a>
+				<i class="zmdi zmdi-check-all"></i>
+			</a>
+		</li>
+		<li class="dropdown" dropdown>
+			<a dropdownToggle>
+				<i class="zmdi zmdi-more-vert"></i>
+			</a>
+
+			<ul *dropdownMenu class="dropdown-menu dropdown-menu-right">
+				<li class="dropdown-arrow"></li>
+				<li>
+					<a>Refresh</a>
+				</li>
+				<li>
+					<a>Manage Widgets</a>
+				</li>
+				<li>
+					<a>Widgets Settings</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<div class="row">
+	<div class="col-sm-12">
+		<div class="card">
+			<div class="card-header">
+				<h2>Notification
+					<small>Animated Alerts with custome types and alignments</small>
+				</h2>
+			</div>
+			<div class="card-body card-padding">
+				<p class="f-500 m-b-20 c-black">Notificaions</p>
+				<div class="notifications row">
+					<div class="col-sm-2 col-xs-6">
+						<button waves-effect class="btn btn-primary" (click)="makeNotif($event)" data-type="inverse" data-from="top" data-align="left" data-icon="fa fa-check">Top Left</button>
+					</div>
+					<div class="col-sm-2 col-xs-6">
+						<button waves-effect class="btn btn-primary" (click)="makeNotif($event)" data-type="inverse" data-from="top" data-align="right" data-icon="fa fa-comments">Top Right</button>
+					</div>
+					<div class="col-sm-2 col-xs-6">
+						<button waves-effect class="btn btn-primary" (click)="makeNotif($event)" data-type="inverse" data-from="top" data-align="center" data-icon="fa fa-comments">Top Center</button>
+					</div>
+					<div class="col-sm-2 col-xs-6">
+						<button waves-effect class="btn btn-primary" (click)="makeNotif($event)" data-type="inverse" data-from="bottom" data-align="left">Bottom Left</button>
+					</div>
+					<div class="col-sm-2 col-xs-6">
+						<button waves-effect class="btn btn-primary" (click)="makeNotif($event)" data-type="inverse" data-from="bottom" data-align="right">Bottom Right</button>
+					</div>
+					<div class="col-sm-2 col-xs-6">
+						<button waves-effect class="btn btn-primary" (click)="makeNotif($event)" data-type="inverse" data-from="bottom" data-align="center">Bottom Center</button>
+					</div>
+				</div>
+				<br/>
+				<p class="f-500 m-b-20 c-black">Type</p>
+				<div class="notifications row">
+					<div class="col-sm-2 col-xs-6">
+						<button waves-effect class="btn btn-primary" (click)="makeNotif($event)" data-type="inverse" data-from="top" data-align="right">Inverse</button>
+					</div>
+					<div class="col-sm-2 col-xs-6">
+						<button waves-effect class="btn btn-info" (click)="makeNotif($event)" data-type="info" data-from="top" data-align="right">Info</button>
+					</div>
+					<div class="col-sm-2 col-xs-6">
+						<button waves-effect class="btn btn-success" (click)="makeNotif($event)" data-type="success" data-from="top" data-align="right">Success</button>
+					</div>
+					<div class="col-sm-2 col-xs-6">
+						<button waves-effect class="btn btn-warning" (click)="makeNotif($event)" data-type="warning" data-from="top" data-align="right">Warning</button>
+					</div>
+					<div class="col-sm-2 col-xs-6">
+						<button waves-effect class="btn btn-danger" (click)="makeNotif($event)" data-type="danger" data-from="top" data-align="right">Danger</button>
+					</div>
+				</div>
+				<br/>
+				
+				<p class="f-500 m-b-20 c-black">Animation</p>
+				<div class="notifications row">
+					<div class="col-sm-2 col-xs-6">
+						<button waves-effect class="btn btn-primary" (click)="makeNotifAnim($event)" data-type="inverse" data-animation-in="animated fadeIn" data-animation-Out="animated fadeOut">Fade In</button>
+					</div>
+					<div class="col-sm-2 col-xs-6">
+						<button waves-effect class="btn btn-primary" (click)="makeNotifAnim($event)" data-type="inverse" data-animation-in="animated fadeInLeft" data-animation-Out="animated fadeOutLeft">Fade In Left</button>
+					</div>
+					<div class="col-sm-2 col-xs-6">
+						<button waves-effect class="btn btn-primary" (click)="makeNotifAnim($event)" data-type="inverse" data-animation-in="animated fadeInRight" data-animation-Out="animated fadeOutRight">Fade In Right</button>
+					</div>
+					<div class="col-sm-2 col-xs-6">
+						<button waves-effect class="btn btn-primary" (click)="makeNotifAnim($event)" data-type="inverse" data-animation-in="animated fadeInUp" data-animation-Out="animated fadeOutUp">Fade In Up</button>
+					</div>
+					<div class="col-sm-2 col-xs-6">
+						<button waves-effect class="btn btn-primary" (click)="makeNotifAnim($event)" data-type="inverse" data-animation-in="animated fadeInDown" data-animation-Out="animated fadeOutDown">Fade In Down</button>
+					</div>
+					<div class="col-sm-2 col-xs-6">
+						<button waves-effect class="btn btn-primary" (click)="makeNotifAnim($event)" data-type="inverse" data-animation-in="animated bounceIn" data-animation-Out="animated bounceOut">Bounce In</button>
+					</div>
+					<div class="col-sm-2 col-xs-6">
+						<button waves-effect class="btn btn-primary" (click)="makeNotifAnim($event)" data-type="inverse" data-animation-in="animated bounceInLeft" data-animation-Out="animated bounceOutLeft">Bounce In Left</button>
+					</div>
+					<div class="col-sm-2 col-xs-6">
+						<button waves-effect class="btn btn-primary" (click)="makeNotifAnim($event)" data-type="inverse" data-animation-in="animated bounceInRight" data-animation-Out="animated bounceOutRight">Bounce In Right</button>
+					</div>
+					<div class="col-sm-2 col-xs-6">
+						<button waves-effect class="btn btn-primary" (click)="makeNotifAnim($event)" data-type="inverse" data-animation-in="animated bounceInUp" data-animation-Out="animated bounceOutUp">Bounce In Up</button>
+					</div>
+					<div class="col-sm-2 col-xs-6">
+						<button waves-effect class="btn btn-primary" (click)="makeNotifAnim($event)" data-type="inverse" data-animation-in="animated rotateInDownRight" data-animation-Out="animated rotateOutUpRight">Fall In Right</button>
+					</div>
+					<div class="col-sm-2 col-xs-6">
+						<button waves-effect class="btn btn-primary" (click)="makeNotifAnim($event)" data-type="inverse" data-animation-in="animated rotateIn" data-animation-Out="animated rotateOut">Rotate In</button>
+					</div>
+					<div class="col-sm-2 col-xs-6">
+						<button waves-effect class="btn btn-primary" (click)="makeNotifAnim($event)" data-type="inverse" data-animation-in="animated flipInX" data-animation-Out="animated flipOutX">Flip In X</button>
+					</div>
+					<div class="col-sm-2 col-xs-6">
+						<button waves-effect class="btn btn-primary" (click)="makeNotifAnim($event)" data-type="inverse" data-animation-in="animated flipInY" data-animation-Out="animated flipOutY">Flip In Y</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="card-header">
+				<h2>Dialog
+					<small>A beautiful replacement for Javascript's boring Alert</small>
+				</h2>
+			</div>
+		
+			<div class="card-body card-padding">
+				<div class="row dialog">
+					<div class="col-sm-3">
+						<p class="f-500 c-black m-b-20">Basic Example</p>
+		
+						<button class="btn btn-info" (click)="makeSwal('basic')">Click me</button>
+					</div>
+		
+					<div class="col-sm-3">
+						<p class="f-500 c-black m-b-20">A title with a text under</p>
+		
+						<button class="btn btn-info" (click)="makeSwal('txt')">Click me</button>
+					</div>
+		
+					<div class="col-sm-3">
+						<p class="f-500 c-black m-b-20">A success message!</p>
+		
+						<button class="btn btn-info" (click)="makeSwal('success')" >Click me</button>
+					</div>
+		
+					<div class="col-sm-3">
+						<p class="f-500 c-black m-b-20">A warning message, with a function attached to the "Confirm"-button...</p>
+		
+						<button class="btn btn-info" (click)="makeSwal('warning')">Click me</button>
+					</div>
+				</div>
+		
+				<br/>
+				<br/>
+		
+				<div class="row dialog">
+					<div class="col-sm-3">
+						<p class="f-500 c-black m-b-20">By passing a parameter, you can execute something else for "Cancel".</p>
+		
+						<button class="btn btn-info" (click)="makeSwal('param')">Click me</button>
+					</div>
+		
+					<div class="col-sm-3">
+						<p class="f-500 c-black m-b-20">A message with custom Image Header</p>
+		
+						<button class="btn btn-info" (click)="makeSwal('img')">Click me</button>
+					</div>
+		
+					<div class="col-sm-3">
+						<p class="f-500 c-black m-b-20">A message with auto close timer</p>
+		
+						<button class="btn btn-info" (click)="makeSwal('timer')">Click me</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,88 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "project": {
+    "name": "template"
+  },
+  "apps": [
+    {
+      "root": "src",
+      "outDir": "dist",
+      "assets": [
+        "assets",
+        "favicon.ico"
+      ],
+      "index": "index.html",
+      "main": "main.ts",
+      "polyfills": "polyfills.ts",
+      "test": "test.ts",
+      "tsconfig": "tsconfig.app.json",
+      "testTsconfig": "tsconfig.spec.json",
+      "prefix": "app",
+      "styles": [
+        "../node_modules/bootstrap/dist/css/bootstrap.min.css",
+        "../node_modules/material-design-iconic-font/dist/css/material-design-iconic-font.min.css",
+        "./styles/perfect-scrollbar.css",
+        "./styles/app.scss",
+        "./javascripts/Waves/dist/waves.css",
+        "./javascripts/owl/assets/owl.carousel.min.css",
+        "./javascripts/owl/assets/owl.theme.default.css",
+        "./javascripts/selectize/selectize.css",
+        "./javascripts/bootstrap-sweetalert/lib/sweet-alert.css",
+        "./javascripts/lightgallery/light-gallery/css/lightGallery.css"
+      ],
+      "scripts": [
+        "../node_modules/jquery/dist/jquery.min.js",
+        "../node_modules/ng-selectize/selectize/selectize.standalone.js",
+        "./javascripts/Waves/dist/waves.min.js",
+        "./javascripts/bootstrap-growl/bootstrap-growl.min.js",
+        "./javascripts/owl/owl.carousel.min.js",
+        "./javascripts/notify-alert/notify-alert.js",
+        "./javascripts/input-mask/jquery-input-mask.js",
+        "./javascripts/bootstrap-sweetalert/lib/sweet-alert.min.js",
+        "./javascripts/sparklines/jquery.sparkline.min.js",
+        "./javascripts/lightgallery/light-gallery/js/lightGallery.min.js",
+        "./javascripts/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js",
+        "./javascripts/plot/flot/jquery.flot.js",
+        "./javascripts/plot/flot/jquery.flot.resize.js",
+        "./javascripts/plot/flot/jquery.flot.pie.js",
+        "./javascripts/plot/flot.tooltip/js/jquery.flot.tooltip.min.js",
+        "./javascripts/plot/flot-orderBars/js/jquery.flot.orderBars.js",
+        "./javascripts/plot/flot.curvedlines/curvedLines.js"
+        
+      ],
+      "environmentSource": "environments/environment.ts",
+      "environments": {
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      }
+    }
+  ],
+  "e2e": {
+    "protractor": {
+      "config": "./protractor.conf.js"
+    }
+  },
+  "lint": [
+    {
+      "project": "src/tsconfig.app.json",
+      "exclude": "**/node_modules/**"
+    },
+    {
+      "project": "src/tsconfig.spec.json",
+      "exclude": "**/node_modules/**"
+    },
+    {
+      "project": "e2e/tsconfig.e2e.json",
+      "exclude": "**/node_modules/**"
+    }
+  ],
+  "test": {
+    "karma": {
+      "config": "./karma.conf.js"
+    }
+  },
+  "defaults": {
+    "styleExt": "css",
+    "component": {}
+  }
+}

@@ -1,0 +1,747 @@
+<div class="block-header">
+	<h2>Form Components</h2>
+
+	<ul class="actions">
+		<li>
+			<a>
+				<i class="zmdi zmdi-trending-up"></i>
+			</a>
+		</li>
+		<li>
+			<a>
+				<i class="zmdi zmdi-check-all"></i>
+			</a>
+		</li>
+		<li class="dropdown" dropdown>
+			<a dropdownToggle>
+				<i class="zmdi zmdi-more-vert"></i>
+			</a>
+
+			<ul *dropdownMenu class="dropdown-menu dropdown-menu-right">
+				<li class="dropdown-arrow"></li>
+				<li>
+					<a>Refresh</a>
+				</li>
+				<li>
+					<a>Manage Widgets</a>
+				</li>
+				<li>
+					<a>Widgets Settings</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<div class="row">
+	<div class="col-sm-12">
+		<div class="card">
+			<div class="card-header">
+				<h2>Input Groups
+					<small>Extend form controls by adding text or buttons before, after, or on both sides of any text-based inputs.</small>
+				</h2>
+			</div>
+		
+			<div class="card-body card-padding">
+				<p class="c-black f-500 m-b-5">Basic Example</p>
+				<small>Place one add-on or button on either side of an input. You may also place one on both sides of an input.</small>
+		
+				<br/>
+				<br/>
+		
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<i class="zmdi zmdi-account"></i>
+							</span>
+							<div class="rg-line">
+								<input type="text" class="form-control" placeholder="Full Name" rg-line>
+								<div class="rg-input-underline">
+									<span class="rg-input-ripple"></span>
+								</div>
+							</div>
+						</div>
+		
+						<br/>
+		
+						<div class="input-group">
+							<span class="input-group-addon">
+								<i class="zmdi zmdi-local-phone"></i>
+							</span>
+							<div class="rg-line">
+								<input type="text" class="form-control" placeholder="Contact Number" rg-line>
+								<div class="rg-input-underline">
+									<span class="rg-input-ripple"></span>
+								</div>
+							</div>
+						</div>
+		
+						<br/>
+		
+						<div class="input-group">
+							<span class="input-group-addon">
+								<i class="zmdi zmdi-email"></i>
+							</span>
+							<div class="rg-line">
+								<input type="text" class="form-control" placeholder="Email Address" rg-line>
+								<div class="rg-input-underline">
+									<span class="rg-input-ripple"></span>
+								</div>
+							</div>
+						</div>
+		
+						<br/>
+		
+						<div class="input-group">
+							<span class="input-group-addon">
+								<i class="zmdi zmdi-pin"></i>
+							</span>
+							<div class="rg-line">
+								<input type="text" class="form-control" placeholder="Home Address" rg-line>
+								<div class="rg-input-underline">
+									<span class="rg-input-ripple"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+		
+					<div class="col-sm-4">
+						<div class="input-group">
+							<div class="rg-line">
+								<input type="text" class="form-control" placeholder="Landscape" rg-line>
+								<div class="rg-input-underline">
+									<span class="rg-input-ripple"></span>
+								</div>
+							</div>
+							<span class="input-group-addon last">
+								<i class="zmdi zmdi-landscape"></i>
+							</span>
+						</div>
+		
+						<br/>
+		
+						<div class="input-group">
+							<div class="rg-line">
+								<input type="text" class="form-control" placeholder="Weather" rg-line>
+								<div class="rg-input-underline">
+									<span class="rg-input-ripple"></span>
+								</div>
+							</div>
+							<span class="input-group-addon last">
+								<i class="zmdi zmdi-sun"></i>
+							</span>
+						</div>
+		
+						<br/>
+		
+						<div class="input-group">
+							<div class="rg-line">
+								<input type="text" class="form-control" placeholder="Flight" rg-line>
+								<div class="rg-input-underline">
+									<span class="rg-input-ripple"></span>
+								</div>
+							</div>
+							<span class="input-group-addon last">
+								<i class="zmdi zmdi-airplane"></i>
+							</span>
+						</div>
+		
+						<br/>
+		
+						<div class="input-group">
+							<div class="rg-line">
+								<input type="text" class="form-control" placeholder="Location" rg-line>
+								<div class="rg-input-underline">
+									<span class="rg-input-ripple"></span>
+								</div>
+							</div>
+							<span class="input-group-addon last">
+								<i class="zmdi zmdi-my-location"></i>
+							</span>
+						</div>
+					</div>
+		
+					<div class="col-sm-4">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<i class="zmdi zmdi-arrow-missed"></i>
+							</span>
+							<div class="rg-line">
+								<input type="text" class="form-control" placeholder="Internet" rg-line>
+								<div class="rg-input-underline">
+									<span class="rg-input-ripple"></span>
+								</div>
+							</div>
+							<span class="input-group-addon last">
+								<i class="zmdi zmdi-globe"></i>
+							</span>
+						</div>
+		
+						<br/>
+		
+						<div class="input-group">
+							<span class="input-group-addon">
+								<i class="zmdi zmdi-money"></i>
+							</span>
+							<div class="rg-line">
+								<input type="text" class="form-control" placeholder="Notifications" rg-line>
+								<div class="rg-input-underline">
+									<span class="rg-input-ripple"></span>
+								</div>
+							</div>
+							<span class="input-group-addon last">
+								<i class="zmdi zmdi-plus-circle-o"></i>
+							</span>
+						</div>
+		
+						<br/>
+		
+						<div class="input-group">
+							<span class="input-group-addon">
+								<i class="zmdi zmdi-mail-send"></i>
+							</span>
+							<div class="rg-line">
+								<input type="text" class="form-control" placeholder="Layers" rg-line>
+								<div class="rg-input-underline">
+									<span class="rg-input-ripple"></span>
+								</div>
+							</div>
+							<span class="input-group-addon last">
+								<i class="zmdi zmdi-layers"></i>
+							</span>
+						</div>
+		
+						<br/>
+		
+						<div class="input-group">
+							<span class="input-group-addon">
+								<i class="zmdi zmdi-portable-wifi"></i>
+							</span>
+							<div class="rg-line">
+								<input type="text" class="form-control" placeholder="Messages" rg-line>
+								<div class="rg-input-underline">
+									<span class="rg-input-ripple"></span>
+								</div>
+							</div>
+							<span class="input-group-addon last">
+								<i class="zmdi zmdi-dialpad"></i>
+							</span>
+						</div>
+					</div>
+				</div>
+		
+				<br/>
+				<br/>
+				<p class="c-black f-500 m-b-5 m-t-20">Multiple Elements</p>
+				<small>You may add 2 or more possible input elements. Use grid classes to define the width of each elements.</small>
+		
+				<br/>
+				<br/>
+		
+				<div class="input-group">
+					<span class="input-group-addon">
+						<i class="zmdi zmdi-account"></i>
+					</span>
+					<div class="col-sm-4">
+						<div class="rg-line">
+							<input type="text" class="form-control" placeholder="First Name" rg-line>
+							<div class="rg-input-underline">
+								<span class="rg-input-ripple"></span>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="rg-line">
+							<input type="text" class="form-control" placeholder="Last Name" rg-line>
+							<div class="rg-input-underline">
+								<span class="rg-input-ripple"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+		
+				<br/>
+				<br/>
+		
+				<div class="input-group">
+					<span class="input-group-addon">
+						<i class="zmdi zmdi-phone"></i>
+					</span>
+					<div class="col-sm-2">
+						<div class="rg-line select">
+							<select class="form-control" rg-line>
+								<option>055</option>
+								<option>056</option>
+								<option>057</option>
+								<option>058</option>
+							</select>
+							<div class="rg-input-underline">
+								<span class="rg-input-ripple"></span>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-2 p-r-0">
+						<div class="rg-line select">
+							<select class="form-control" rg-line>
+								<option>812</option>
+								<option>813</option>
+								<option>814</option>
+								<option>815</option>
+							</select>
+							<div class="rg-input-underline">
+								<span class="rg-input-ripple"></span>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="rg-line">
+							<input type="text" class="form-control" placeholder="Phone Number" rg-line>
+							<div class="rg-input-underline">
+								<span class="rg-input-ripple"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+		
+				<br/>
+				<br/>
+				<p class="c-black f-500 m-b-5 m-t-20">Different Sizes</p>
+				<small>You may use the extra sizing classes to change size of the feilds.</small>
+		
+				<br/>
+				<br/>
+		
+				<div class="input-group input-group-lg">
+					<span class="input-group-addon">
+						<i class="zmdi zmdi-sun"></i>
+					</span>
+					<div class="rg-line">
+						<input type="text" class="form-control input-lg" placeholder="Weather" rg-line>
+						<div class="rg-input-underline">
+							<span class="rg-input-ripple"></span>
+						</div>
+					</div>
+				</div>
+		
+				<br/>
+		
+				<div class="input-group">
+					<span class="input-group-addon">
+						<i class="zmdi zmdi-sun"></i>
+					</span>
+					<div class="rg-line">
+						<input type="text" class="form-control" placeholder="Weather" rg-line>
+						<div class="rg-input-underline">
+							<span class="rg-input-ripple"></span>
+						</div>
+					</div>
+				</div>
+		
+				<br/>
+		
+				<div class="input-group input-group-sm">
+					<span class="input-group-addon">
+						<i class="zmdi zmdi-sun"></i>
+					</span>
+					<div class="rg-line">
+						<input type="text" class="form-control input-sm" placeholder="Weather" rg-line>
+						<div class="rg-input-underline">
+							<span class="rg-input-ripple"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+			<br/>
+		</div>
+		
+		<div class="card">
+			<div class="card-header">
+				<h2>Input Mask
+					<small>An inputmask helps the user with the input by ensuring a predefined format. This can be useful for dates, numerics, phone
+						numbers etc...</small>
+				</h2>
+			</div>
+		
+			<div class="card-body card-padding">
+				<div class="row">
+					<div class="col-sm-3 m-b-20">
+						<div class="form-group rg-line">
+							<label>Date</label>
+							<input class="form-control" placeholder="dd/mm/yyyy" rg-line [inputmask]="'dd-mm-yyyy'" maskHolder="dd/mm/yyyy">
+							<div class="rg-input-underline">
+								<span class="rg-input-ripple"></span>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3 m-b-20">
+						<div class="form-group rg-line">
+							<label>Time</label>
+							<input class="form-control" placeholder="hh:mm:ss" rg-line [inputmask]="'hh:mm:ss'" maskHolder="hh:mm:ss">
+							<div class="rg-input-underline">
+								<span class="rg-input-ripple"></span>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3 m-b-20">
+						<div class="form-group rg-line">
+							<label>Date Time</label>
+							<input class="form-control" placeholder="dd-mm-yyyy hh:mm:ss" rg-line [inputmask]="'dd-mm-yyyy hh:mm:ss'" maskHolder="datetime">
+							<div class="rg-input-underline">
+								<span class="rg-input-ripple"></span>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3 m-b-20">
+						<div class="form-group rg-line">
+							<label>CEP</label>
+							<input class="form-control" placeholder="00000-000" rg-line [inputmask]="'99999-999'" maskHolder="00000-000">
+							<div class="rg-input-underline">
+								<span class="rg-input-ripple"></span>
+							</div>
+						</div>
+					</div>
+				
+					<div class="col-sm-3 m-b-20">
+						<div class="form-group rg-line">
+							<label>Phone Number</label>
+							<input class="form-control" placeholder="000-00-0000000" rg-line [inputmask]="'999-99-9999999'" maskHolder="000-00-0000000">
+							<div class="rg-input-underline">
+								<span class="rg-input-ripple"></span>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3 m-b-20">
+						<div class="form-group rg-line">
+							<label>Phone with Odd</label>
+							<input class="form-control" placeholder="(00) 0000-0000" rg-line [inputmask]="'(99) 9999-9999'" maskHolder="(00) 0000-0000">
+							<div class="rg-input-underline">
+								<span class="rg-input-ripple"></span>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3 m-b-20">
+						<div class="form-group rg-line">
+							<label>US Phone Number</label>
+							<input class="form-control" placeholder="(000) 0000-0000" rg-line [inputmask]="'(999) 9999-9999'" maskHolder="(000) 0000-0000">
+							<div class="rg-input-underline">
+								<span class="rg-input-ripple"></span>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3 m-b-20">
+						<div class="form-group rg-line">
+							<label>CPF</label>
+							<input class="form-control" placeholder="000.000.000-00" rg-line [inputmask]="'999.999.999-99'" maskHolder="000.000.000-00">
+							<div class="rg-input-underline">
+								<span class="rg-input-ripple"></span>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3 m-b-20">
+						<div class="form-group rg-line">
+							<label>Money</label>
+							<input class="form-control" placeholder="000,000,000,000,000.00" rg-line [inputmask]="'999,999,999,999,999.99'" maskHolder="000,000,000,000,000.00">
+							<div class="rg-input-underline">
+								<span class="rg-input-ripple"></span>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3 m-b-20">
+						<div class="form-group rg-line">
+							<label>IP Address</label>
+							<input class="form-control" placeholder="000.000.000.000" rg-line [inputmask]="'999.999.999.999'" maskHolder="000.000.000.000">
+							<div class="rg-input-underline">
+								<span class="rg-input-ripple"></span>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3 m-b-20">
+						<div class="form-group rg-line">
+							<label>Percentage</label>
+							<input class="form-control" placeholder="00000,00%" rg-line [inputmask]="'99999,99%'" maskHolder="00000,00%">
+							<div class="rg-input-underline">
+								<span class="rg-input-ripple"></span>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3 m-b-20">
+						<div class="form-group rg-line">
+							<label>Credit Card</label>
+							<input class="form-control" placeholder="0000 0000 0000 0000" rg-line [inputmask]="'9999 9999 9999 9999'" maskHolder="0000 0000 0000 0000">
+							<div class="rg-input-underline">
+								<span class="rg-input-ripple"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="card">
+			<div class="card-header">
+				<h2>Selectize
+					<small>Make long, unwieldy select boxes more user friendly.</small>
+				</h2>
+			</div>
+		
+			<div class="card-body card-padding">
+				<div class="row">
+					<div class="col-sm-3 m-b-15">
+						<p class="f-500 c-black m-b-15">Basic Example</p>
+						<select [config]="SELECTIZE_CONF" selectize placeholder="Select a country..." class="w-100">
+							<option value="United States">United States</option>
+							<option value="United Kingdom">United Kingdom</option>
+							<option value="Afghanistan">Afghanistan</option>
+							<option value="Aland Islands">Aland Islands</option>
+							<option value="Albania">Albania</option>
+							<option value="Algeria">Algeria</option>
+							<option value="American Samoa">American Samoa</option>
+						</select>
+					</div>
+		
+					<div class="col-sm-3 m-b-15">
+						<p class="f-500 c-black m-b-15">Disabled Items</p>
+						<select [config]="SELECTIZE_CONF" selectize placeholder="Select a country..." class="w-100" >
+							<option value="United States">United States</option>
+							<option value="United Kingdom">United Kingdom</option>
+							<option disabled value="Afghanistan">Afghanistan</option>
+							<option disabled value="Aland Islands">Aland Islands</option>
+							<option value="Albania">Albania</option>
+							<option disabled value="Algeria">Algeria</option>
+							<option value="American Samoa">American Samoa</option>
+						</select>
+					</div>
+		
+					<div class="col-sm-3 m-b-15">
+						<p class="f-500 c-black m-b-15">Multiple Example</p>
+						<select multiple [config]="SELECTIZE_CONF" selectize placeholder="Select a country..." class="w-100">
+							<option value="United States">United States</option>
+							<option value="United Kingdom">United Kingdom</option>
+							<option value="Afghanistan">Afghanistan</option>
+							<option value="Aland Islands">Aland Islands</option>
+							<option value="Albania">Albania</option>
+							<option value="Algeria">Algeria</option>
+							<option value="American Samoa">American Samoa</option>
+						</select>
+					</div>
+		
+					<div class="col-sm-3 m-b-15">
+						<p class="f-500 c-black m-b-15">Option Group</p>
+						<select class="w-100" [config]="SELECTIZE_CONF" selectize placeholder="Your Favorite Football Team">
+							<optgroup label="NFC EAST">
+								<option>Dallas Cowboys</option>
+								<option>New York Giants</option>
+								<option>Philadelphia Eagles</option>
+								<option>Washington Redskins</option>
+							</optgroup>
+							<optgroup label="NFC NORTH">
+								<option>Chicago Bears</option>
+								<option>Detroit Lions</option>
+								<option>Green Bay Packers</option>
+								<option>Minnesota Vikings</option>
+							</optgroup>
+						</select>
+					</div>
+		
+				</div>
+			</div>
+		</div>
+		
+		<div class="card">
+			<div class="card-header">
+				<h2>Toggle Switch
+					<small>Material Desing look alike Toggle Switches based on Radio Box.</small>
+				</h2>
+			</div>
+		
+			<div class="card-body card-padding">
+				<p class="f-500 c-black m-b-5">Basic Examples</p>
+				<small>Default and Disabled options</small>
+				<br/>
+				<br/>
+				<br/>
+		
+				<div class="row m-b-20">
+					<div class="col-sm-4 m-b-20">
+						<div class="toggle-switch">
+							<label for="ts1" class="ts-label">Toggle Swith Default</label>
+							<input id="ts1" type="checkbox" hidden="hidden">
+							<label for="ts1" class="ts-helper"></label>
+						</div>
+					</div>
+		
+					<div class="col-sm-4 m-b-20">
+						<div class="toggle-switch disabled">
+							<label for="tsd" class="ts-label">Toggle Swith Disabled</label>
+							<input id="tsd" type="checkbox" hidden="hidden" checked="checked" disabled="disabled">
+							<label for="tsd" class="ts-helper"></label>
+						</div>
+					</div>
+				</div>
+		
+				<p class="f-500 c-black m-b-5">Optional Color schemes</p>
+				<small>You can use any color you want just add attribute switcher it must have a unique value, switchColor with color value amd
+				switchActive with color value.</small>
+				<br/>
+				<br/>
+				<br/>
+				<div class="row">
+					<div class="col-sm-4 m-b-20">
+						<div class="toggle-switch" switcher="red" switchColor="rgba(244,67,54,0.5)" switchActive="#f44336">
+							<label class="ts-label" for="ts-red">Toggle Swith Red</label>
+							<input type="checkbox" id="ts-red" hidden="hidden">
+							<label class="ts-helper" for="ts-red"></label>
+						</div>
+					</div>
+					<div class="col-sm-4 m-b-20">
+						<div class="toggle-switch" switcher="blue" switchColor="rgba(33,150,243,0.5)" switchActive="#2196f3">
+							<label class="ts-label" for="ts-blue">Toggle Swith Blue</label>
+							<input type="checkbox" id="ts-blue" hidden="hidden">
+							<label class="ts-helper" for="ts-blue"></label>
+						</div>
+					</div>
+					<div class="col-sm-4 m-b-20">
+						<div class="toggle-switch" switcher="green" switchColor="rgba(76,175,80,0.5)" switchActive="#4caf50">
+							<label class="ts-label" for="ts-green">Toggle Swith Green</label>
+							<input type="checkbox" id="ts-green" hidden="hidden">
+							<label class="ts-helper" for="ts-green"></label>
+						</div>
+					</div>
+				
+					<div class="col-sm-4 m-b-20">
+						<div class="toggle-switch" switcher="cyan" switchColor="rgba(0,188,212,0.5)" switchActive="#00bcd4">
+							<label class="ts-label" for="ts-cyan">Toggle Swith Cyan</label>
+							<input type="checkbox" id="ts-cyan" hidden="hidden">
+							<label class="ts-helper" for="ts-cyan"></label>
+						</div>
+					</div>
+					<div class="col-sm-4 m-b-20">
+						<div class="toggle-switch" switcher="lime" switchColor="rgba(205,220,57,0.5)" switchActive="#cddc39">
+							<label class="ts-label" for="ts-lime">Toggle Swith Lime</label>
+							<input type="checkbox" id="ts-lime" hidden="hidden">
+							<label class="ts-helper" for="ts-lime"></label>
+						</div>
+					</div>
+					<div class="col-sm-4 m-b-20">
+						<div class="toggle-switch" switcher="amber" switchColor="rgba(255,193,7,0.5)" switchActive="#ffc107">
+							<label class="ts-label" for="ts-amber">Toggle Swith Amber</label>
+							<input type="checkbox" id="ts-amber" hidden="hidden">
+							<label class="ts-helper" for="ts-amber"></label>
+						</div>
+					</div>
+				
+					<div class="col-sm-4 m-b-20">
+						<div class="toggle-switch" switcher="purple" switchColor="rgba(156,39,176,0.5)" switchActive="#9c27b0">
+							<label class="ts-label" for="ts-purple">Toggle Swith Purple</label>
+							<input type="checkbox" id="ts-purple" hidden="hidden">
+							<label class="ts-helper" for="ts-purple"></label>
+						</div>
+					</div>
+					<div class="col-sm-4 m-b-20">
+						<div class="toggle-switch" switcher="pink" switchColor="rgba(233,30,99,0.5)" switchActive="#e91e63">
+							<label class="ts-label" for="ts-pink">Toggle Swith Pink</label>
+							<input type="checkbox" id="ts-pink" hidden="hidden">
+							<label class="ts-helper" for="ts-pink"></label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-header">
+				<h2>
+					Datepicker
+					<small>
+						<a href="https://valor-software.com/ngx-bootstrap/#/datepicker">ui.bootstrap.datepicker</a>
+					</small>
+				</h2>
+			</div>
+			<div class="card-body card-padding">
+				<p class="c-black">Inline Examples</p>
+				<small>Displaying the Datepicker by default</small>
+				<br><br>
+				<div class="row">
+					<div class="col-sm-12">
+						<div style="display:inline-block;">
+							<datepicker class="dp-green dp-parent" [showWeeks]="false"></datepicker>
+						</div>
+						<div style="display:inline-block;">
+							<datepicker class="dp-blue dp-parent" [showWeeks]="false"></datepicker>
+						</div>
+						<div style="display:inline-block;">
+							<datepicker class="dp-red dp-parent" [showWeeks]="false"></datepicker>
+						</div>
+					</div>
+				</div>
+				<p class="c-black">Multiple Popup Examples</p>
+				<small>Displaying on focus</small>
+				<div class="row">
+					<!-- GREEN -->
+					<div class="col-sm-4">
+						<div class="form-group">						
+							<div class="rg-line" dropdown [autoClose]="true" [isOpen]="green.isopen" stop-propagate>
+								<input type="text" class="form-control" placeholder="Select Date" rg-line dropdownToggle placeholder="Select Date" (click)="green.isopen = true;" [ngModel]="greenDate | date: 'y-MM-dd'">
+								<div class="rg-input-underline">
+									<span class="rg-input-ripple"></span>
+								</div>
+								<div *dropdownMenu class="dropdown-menu dropdown-calendar" role="menu">
+									<datepicker class="dp-green dp-parent" [(ngModel)]="greenDate" [minDate]="minDate" [showWeeks]="false" (selectionDone)="onSelectionDone($event, 'green')"></datepicker>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- BLUE -->
+					<div class="col-sm-4">
+						<div class="form-group">
+							<div class="rg-line" dropdown [autoClose]="true" [isOpen]="blue.isopen" stop-propagate>
+								<input type="text" class="form-control" placeholder="Select Date" rg-line dropdownToggle placeholder="Select Date" (click)="blue.isopen = true;"
+								[ngModel]="blueDate | date: 'y-MM-dd'">
+								<div class="rg-input-underline">
+									<span class="rg-input-ripple"></span>
+								</div>
+								<div *dropdownMenu class="dropdown-menu dropdown-calendar" role="menu">
+									<datepicker class="dp-blue dp-parent" [(ngModel)]="blueDate" [minDate]="minDate" [showWeeks]="false" (selectionDone)="onSelectionDone($event, 'blue')"></datepicker>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- RED -->
+					<div class="col-sm-4">
+						<div class="form-group">
+							<div class="rg-line" dropdown [autoClose]="true" [isOpen]="red.isopen" stop-propagate>
+								<input type="text" class="form-control" placeholder="Select Date" rg-line dropdownToggle placeholder="Select Date" (click)="red.isopen = true;"
+								[ngModel]="redDate | date: 'y-MM-dd'">
+								<div class="rg-input-underline">
+									<span class="rg-input-ripple"></span>
+								</div>
+								<div *dropdownMenu class="dropdown-menu dropdown-calendar" role="menu">
+									<datepicker class="dp-red dp-parent" [(ngModel)]="redDate" [minDate]="minDate" [showWeeks]="false" (selectionDone)="onSelectionDone($event, 'red')"></datepicker>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<p class="c-black">Other Examples</p>
+				<small> Dropup, Month and Year Pickers</small>
+				<div class="row">
+					<!-- DROP UP -->
+					<div class="col-sm-4">
+						<div class="form-group">
+							<div class="rg-line" dropdown [dropup]="true" [autoClose]="true" [isOpen]="dropUp.isopen" stop-propagate>
+								<input type="text" class="form-control" placeholder="Select Date" rg-line dropdownToggle placeholder="Select Date" (click)="dropUp.isopen = true;"
+								[ngModel]="dropUpDate | date: 'y-MM-dd'">
+								<div class="rg-input-underline">
+									<span class="rg-input-ripple"></span>
+								</div>
+								<div *dropdownMenu class="dropdown-menu dropdown-calendar" role="menu">
+									<datepicker class="dp-red dp-parent" [(ngModel)]="dropUpDate" [minDate]="minDate" [showWeeks]="false" (selectionDone)="onSelectionDone($event, 'dropUp')"></datepicker>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>			
+		</div>
+	</div>
+</div>

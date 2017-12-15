@@ -1,0 +1,67 @@
+<header class="header">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button aria-con trols="navbar" aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse" type="button" (click)="expandNavHead()">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" routerLink="/home">Material Admin</a>
+            </div>
+            <ul class="nav navbar-nav hidden-xs">
+                <li class="hidden">
+                    <a routerLink="/about">About</a>
+                </li>
+                <li class="hidden">
+                    <a routerLink="/contact">Contact</a>
+                </li>
+                <li class="hidden">
+                    <a class="cursor-pointer" routerLink="/login">Login</a>
+                </li>
+                <li class="hidden">
+                    <a class="cursor-pointer" routerLink="/signup">Register</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right hidden-xs">
+                <li>
+                    <div class="search-div">
+                        <div>
+                            <input type="search" placeholder="Search..."><!--
+                            --><button class="btn">
+                                <i class="zmdi zmdi-search"></i>
+                            </button>
+                        </div>
+                        
+                    </div>
+                </li>
+                <li dropdown class="dropdown">
+                    <a class="icon-zmdi" dropdownToggle>
+                        <i class="zmdi zmdi-email"></i>
+                    </a>
+                    <div class="dropdown-menu pull-right">
+                        <div class="dropdown-arrow"></div>
+                        <p class="p-20">
+                            You can put anything here
+                        </p>
+                    </div>
+                </li>
+                <li dropdown class="dropdown has-image">
+                    <a class="cursor-pointer" class="nav-image" dropdownToggle>
+                        <div class="notif-counter">
+                            <div class="counter">101</div>
+                        </div>
+                        <img src="./assets/images/profile.jpeg">
+                    </a>
+                    <div class="dropdown-menu pull-right">
+                        <div class="dropdown-arrow"></div>
+                        <p class="p-20">
+                            You can put anything here
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>

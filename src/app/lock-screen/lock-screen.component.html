@@ -1,0 +1,27 @@
+<div class="container-fluid">
+	<div class="login-container">
+		<div class="login-flex">
+			<div class="login-holder">
+				<div class="login-box">
+					<div class="card">
+						<img class="lock-img" src="./assets/images/profile.jpeg">
+						<div class="card-header">
+							<h2 class="no-content"></h2>
+						</div>
+						<div class="card-body card-padding ch-alt">
+							<div class="form-group rg-float">
+								<div class="rg-line">
+									<input class="form-control input-sm text-center" rg-line type="password" placeholder="Password" (focus)="inFocus()" (blur)="inBlur()" [(ngModel)]="password">
+									<div class="rg-input-underline">
+										<span class="rg-input-ripple"></span>
+									</div>
+								</div>
+							</div>
+							<button class="btn btn-block login-btn" type="submit" waves-effect>UNLOCK</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
