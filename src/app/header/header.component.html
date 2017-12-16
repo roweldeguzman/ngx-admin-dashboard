@@ -26,6 +26,14 @@
             </ul>
             <ul class="nav navbar-nav navbar-right hidden-xs">
                 <li>
+                    <a class="no-hover">
+                        <div class="toggle-switch" switcher="cyan" switchColor="rgba(0,188,212,0.5)" switchActive="#00bcd4">
+                            <input type="checkbox" id="toggle-layout" hidden="hidden" (change)="changeLayout($event)">
+                            <label class="ts-helper" for="toggle-layout"></label>
+                        </div>
+                    </a>
+                </li>
+                <li>
                     <div class="search-div">
                         <div>
                             <input type="search" placeholder="Search..."><!--
