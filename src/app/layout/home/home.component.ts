@@ -13,7 +13,7 @@ export class HomeComponent extends BaseComponent implements OnInit {
 		super(injector);
 	}
 	ngOnInit() {
-		this.updateTitle("This is a home component");
+		window.scrollTo(0, 0);
 		this.service.notify("Welcome Rowel de Guzman", "inverse", {
 			from: 'top',
 			align: 'right'

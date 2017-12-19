@@ -31,9 +31,6 @@ const routes: Routes = [
 			}, {
 				path: 'wall',
 				loadChildren: './wall/wall.module#WallModule'
-			}, {
-				path: 'page404',
-				loadChildren: './page404/page404.module#Page404Module'
 			}
 		]
 	}, { path: '**', redirectTo: 'profile' }
