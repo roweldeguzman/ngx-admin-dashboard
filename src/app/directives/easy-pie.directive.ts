@@ -11,7 +11,7 @@ declare let $: any;
 @Directive({
 	selector: '[easypie]'
 })
-export class EasyPieDirective {
+export class EasyPieDirective implements OnInit{
 	
 	constructor(private el: ElementRef) { }
 
