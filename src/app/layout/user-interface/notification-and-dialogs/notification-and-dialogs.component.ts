@@ -13,7 +13,7 @@ export class NotificationAndDialogsComponent extends BaseComponent implements On
 	constructor(public injector: Injector) { super(injector); }
 	
 	ngOnInit() {
-
+		window.scrollTo(0, 0);
 	}
 
 	public makeNotif(ev){

@@ -18,7 +18,7 @@ export class UiBootstrapComponent implements OnInit {
 		this.randomStacked();
 	}
 	ngOnInit() {
-
+		window.scrollTo(0, 0);
 	}
 	singleModel: string = '1';
 	checkModel: any = { left: false, middle: true, right: false };

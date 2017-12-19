@@ -10,7 +10,7 @@ export class AlertsComponent implements OnInit {
 	constructor() { }
 	
 	ngOnInit() {
-
+		window.scrollTo(0, 0);
 	}
 	dismissible = true;
 	alerts: any = [

@@ -22,7 +22,7 @@ export class ProfileComponent implements OnInit {
 	@ViewChild('placeholder', { read: ViewContainerRef }) placeholder: ViewContainerRef;
 
 	ngOnInit() {
-
+		window.scrollTo(0, 0);
 	}
 	
 	public createComponentFactory(component){
