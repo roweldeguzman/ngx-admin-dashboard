@@ -11,7 +11,7 @@ declare let $: any;
 export class WidgetComponent extends BaseComponent implements OnInit {
 	constructor(public injector: Injector) { super(injector) }
 	ngOnInit() {
-
+		window.scrollTo(0, 0);
 	}
 	public tabActive: number = 1;
 	private selectTab(tab: number) {

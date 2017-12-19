@@ -10,6 +10,7 @@ declare let $;
 export class ChartsComponent implements OnInit {
 	constructor() { }
 	ngOnInit() {
+		window.scrollTo(0, 0);
 		this.donutChart();
 		this.dynamicChart();
 		this.barChart();

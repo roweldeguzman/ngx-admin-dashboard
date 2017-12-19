@@ -15,7 +15,7 @@ export class BaseComponent{
 		this.service        =   injector.get(ServiceService)
 	}
 	
-	public baseUrl	=	"http://server.roweldev.com";
+	public baseUrl	=	"";
 	public appDefaultConfig: Object	=	{};
 	public isAsideActive	=	true;
 	public updateTitle(title){

@@ -9,7 +9,7 @@ declare let $: any;
 export class AnimationsComponent implements OnInit {
 	constructor() { }
 	ngOnInit() {
-
+		window.scrollTo(0, 0);
 	}
 	public attentionSeekers = [
 		{ animation: 'bounce', target: 'attentionSeeker' },

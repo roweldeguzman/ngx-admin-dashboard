@@ -13,7 +13,7 @@ export class ContactComponent extends BaseComponent implements OnInit, OnDestroy
 		super(injector);
 	}
 	ngOnInit() {
-		this.updateTitle("This is Contact Component");
+		window.scrollTo(0, 0);
 	}
 	ngOnDestroy(){		
 	}

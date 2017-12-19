@@ -11,6 +11,7 @@ export class MediaComponent implements OnInit {
 	constructor() { }
 	@ViewChild("lightbox") lightbox;
 	ngOnInit() {
+		window.scrollTo(0, 0);
 		$(this.lightbox.nativeElement).lightGallery({
 			enableTouch: true
 		})

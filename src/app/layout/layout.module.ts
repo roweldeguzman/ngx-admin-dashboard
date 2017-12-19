@@ -45,6 +45,9 @@ const routes: Routes = [
 		path: 'lock-screen',
 		loadChildren: '../lock-screen/lock-screen.module#LockScreenModule',
 	}, {
+		path: 'page404',
+		loadChildren: './sample-page/page404/page404.module#Page404Module'
+	}, {
 		path: '**', redirectTo: "/"
 	}
 ];

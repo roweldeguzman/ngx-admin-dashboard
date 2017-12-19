@@ -10,6 +10,7 @@ export class PricingTableComponent implements OnInit {
 	constructor() { }
 
 	ngOnInit() {
+		window.scrollTo(0, 0);
 		$(".preloader-base").remove();
 	}
 
