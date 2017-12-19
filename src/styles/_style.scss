@@ -10,8 +10,6 @@ body{
     color: #333;
 }
 main{
-    margin-top: 70px;
-    margin-left: 250px !important;
     .block-header{
         padding: 0 22px;
         margin-bottom: 25px;
@@ -62,27 +60,7 @@ hr{
     margin-top: 10px !important;
     margin-bottom: 10px !important;
 }
-@media screen and (max-width: 1024px){
-    main{
-        margin-left: 52px !important;
-        transition-duration: .3s;
-        .main-overlay{
-            left: 52px !important;
-        }
-    }
-    main.aside-active{
-        margin-left: 250px !important;
-        transition-duration: .3s;
-    }
-}
-@media screen and (max-width: 767px){
-    main{
-        margin-left: 0px !important;
-        .main-overlay{
-            left: 0 !important;
-        }
-    }
-}
+
 /* Perfect Scrollbar override attributes */
 .ps__rail-y {
     width: 5px;

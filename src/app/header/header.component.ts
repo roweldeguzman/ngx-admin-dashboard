@@ -16,9 +16,9 @@ export class HeaderComponent extends BaseComponent implements OnInit {
 
 	changeLayout(ev){
 		if (ev.target.checked){
-			$("body").addClass("single-layout");
+			$("body").addClass("full-layout");
 		} else {
-			$("body").removeClass("single-layout");
+			$("body").removeClass("full-layout");
 		}
 	}
 }

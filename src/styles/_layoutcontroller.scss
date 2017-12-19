@@ -1,0 +1,49 @@
+main{
+	margin-top: 70px;
+	
+}
+body.full-layout {
+	@media (min-width: 1200px){
+		main.container{
+			width: calc(100% - 250px);
+			margin-left: 250px !important;
+		}
+	}
+}
+
+body:not(.full-layout) {
+	
+	main.container{
+
+	}
+	aside{
+		display: none;
+	}
+}
+
+@media screen and (max-width: 1024px){
+    main{
+        //margin-left: 52px !important;
+        transition-duration: .3s;
+        .main-overlay{
+            left: 52px !important;
+        }
+    }
+    main.aside-active{
+        margin-left: 250px !important;
+        transition-duration: .3s;
+    }
+}
+@media screen and (max-width: 767px){
+    main{
+        margin-left: 0px !important;
+        .main-overlay{
+            left: 0 !important;
+        }
+    }
+    body:not(.full-layout) {
+        aside{
+            display: block;
+        }
+    }
+}
