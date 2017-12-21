@@ -9,47 +9,6 @@ body{
     line-height: 1.42857143;
     color: #333;
 }
-main{
-    .block-header{
-        padding: 0 22px;
-        margin-bottom: 25px;
-        position: relative;
-        h2{
-            font-size: 17px;
-            color: #777;
-            margin-top: 0px !important;
-            margin-bottom: 0px !important;
-        }
-        .actions {
-            position: absolute;
-            right: 10px;
-            top: -5px;
-            z-index: 5;
-        }
-    }
-    .main-overlay{
-        width: 100%;
-        position: fixed;
-        height: 100%;
-        top: 50px;
-        bottom: 0;
-        background: pink;
-        left: 250px;
-        visibility: hidden;
-        z-index: 8;
-        &.active{
-            visibility: visible;
-        }
-    }
-    a {cursor: pointer;}
-    a:hover{ text-decoration:  none; }
-    footer{
-        ul li {
-            display: inline;
-            padding: 10px;
-        }
-    }
-}
 
 .clear {
     clear: both;

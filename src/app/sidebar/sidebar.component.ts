@@ -23,10 +23,10 @@ export class SidebarComponent extends BaseComponent implements OnInit {
 	ngOnInit() {
 		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 			this.scrollbarDisableOnMobile = true;
-		} else if (window.innerWidth <= 767){
+		} else if (window.innerWidth <= 767) {
 			this.scrollbarDisableOnMobile = true;
 		}
-		window.onresize	=	()=>{
+		window.onresize	=	() => {
 			if (window.innerWidth <= 767){
 				this.scrollbarDisableOnMobile = true;
 			} else {
@@ -51,22 +51,12 @@ export class SidebarComponent extends BaseComponent implements OnInit {
 		}
 	}
 	public expandNav(ev){
-		$("aside, footer").toggleClass("active");
-		
+		$("aside, footer, .overlay").toggleClass("active");
+
 		if (!$("aside").hasClass("active")){
-			$(".sub-menu.toggled").each(function(i, e){
-				$(e).find('ul:first').find("a.sub").css("visibility","hidden");
-				$(e).toggleClass("toggled");
-				$(e).addClass("toggled-hidden");
-				$(e).find('ul:first').slideToggle('fast');
-			});
+			this.collapseSpandedNav(true);
 		} else {
-			$(".toggled-hidden").each(function(i, e){
-				$(e).removeClass("toggled-hidden");
-				$(e).toggleClass("toggled");
-				$(e).find('ul:first').slideToggle('fast');
-				$(e).find('ul:first').find("a.sub").css("visibility", "visible");
-			})
+			this.collapseSpandedNav(false);
 		}
 		$(ev.target).toggleClass("active");
 		$("main").toggleClass("aside-active");

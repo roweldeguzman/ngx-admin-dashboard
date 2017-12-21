@@ -10,6 +10,7 @@ import {
 } from '@angular/router';
 import { BaseComponent } from '../BaseComponent';
 declare let $;
+declare let window;
 @Component({
 	selector: 'app-layout',
   	templateUrl: './layout.component.html',
@@ -35,7 +36,6 @@ export class LayoutComponent extends BaseComponent implements OnInit {
 	public currentState;
 	navigationInterceptor(event: RouterEvent): void {
         if (event instanceof NavigationStart) {
-            console.info("Layout.module.ts","NavigationStart");
             if (document.querySelector(".main-overlay") != null) {
                 document.querySelector(".main-overlay").classList.add("active");
             }
@@ -47,10 +47,19 @@ export class LayoutComponent extends BaseComponent implements OnInit {
             }
 
             if (window.innerWidth <= 767){
-                if($("aside").hasClass("active")){
+                if($("aside").hasClass("active")){                    
                     setTimeout(function(){
                         $("aside, .overlay").removeClass("active");
+                        $(".hamburger--spring").toggleClass("is-active");
                     }, 300);
+                }                
+            } else if (window.innerWidth > 768){
+                if($("aside").hasClass("active")){
+                    //this.collapseSpandedNav(true);                    
+                    setTimeout(function(){
+                        $("aside, .overlay, .bottom-toggler").removeClass("active");
+                        $(".hamburger--spring").toggleClass("is-active");
+                    }, 50);
                 }
             }
         }

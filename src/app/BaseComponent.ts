@@ -37,6 +37,33 @@ export class BaseComponent{
 		}
 	}
 	public expandNavHead(){
-		$("aside, .overlay").toggleClass("active")
+		$("aside, .overlay").toggleClass("active");
+		if ($(".bottom-toggler").hasClass("active")) {
+			$(".bottom-toggler").removeClass("active");
+		}
+		if ($("aside").hasClass("active")) {
+			this.collapseSpandedNav(false);
+		} else {
+			this.collapseSpandedNav(true);
+		}
+	}
+
+	public collapseSpandedNav(isClose: boolean){
+		$(".hamburger--spring").toggleClass("is-active");
+		if (isClose) {
+			$(".sub-menu.toggled").each(function(i, e){
+				$(e).find('ul:first').find("a.sub").css("visibility","hidden");
+				$(e).toggleClass("toggled");
+				$(e).addClass("toggled-hidden");
+				$(e).find('ul:first').slideToggle('fast');
+			});
+		} else {
+			$(".toggled-hidden").each(function(i, e){
+				$(e).removeClass("toggled-hidden");
+				$(e).toggleClass("toggled");
+				$(e).find('ul:first').slideToggle('fast');
+				$(e).find('ul:first').find("a.sub").css("visibility", "visible");
+			})
+		}
 	}
 }

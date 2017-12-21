@@ -1,24 +1,79 @@
 main{
 	margin-top: 70px;
-	
+	.block-header{
+        padding: 0 22px;
+        margin-bottom: 25px;
+        position: relative;
+        h2{
+            font-size: 17px;
+            color: #777;
+            margin-top: 0px !important;
+            margin-bottom: 0px !important;
+        }
+        .actions {
+            position: absolute;
+            right: 10px;
+            top: -5px;
+            z-index: 5;
+        }
+    }
+    .main-overlay{
+        width: 100%;
+        position: fixed;
+        height: 100%;
+        top: 50px;
+        bottom: 0;
+        background: pink;
+        left: 250px;
+        visibility: hidden;
+        z-index: 8;
+        &.active{
+            visibility: visible;
+        }
+    }
+    a {
+        cursor: pointer;
+        &:hover{ text-decoration:  none;  }
+    }
+    footer{
+        ul li {
+            display: inline;
+            padding: 10px;
+        }
+    }
 }
 body.full-layout {
-	@media (min-width: 1200px){
+	@media (min-width: 1025px){
 		main.container{
 			width: calc(100% - 250px);
 			margin-left: 250px !important;
-		}
-	}
+        }
+    }
+    @media (min-width: 768px) and (max-width: 1024px){
+        main.container{
+			width: calc(100% - 50px);
+			margin-left: 50px !important;
+        }
+    }
 }
 
 body:not(.full-layout) {
-	
-	main.container{
-
-	}
+    @media (min-width: 768px){
+        header button.navbar-toggle.collapsed{
+            display: block !important;
+            float: left;
+        }
+    }
 	aside{
-		display: none;
-	}
+        //display: none;
+        transition-duration: .3s;
+        transform: translateX(-250px);
+
+        &.active{
+            transition-duration: .3s;
+            transform: translateX(0);
+        }
+    }
 }
 
 @media screen and (max-width: 1024px){
@@ -30,7 +85,7 @@ body:not(.full-layout) {
         }
     }
     main.aside-active{
-        margin-left: 250px !important;
+        //margin-left: 250px !important;
         transition-duration: .3s;
     }
 }

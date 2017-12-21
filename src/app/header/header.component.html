@@ -2,13 +2,16 @@
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
-                <button aria-con trols="navbar" aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse" type="button" (click)="expandNavHead()">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                <button aria-con trols="navbar" aria-expanded="false" class="navbar-toggle collapsed hamburger--spring" data-target="#navbar" data-toggle="collapse" type="button" (click)="expandNavHead()">
+                    <div class="hamburger-box">
+                        <div class="hamburger-inner"></div>
+                    </div>
+                    <!-- <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar icon-bar-1"></span>
+                    <span class="icon-bar icon-bar-2"></span>
+                    <span class="icon-bar icon-bar-3"></span> -->
                 </button>
-                <a class="navbar-brand" routerLink="/home">Material Admin</a>
+                <a class="navbar-brand" routerLink="/home">Material Admin </a>
             </div>
             <ul class="nav navbar-nav hidden-xs">
                 <li class="hidden">
@@ -48,21 +51,34 @@
                     <a class="icon-zmdi" dropdownToggle>
                         <i class="zmdi zmdi-email"></i>
                     </a>
-                    <div class="dropdown-menu pull-right">
+                    <div class="dropdown-menu pull-right messages-list">
                         <div class="dropdown-arrow"></div>
-                        <p class="p-20">
-                            You can put anything here
-                        </p>
+                        <div class="listview">
+                            <div class="lv-header">Message</div>
+                            <div class="lv-body">
+                                <a *ngFor="let messageList of items" class="lv-item">
+                                    <div class="media">
+                                        <div class="pull-left">
+                                            <img class="lv-img-sm" src="./assets/img/profile-pics/">
+                                        </div>
+                                        <div class="media-body">
+                                            <div class="lv-title"> {{ items.title }} </div>
+                                            <div class="lv-small"> {{ items.message }} </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>                        
                     </div>
                 </li>
                 <li dropdown class="dropdown has-image">
                     <a class="cursor-pointer" class="nav-image" dropdownToggle>
                         <div class="notif-counter">
-                            <div class="counter">101</div>
+                            <div class="counter">10</div>
                         </div>
                         <img src="./assets/images/profile.jpeg">
                     </a>
-                    <div class="dropdown-menu pull-right">
+                    <div class="dropdown-menu pull-right profile-menu-list">
                         <div class="dropdown-arrow"></div>
                         <p class="p-20">
                             You can put anything here
@@ -70,6 +86,11 @@
                     </div>
                 </li>
             </ul>
+            <!-- <ul class="nav navbar-nav navbar-right big-search-holder">
+                <li class="no-hover big-search-container">
+                    <input>
+                </li>
+            </ul> -->
         </div>
     </nav>
 </header>
