@@ -14,6 +14,27 @@ export class HeaderComponent extends BaseComponent implements OnInit {
 
 	ngOnInit() {}
 
+	public messageList = [
+		{
+			title: "Rowel de Guzman",
+			message: "Sample Message for Rowel de Guzman",
+			image: "1.jpg"
+		}, {
+			title: "Albert Magat",
+			message: "Sample Message for Albert Magat",
+			image: "2.jpg"
+		}, {
+			title: "Daryl Abalos",
+			message: "Sample Message for Daryl Abalos",
+			image: "3.jpg"
+		}, {
+			title: "Jonathan Poquiz",
+			message: "Sample Message for Jonathan Poquiz",
+			image: "4.jpg"
+		}
+	];
+
+
 	changeLayout(ev){
 		if (ev.target.checked){
 			$("body").addClass("full-layout");
@@ -21,16 +42,5 @@ export class HeaderComponent extends BaseComponent implements OnInit {
 			$("body").removeClass("full-layout");
 		}
 	}
-	public rest = "Rowel";
-	public messageList = [
-		{
-			title: "Rowel de Guzman",
-			message: "Sample Message for Rowel de Guzman",
-			image: "1.jpg"
-		}, {
-			title: "Alber Magat",
-			message: "Sample Message for Alber Magat",
-			image: "2.jpg"
-		}
-	];
+	
 }

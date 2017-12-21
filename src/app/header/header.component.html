@@ -11,7 +11,7 @@
                     <span class="icon-bar icon-bar-2"></span>
                     <span class="icon-bar icon-bar-3"></span> -->
                 </button>
-                <a class="navbar-brand" routerLink="/home">Material Admin </a>
+                <a class="navbar-brand" routerLink="/home">Material Admin</a>
             </div>
             <ul class="nav navbar-nav hidden-xs">
                 <li class="hidden">
@@ -56,10 +56,10 @@
                         <div class="listview">
                             <div class="lv-header">Message</div>
                             <div class="lv-body">
-                                <a *ngFor="let messageList of items" class="lv-item">
+                                <a *ngFor="let items of messageList" class="lv-item">
                                     <div class="media">
                                         <div class="pull-left">
-                                            <img class="lv-img-sm" src="./assets/img/profile-pics/">
+                                            <img class="lv-img-sm" src="./assets/img/profile-pics/{{items.image}}">
                                         </div>
                                         <div class="media-body">
                                             <div class="lv-title"> {{ items.title }} </div>
@@ -68,6 +68,8 @@
                                     </div>
                                 </a>
                             </div>
+                            <div class="clearfix"></div>
+                            <a class="lv-footer">View All</a>
                         </div>                        
                     </div>
                 </li>

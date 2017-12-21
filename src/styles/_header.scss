@@ -1,13 +1,20 @@
 app-header{
     header{
         nav{
-            li a:not(.no-hover):hover,
-            li.open a:not(.lv-item):not(.no-hover){
-                background: $light !important;;
+            li > a:not(.no-hover):hover,
+            li.open > a:not(.no-hover){
+                background: $light !important;
             }
             li a.lv-item:hover{
                 text-decoration: none !important; 
-                
+                background: $light !important;
+            }
+            li a.lv-footer {
+                text-decoration: none !important; 
+                color: #828282 !important;
+            }
+            li a.lv-footer:hover{
+                color: #050505;
             }
             li:last-child{
                 margin-right: 15px;
