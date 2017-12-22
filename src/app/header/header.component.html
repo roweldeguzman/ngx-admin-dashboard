@@ -1,5 +1,5 @@
 <header class="header">
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top {{currentSkin}}">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button aria-con trols="navbar" aria-expanded="false" class="navbar-toggle collapsed hamburger--spring" data-target="#navbar" data-toggle="collapse" type="button" (click)="expandNavHead()">
@@ -13,20 +13,6 @@
                 </button>
                 <a class="navbar-brand" routerLink="/home">Material Admin</a>
             </div>
-            <ul class="nav navbar-nav hidden-xs">
-                <li class="hidden">
-                    <a routerLink="/about">About</a>
-                </li>
-                <li class="hidden">
-                    <a routerLink="/contact">Contact</a>
-                </li>
-                <li class="hidden">
-                    <a class="cursor-pointer" routerLink="/login">Login</a>
-                </li>
-                <li class="hidden">
-                    <a class="cursor-pointer" routerLink="/signup">Register</a>
-                </li>
-            </ul>
             <ul class="nav navbar-nav navbar-right hidden-xs">
                 <li>
                     <a class="no-hover">
@@ -36,18 +22,49 @@
                         </div>
                     </a>
                 </li>
-                <li>
+                <li class="search-parent">
                     <div class="search-div">
-                        <div>
-                            <input type="search" placeholder="Search..."><!--
-                            --><button class="btn">
-                                <i class="zmdi zmdi-search"></i>
+                        <div class="seach-container">
+                            <input type="search" placeholder="Search..." class="main-search-menu-input"><!--
+                            --><button class="btn prevent-main-search-hide" tabindex="0">
+                                <i class="zmdi zmdi-search prevent-main-search-hide" tabindex="0"></i>
                             </button>
+                            <div class="main-search-menu-dropdown">
+                                <div class="search-scroll" [perfectScrollbar]>
+                                    <ul class="main-search-menu-result">
+                                        <li><a (click)="testExpress($event)" class="no-hover search-result">Content 1</a></li>
+                                        <li><a (click)="testExpress($event)" class="no-hover search-result">Content 2</a></li>
+                                        <li><a (click)="testExpress($event)" class="no-hover search-result">Content 3</a></li>
+                                        <li><a (click)="testExpress($event)" class="no-hover search-result">Content 4</a></li>
+                                        <li><a (click)="testExpress($event)" class="no-hover search-result">Content 5</a></li>
+                                        <li><a (click)="testExpress($event)" class="no-hover search-result">Content 6</a></li>
+                                        <li><a (click)="testExpress($event)" class="no-hover search-result">Content 7</a></li>
+                                        <li><a (click)="testExpress($event)" class="no-hover search-result">Content 8</a></li>
+                                        <li><a (click)="testExpress($event)" class="no-hover search-result">Content 9</a></li>
+                                        <li><a (click)="testExpress($event)" class="no-hover search-result">Content 10</a></li>
+                                        <li><a (click)="testExpress($event)" class="no-hover search-result">Content 11</a></li>
+                                        <li><a (click)="testExpress($event)" class="no-hover search-result">Content 12</a></li>
+        
+                                        <li><a (click)="testExpress($event)" class="no-hover search-result">Content 13</a></li>
+                                        <li><a (click)="testExpress($event)" class="no-hover search-result">Content 14</a></li>
+                                        <li><a (click)="testExpress($event)" class="no-hover search-result">Content 15</a></li>
+                                        <li><a (click)="testExpress($event)" class="no-hover search-result">Content 16</a></li>
+                                        <li><a (click)="testExpress($event)" class="no-hover search-result">Content 17</a></li>
+                                        <li><a (click)="testExpress($event)" class="no-hover search-result">Content 18</a></li>
+                                        <li><a (click)="testExpress($event)" class="no-hover search-result">Content 19</a></li>
+                                        <li><a (click)="testExpress($event)" class="no-hover search-result">Content 20</a></li>
+                                        <li><a (click)="testExpress($event)" class="no-hover search-result">Content 21</a></li>
+                                        <li><a (click)="testExpress($event)" class="no-hover search-result">Content 22</a></li>
+                                        <li><a (click)="testExpress($event)" class="no-hover search-result">Content 23</a></li>
+                                        <li><a (click)="testExpress($event)" class="no-hover search-result">Content 24</a></li>
+                                    </ul>
+                                </div>
+                                <div class="search-footer" tabindex="0">see all</div>
+                            </div>
                         </div>
-                        
                     </div>
                 </li>
-                <li dropdown class="dropdown">
+                <li dropdown class="dropdown has-zmdi">
                     <a class="icon-zmdi" dropdownToggle>
                         <i class="zmdi zmdi-email"></i>
                     </a>
@@ -72,6 +89,38 @@
                             <a class="lv-footer">View All</a>
                         </div>                        
                     </div>
+                </li>
+                <li dropdown class="dropdown has-zmdi">
+                    <a class="icon-zmdi" dropdownToggle>
+                        <i class="tm-icon zmdi zmdi-more-vert"></i>
+                    </a>                    
+                    <ul class="list-unstyled dropdown-menu pull-right" style="width: 180px;">
+                        <li class="dropdown-arrow"></li>
+                        <li class="skin-switch hidden-xs" style="padding: 15px 0 8px; text-align: center;">
+                            <span *ngFor="let item of skinList | slice: 0:6" class="ss-skin bgm-{{ item }}" (click)="skinSwitch(item)"></span>
+                        </li>
+                        <li class="divider hidden-xs"></li>
+                        <li class="hidden-xs">
+                            <a>
+                                <i class="zmdi zmdi-fullscreen"></i> Toggle Fullscreen
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <i class="zmdi zmdi-delete"></i> Clear Local Storage
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <i class="zmdi zmdi-face"></i> Privacy Settings
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <i class="zmdi zmdi-settings"></i> Other Settings
+                            </a>
+                        </li>
+                    </ul>                                          
                 </li>
                 <li dropdown class="dropdown has-image">
                     <a class="cursor-pointer" class="nav-image" dropdownToggle>

@@ -64,5 +64,11 @@ export class SidebarComponent extends BaseComponent implements OnInit {
 	public contains(state){
 		return this.service.in_array(state, this.routerState);
 	}
-
+	public dropHeader() {
+		$('.aside-dropdown').slideToggle('fast');
+		$('.header-dropdown-icon > i').toggleClass('rotate');
+		if ($(".header-dropdown-icon > i").hasClass("rotate")) {
+			$('#for-scroll').scrollTop(0);
+		}		
+	}
 }

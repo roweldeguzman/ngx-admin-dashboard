@@ -1,7 +1,30 @@
 <aside>
+	<div class="aside-profile" (click)="dropHeader()">
+		<img src="./assets/images/profile.jpeg">
+		<div class="labeled">
+			<div class="name ellipsis">Rowel de Guzman</div>
+			<div class="email ellipsis">rowel.deguzman@roweldev.com</div>
+		</div>
+		<div class="header-dropdown-icon">
+			<i class="zmdi zmdi-chevron-down zmdi-hc-fw" aria-hidden="true"></i>
+		</div>
+	</div>
 	<nav [perfectScrollbar] id="for-scroll" [disabled]="scrollbarDisableOnMobile">
 		<ul class="list-unstyled">
-			<li class="separation">Main</li>
+			<div class="aside-dropdown" style="display: none;">
+				<ul class="list-unstyled">
+					<li>
+						<a>Profile</a>
+					</li>
+					<li>
+						<a>Switch account</a>
+					</li>
+					<li>
+						<a>Logout</a>
+					</li>
+				</ul>
+			</div>
+			<!-- <li class="separation">Main</li> -->
 			<li>
 				<a routerLink="/home" [ngClass]="{'active': contains('home')}">
 					<div class="icon-circle">

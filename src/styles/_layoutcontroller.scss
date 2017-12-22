@@ -54,6 +54,39 @@ body.full-layout {
 			width: calc(100% - 50px);
 			margin-left: 50px !important;
         }
+        .aside-profile{
+            pointer-events: none;
+            height: 70px;
+            transition: height .3s;
+            img {
+                height: 32px;
+                width: 32px;
+                left: 10px;
+                transition: width .3s , height .3s, left .3s;
+            }
+            .labeled, .header-dropdown-icon {
+                opacity: 0;
+                transition: opacity .3s;
+            }
+        }
+
+        aside.active{
+            .aside-profile{
+                pointer-events: auto;
+                height: 150px;
+                transition: height .3s;
+                img {
+                    height: 50px !important;
+                    width: 50px !important;
+                    left: 16px !important;
+                    transition: width .3s , height .3s, left .3s;
+                }
+                .labeled, .header-dropdown-icon {
+                    opacity: 1;
+                    transition: opacity .3s;
+                }
+            }
+        }
     }
 }
 
