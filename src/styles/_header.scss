@@ -31,10 +31,11 @@ app-header{
             border-bottom: $primary !important;            
             .navbar-brand {
                 outline: none;
+                color: #FFF !important;
             }
-            li > a:not(.no-hover):hover,
+            li.dropdown > a:not(.no-hover):hover,
             li.open > a:not(.no-hover){
-                background: $light !important;
+                background: rgba(0, 0, 0, 0.12) !important;
                 cursor: pointer;
             }
             li a.lv-item:hover{
@@ -218,7 +219,11 @@ app-header{
             button.navbar-toggle{
                 padding: 4px 10px !important;
                 border: none !important;
-                background-color: $primary !important;
+                background-color: none !important;
+            }
+            button.navbar-toggle:hover,
+            button.navbar-toggle:focus{
+                background-color: transparent !important;
             }
             .toggle-switch .ts-helper {
                 height: 12px !important;
@@ -252,7 +257,6 @@ app-header{
             top: 6px;
             transition: background-color 0s linear .13s;
         }
-        .hamburger-inner { opacity:  0.5; }
         .hamburger-inner::after, 
         .hamburger-inner::before{
             display: block;
@@ -277,11 +281,11 @@ app-header{
         }
         .hamburger--spring .hamburger-inner::before {
             top: 7px;
-            transition: top .1s cubic-bezier(.33333,.66667,.66667,1) .2s, opacity .1s cubic-bezier(.33333,0,.66667,.33333) .15s, transform .13s cubic-bezier(.55,.055,.675,.19);
+            transition: top .1s cubic-bezier(.33333,.66667,.66667,1) .2s, transform .13s cubic-bezier(.55,.055,.675,.19);
         }
         .hamburger--spring .hamburger-inner::after {
             top: 14px;
-            transition: top .2s cubic-bezier(.33333,.66667,.66667,1) .2s, opacity .1s cubic-bezier(.33333,0,.66667,.33333) .15s, transform .13s cubic-bezier(.55,.055,.675,.19);
+            transition: top .2s cubic-bezier(.33333,.66667,.66667,1) .2s, transform .13s cubic-bezier(.55,.055,.675,.19);
         }
         .hamburger--spring.is-active .hamburger-inner{
             transition-delay: .22s;
@@ -290,15 +294,13 @@ app-header{
         }
         .hamburger--spring.is-active .hamburger-inner::before{
             top: -4.5px;
-            opacity: 1;
-            transition: top .1s cubic-bezier(.33333,0,.66667,.33333) .15s, opacity .1s cubic-bezier(.33333,0,.66667,.33333) .15s, transform .13s cubic-bezier(.215,.61,.355,1) .22s;
+            transition: top .1s cubic-bezier(.33333,0,.66667,.33333) .15s, transform .13s cubic-bezier(.215,.61,.355,1) .22s;
             transform: translate3d(0,10px,0) rotate(45deg);
             
         }
         .hamburger--spring.is-active .hamburger-inner::after{
             top: -4.5px;
-            opacity:  1;
-            transition: top .2s cubic-bezier(.33333,0,.66667,.33333), opacity .1s cubic-bezier(.33333,0,.66667,.33333) .15s, transform .13s cubic-bezier(.215,.61,.355,1) .22s;
+            transition: top .2s cubic-bezier(.33333,0,.66667,.33333), transform .13s cubic-bezier(.215,.61,.355,1) .22s;
             transform: translate3d(0,10px,0) rotate(-45deg);            
         }
     }

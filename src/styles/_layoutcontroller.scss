@@ -31,16 +31,17 @@ main{
             visibility: visible;
         }
     }
-    a {
-        cursor: pointer;
-        &:hover{ text-decoration:  none;  }
-    }
+    
     footer{
         ul li {
             display: inline;
             padding: 10px;
         }
     }
+}
+a {
+    cursor: pointer;
+    &:hover{ text-decoration:  none;  }
 }
 body.full-layout {
 	@media (min-width: 1025px){
