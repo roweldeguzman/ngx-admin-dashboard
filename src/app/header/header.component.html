@@ -1,22 +1,22 @@
 <header class="header">
-    <nav class="navbar navbar-default navbar-fixed-top {{currentSkin}}">
+    <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
-                <button aria-con trols="navbar" aria-expanded="false" class="navbar-toggle collapsed hamburger--spring" data-target="#navbar" data-toggle="collapse" type="button" (click)="expandNavHead()">
+                <button class="navbar-toggle collapsed hamburger--spring" type="button" (click)="expandNavHead()">
                     <div class="hamburger-box">
                         <div class="hamburger-inner"></div>
                     </div>
-                    <!-- <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar icon-bar-1"></span>
-                    <span class="icon-bar icon-bar-2"></span>
-                    <span class="icon-bar icon-bar-3"></span> -->
                 </button>
                 <a class="navbar-brand" routerLink="/home">Material Admin</a>
+                <button class="navbar-toggle collapsed pull-right search-small visible-xs" type="button" (click)="showHideSearchMobile('show')">
+                    <i class="zmdi zmdi-search"></i>
+                </button>
             </div>
             <ul class="nav navbar-nav navbar-right hidden-xs">
                 <li>
                     <a class="no-hover">
-                        <div class="toggle-switch" switcher="cyan" switchColor="rgba(0,188,212,0.5)" switchActive="#00bcd4">
+                    <!-- rgba(0,188,212,0.5) -->
+                        <div class="toggle-switch" switcher="cyan" switchColor="rgba(0,0,0,0.26)" switchActive="#FFF">
                             <input type="checkbox" id="toggle-layout" hidden="hidden" (change)="changeLayout($event)" checked="checked">
                             <label class="ts-helper" for="toggle-layout"></label>
                         </div>
@@ -94,14 +94,14 @@
                     <a class="icon-zmdi" dropdownToggle>
                         <i class="tm-icon zmdi zmdi-more-vert"></i>
                     </a>                    
-                    <ul class="list-unstyled dropdown-menu pull-right" style="width: 180px;">
+                    <ul class="list-unstyled dropdown-menu pull-right" style="width: 300px;">
                         <li class="dropdown-arrow"></li>
                         <li class="skin-switch hidden-xs" style="padding: 15px 0 8px; text-align: center;">
-                            <span *ngFor="let item of skinList | slice: 0:6" class="ss-skin bgm-{{ item }}" (click)="skinSwitch(item)"></span>
+                            <span *ngFor="let item of skinList" class="ss-skin bgm-{{ item }}" (click)="skinSwitch(item)"></span>
                         </li>
                         <li class="divider hidden-xs"></li>
                         <li class="hidden-xs">
-                            <a>
+                            <a (click)="fullScreen()">
                                 <i class="zmdi zmdi-fullscreen"></i> Toggle Fullscreen
                             </a>
                         </li>
@@ -137,11 +137,127 @@
                     </div>
                 </li>
             </ul>
-            <!-- <ul class="nav navbar-nav navbar-right big-search-holder">
-                <li class="no-hover big-search-container">
-                    <input>
+            <!-- <ul class="nav navbar-nav navbar-right visible-xs">
+                <li dropdown class="dropdown has-zmdi">
+                    <a class="icon-zmdi" dropdownToggle>
+                        <i class="zmdi zmdi-email"></i>
+                    </a>
+                    <div class="dropdown-menu pull-right messages-list">
+                        <div class="dropdown-arrow"></div>
+                        <div class="listview">
+                            <div class="lv-header">Message</div>
+                            <div class="lv-body">
+                                <a *ngFor="let items of messageList" class="lv-item">
+                                    <div class="media">
+                                        <div class="pull-left">
+                                            <img class="lv-img-sm" src="./assets/img/profile-pics/{{items.image}}">
+                                        </div>
+                                        <div class="media-body">
+                                            <div class="lv-title"> {{ items.title }} </div>
+                                            <div class="lv-small"> {{ items.message }} </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>                        
+                    </div>
                 </li>
             </ul> -->
+        </div>
+        <div class="container-fluid visible-xs" id="search-mobile-container">
+            <div class="seach-mobile-body">
+                <div class="search-div">
+                    <div class="seach-container">
+                        <button class="btn mobile-search-close" (click)="showHideSearchMobile('hide')">
+                            <i class="zmdi zmdi-arrow-left"></i>
+                        </button><!--
+                        --><input type="search" placeholder="Search..." class="main-search-menu-input"><!--
+                        --><button class="btn prevent-main-search-hide" tabindex="0">
+                            <i class="zmdi zmdi-search prevent-main-search-hide" tabindex="0"></i>
+                        </button>
+                        <div class="main-search-menu-dropdown">
+                            <div class="search-scroll" [perfectScrollbar]>
+                                <ul class="main-search-menu-result">
+                                    <li>
+                                        <a (click)="testExpress($event)" class="no-hover search-result">Content 1</a>
+                                    </li>
+                                    <li>
+                                        <a (click)="testExpress($event)" class="no-hover search-result">Content 2</a>
+                                    </li>
+                                    <li>
+                                        <a (click)="testExpress($event)" class="no-hover search-result">Content 3</a>
+                                    </li>
+                                    <li>
+                                        <a (click)="testExpress($event)" class="no-hover search-result">Content 4</a>
+                                    </li>
+                                    <li>
+                                        <a (click)="testExpress($event)" class="no-hover search-result">Content 5</a>
+                                    </li>
+                                    <li>
+                                        <a (click)="testExpress($event)" class="no-hover search-result">Content 6</a>
+                                    </li>
+                                    <li>
+                                        <a (click)="testExpress($event)" class="no-hover search-result">Content 7</a>
+                                    </li>
+                                    <li>
+                                        <a (click)="testExpress($event)" class="no-hover search-result">Content 8</a>
+                                    </li>
+                                    <li>
+                                        <a (click)="testExpress($event)" class="no-hover search-result">Content 9</a>
+                                    </li>
+                                    <li>
+                                        <a (click)="testExpress($event)" class="no-hover search-result">Content 10</a>
+                                    </li>
+                                    <li>
+                                        <a (click)="testExpress($event)" class="no-hover search-result">Content 11</a>
+                                    </li>
+                                    <li>
+                                        <a (click)="testExpress($event)" class="no-hover search-result">Content 12</a>
+                                    </li>
+                
+                                    <li>
+                                        <a (click)="testExpress($event)" class="no-hover search-result">Content 13</a>
+                                    </li>
+                                    <li>
+                                        <a (click)="testExpress($event)" class="no-hover search-result">Content 14</a>
+                                    </li>
+                                    <li>
+                                        <a (click)="testExpress($event)" class="no-hover search-result">Content 15</a>
+                                    </li>
+                                    <li>
+                                        <a (click)="testExpress($event)" class="no-hover search-result">Content 16</a>
+                                    </li>
+                                    <li>
+                                        <a (click)="testExpress($event)" class="no-hover search-result">Content 17</a>
+                                    </li>
+                                    <li>
+                                        <a (click)="testExpress($event)" class="no-hover search-result">Content 18</a>
+                                    </li>
+                                    <li>
+                                        <a (click)="testExpress($event)" class="no-hover search-result">Content 19</a>
+                                    </li>
+                                    <li>
+                                        <a (click)="testExpress($event)" class="no-hover search-result">Content 20</a>
+                                    </li>
+                                    <li>
+                                        <a (click)="testExpress($event)" class="no-hover search-result">Content 21</a>
+                                    </li>
+                                    <li>
+                                        <a (click)="testExpress($event)" class="no-hover search-result">Content 22</a>
+                                    </li>
+                                    <li>
+                                        <a (click)="testExpress($event)" class="no-hover search-result">Content 23</a>
+                                    </li>
+                                    <li>
+                                        <a (click)="testExpress($event)" class="no-hover search-result">Content 24</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="search-footer" tabindex="0">see all</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </nav>
 </header>

@@ -1,41 +1,13 @@
 app-header{
     header{
         nav{
-            &.primary{
-                background: $primary !important;
-            }
-            &.blue{
-                background: #2196f3 !important;
-            }
-            &.lightblue {
-                background: #03a9f4 !important;
-            }
-            &.bluegray{
-                background: #607d8b !important;
-            }
-            &.cyan {
-                background: #00bcd4 !important;
-            }
-            &.teal {
-                background: #009688 !important;
-            }
-            &.green{
-                background: #4caf50 !important;
-            }
-            &.orange {
-                background: #ff9800 !important;
-            }
-            //background: $primary !important;
-            
-            
-            border-bottom: $primary !important;            
             .navbar-brand {
                 outline: none;
                 color: #FFF !important;
             }
             li.dropdown > a:not(.no-hover):hover,
             li.open > a:not(.no-hover){
-                background: rgba(0, 0, 0, 0.12) !important;
+                background: rgba(255,255,255,0.1) !important;
                 cursor: pointer;
             }
             li a.lv-item:hover{
@@ -217,7 +189,7 @@ app-header{
 
             }
             button.navbar-toggle{
-                padding: 4px 10px !important;
+                padding: 4px 10px;
                 border: none !important;
                 background-color: none !important;
             }
@@ -246,6 +218,7 @@ app-header{
             .search-list{
                 top: 41px;
             }
+            
         }
         .hamburger-box {
             position: relative;
@@ -304,4 +277,59 @@ app-header{
             transform: translate3d(0,10px,0) rotate(-45deg);            
         }
     }
+}
+
+@media (max-width: 767px){
+    .navbar-toggle:not(.pull-right) {
+        float: left !important;
+        margin-right: 0;
+        margin-left: 5px;
+    }
+
+    .search-small{
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+        i {
+            font-size: 24px !important;
+            color: #FFF;
+        }
+    }
+    .navbar-brand{
+        width: calc(100% - 100px) !important;
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    #search-mobile-container{
+        position: absolute;
+        top: 0;
+        height: 50px;
+        background: $primary;
+        width: 100%;
+        transform: translateY(-50px);
+        transition-duration: .3s;
+        will-change: transform;
+    }
+    #search-mobile-container.active{
+        transform: translateY(0);
+        transition-duration: .3s;
+        will-change: transform;
+    }
+
+    .seach-mobile-body {
+        .search-div{
+            width: 100%;
+            .seach-container {
+                padding-left: 0;
+            }
+            div > input[type="search"]{
+                width: calc(100% - 60px);
+            }
+            .main-search-menu-dropdown{
+                width: calc(100% - 30px);
+                right: 15px;
+            }
+        }
+    }
+    
 }

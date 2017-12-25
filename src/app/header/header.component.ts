@@ -1,8 +1,9 @@
-import { Component, OnInit, Injector } from '@angular/core';
+import { Component, OnInit, Injector, Output, EventEmitter } from '@angular/core';
 
 import { BaseComponent } from '../BaseComponent';
 
 declare let $:any;
+declare let document: any;
 @Component({
 	selector: 'app-header',
   	templateUrl: './header.component.html',
@@ -89,7 +90,7 @@ export class HeaderComponent extends BaseComponent implements OnInit {
 		}
 		/* End Script for search */
 	}
-	public 	currentSkin = "primary";
+	@Output() pushSkinToLayout = new EventEmitter<any>();
 	public	skinList = [
 		'primary',
 		'lightblue',
@@ -137,7 +138,47 @@ export class HeaderComponent extends BaseComponent implements OnInit {
 			$("body").removeClass("full-layout");
 		}
 	}
+	/* This method will push the color variable to layout component */
 	public skinSwitch(color) {
-		this.currentSkin = color;
+		this.pushSkinToLayout.emit(color);
+	}
+	public showHideSearchMobile(type: String) {
+		if (type == "show") {
+			$("#search-mobile-container").addClass("active");
+		} else {
+			$("#search-mobile-container").removeClass("active");
+		}
+	}
+	public fullScreen() {
+		//Launch
+		function launchIntoFullscreen(element) {
+			if (element.requestFullscreen) {
+				element.requestFullscreen();
+			} else if (element.mozRequestFullScreen) {
+				element.mozRequestFullScreen();
+			} else if (element.webkitRequestFullscreen) {
+				element.webkitRequestFullscreen();
+			} else if (element.msRequestFullscreen) {
+				element.msRequestFullscreen();
+			}
+		}
+
+		//Exit
+		function exitFullscreen() {
+			if (document.exitFullscreen) {
+				document.exitFullscreen();
+			} else if (document.mozCancelFullScreen) {
+				document.mozCancelFullScreen();
+			} else if (document.webkitExitFullscreen) {
+				document.webkitExitFullscreen();
+			}
+		}
+
+		if (exitFullscreen()) {
+			launchIntoFullscreen(document.documentElement);
+		}
+		else {
+			launchIntoFullscreen(document.documentElement);
+		}
 	}
 }

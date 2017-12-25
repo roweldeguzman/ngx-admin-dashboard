@@ -3,7 +3,8 @@ import {
 	OnInit, 
 	Injector, 
 	SimpleChanges,
-	Input
+	Input,
+	ViewChild
 } from '@angular/core';
 import { BaseComponent } from '../BaseComponent';
 
@@ -19,9 +20,13 @@ export class SidebarComponent extends BaseComponent implements OnInit {
 
 	public scrollbarDisableOnMobile = false;	
 	@Input() currentState;
+	@ViewChild('sidebarContainer') sidebarContainer;
 	public routerState;
+	public currentSkin;
 	ngOnInit() {
+		let $this = this;
 		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+			console.log(window.innerWidth <= 1025 && window.innerWidth >= 768);
 			this.scrollbarDisableOnMobile = true;
 		} else if (window.innerWidth <= 767) {
 			this.scrollbarDisableOnMobile = true;
@@ -43,14 +48,33 @@ export class SidebarComponent extends BaseComponent implements OnInit {
 					$(e).find('ul:first').slideToggle('fast');
 				});
 			}
-		}, 100)
+		}, 100);
+
+		/*$("#sidebarContainer").on("mouseenter", function (event) {
+			console.log(window.innerWidth <= 1025 && window.innerWidth >= 768);
+			
+			if (window.innerWidth <= 1025 && window.innerWidth >= 768) {
+				if (!$("#sidebarContainer").hasClass("hovered") && !$("aside").hasClass("active")) {
+					$("#sidebarContainer").addClass("hovered")
+					$this.expandNav();
+				}
+			}
+		});
+		$("#sidebarContainer").on("mouseleave", function(event) {
+			if (window.innerWidth <= 1025 && window.innerWidth >= 768) {
+				if ($("#sidebarContainer").hasClass("hovered")) {
+					$("#sidebarContainer").removeClass("hovered")
+					$this.expandNav();
+				}
+			}
+		});*/
 	}
 	ngOnChanges(changes: SimpleChanges) {
 		if (changes.currentState.currentValue !== undefined){
 			this.routerState	=	changes.currentState.currentValue;
 		}
 	}
-	public expandNav(ev){
+	public expandNav(){
 		$("aside, footer, .overlay").toggleClass("active");
 
 		if (!$("aside").hasClass("active")){
@@ -58,7 +82,7 @@ export class SidebarComponent extends BaseComponent implements OnInit {
 		} else {
 			this.collapseSpandedNav(false);
 		}
-		$(ev.target).toggleClass("active");
+		$(".bottom-toggler").toggleClass("active");
 		$("main").toggleClass("aside-active");
 	}
 	public contains(state){

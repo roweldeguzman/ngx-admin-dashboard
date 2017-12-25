@@ -1,6 +1,7 @@
 import {Injector} from '@angular/core';
 import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
 import { ServiceService } from './services/service.service';
+import { LocalStorageService } from './services/storage.service';
 
 declare let $:any;
 declare let window:any;
@@ -8,11 +9,12 @@ declare let window:any;
 export class BaseComponent{
 	protected http: HttpClient;
 	protected service:ServiceService;
-
+	protected localstorage: LocalStorageService;
 
     constructor(public injector: Injector){
 		this.http           =   injector.get(HttpClient)
 		this.service        =   injector.get(ServiceService)
+		this.localstorage	=	injector.get(LocalStorageService);
 	}
 	
 	public baseUrl	=	"";

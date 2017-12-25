@@ -93,7 +93,7 @@ body.full-layout {
 
 body:not(.full-layout) {
     @media (min-width: 768px){
-        header button.navbar-toggle.collapsed{
+        header button.navbar-toggle.collapsed:not(.search-small){
             display: block !important;
             float: left;
         }
@@ -134,5 +134,101 @@ body:not(.full-layout) {
         aside{
             display: block;
         }
+    }
+}
+
+/* APP HEADER */
+app-header[rg-skin="primary"] nav{
+    background: $primary !important;
+    border-bottom: $primary !important;
+}
+app-header[rg-skin="blue"] nav{
+    background: $blue !important;
+    border-bottom: $blue !important;
+}
+app-header[rg-skin="lightblue"] nav{
+    background: $lightblue !important;
+    border-bottom: $lightblue !important;
+}
+app-header[rg-skin="bluegray"] nav{
+    background: $bluegray !important;
+    border-bottom: $bluegray !important;
+}
+app-header[rg-skin="cyan"] nav{
+    background: $cyan !important;
+    border-bottom: $cyan !important;
+}
+app-header[rg-skin="teal"] nav{
+    background: $teal !important;
+    border-bottom: $teal !important;
+}
+app-header[rg-skin="green"] nav{
+    background: $green !important;
+    border-bottom: $green !important;
+}
+app-header[rg-skin="orange"] nav{
+    background: $orange !important;
+    border-bottom: $orange !important;
+}
+app-header[rg-skin="purple"] nav{
+    background: $purple !important;
+    border-bottom: $purple !important;
+}
+/* APP SIDEBAR */
+app-sidebar[rg-skin="primary"] aside {
+    .aside-profile{
+        //background: $primary !important;
+    }
+
+    
+}
+app-sidebar[rg-skin="blue"] aside {
+    .aside-profile{
+        //background: $blue !important;
+    }
+    nav ul li:not(.separation){
+        & > a{
+            &.active{
+                //background-color:#2196F3 !important;
+                i { 
+                    //color: $cyan; 
+                }
+            }
+        }
+    }
+}
+app-sidebar[rg-skin="lightblue"] aside {
+    .aside-profile{
+        //background: $lightblue !important;
+    }
+}
+app-sidebar[rg-skin="bluegray"] aside {
+    .aside-profile{
+        //background: #bluegray !important;
+    }
+}
+app-sidebar[rg-skin="cyan"] aside {
+    .aside-profile{
+        //background: $cyan !important;
+    }
+}
+app-sidebar[rg-skin="teal"] aside {
+    .aside-profile{
+        //background: $teal !important;
+    }
+}
+app-sidebar[rg-skin="green"] aside {
+    .aside-profile{
+        //background: $green !important;
+    }
+}
+app-sidebar[rg-skin="orange"] aside {
+    .aside-profile{
+        //background: $orange !important;
+    }
+}
+app-sidebar[rg-skin="purple"] aside {
+    .aside-profile{
+        //background: $purple !important;
     }
 }

@@ -1,5 +1,5 @@
-<app-header></app-header>
-<app-sidebar [currentState]="currentState"></app-sidebar>
+<app-header (pushSkinToLayout)="getCurrentSkin($event)" attr.rg-skin="{{ currentSkin }}"></app-header>
+<app-sidebar [currentState]="currentState" attr.rg-skin="{{ currentSkin }}"></app-sidebar>
 <main class="container">
 	<router-outlet></router-outlet>
 	<footer class="text-center" id="footer">

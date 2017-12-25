@@ -1,18 +1,16 @@
 app-sidebar{
     aside{
-        background-color: $primary;
+        background: $primary;
         height: 100%;
         width: 250px;
         top: 49px;
         position: fixed;
         z-index: 10;
         nav{
-            height: calc(100% - 39px);
+            height: calc(100% - 189px);
             overflow: auto;
         }
-        nav > .bottom-collapser{
-            display: none;
-        }
+        
         nav ul li:not(.separation){
             cursor: pointer;
             position: relative;
@@ -26,7 +24,7 @@ app-sidebar{
                 &.active, &:hover{
                     color: $white;
                     text-decoration: none;
-                    background-color:$light;
+                    background-color:rgba(255,255,255,0.1);
                     cursor: pointer;
                     i { 
                         color: $cyan; 
@@ -154,11 +152,18 @@ app-sidebar{
             top: 150px !important;
         }
     }
-
+    .bottom-collapser{
+        display: none;
+    }
     @media screen and (max-width: 1024px){
         aside:not(.active){
             width: 52px !important;
             transition-duration: .3s;
+            pointer-events: none;
+            nav{
+                height: calc(100% - 150px);
+                overflow-x: hidden;
+            }
             nav ul li{
                 &.separation, a{
                     padding: 10px 0 10px 10px !important;
@@ -173,31 +178,7 @@ app-sidebar{
         }
         aside {
             nav{
-                height: calc(100% - 67px);
-            }
-            nav > .bottom-collapser{
-                display: block;
-                cursor: pointer;
-                .bottom-toggler{
-                    background-color: $primary;
-                    position: fixed;
-                    bottom: 0;
-                    left: 0;
-                    font-size: 13px;
-                    height: 28px;
-                    text-align: center;
-                    line-height: 28px;
-                    transition-duration: .3s;
-                    z-index: 1;
-                    width: 50px;
-                    i{
-                        color: $white;
-                        pointer-events: none;
-                    }
-                    &.active{
-                        width: 250px !important;
-                    }
-                }
+                height: calc(100% - 217px);
             }
         }
         aside.active{
@@ -217,9 +198,33 @@ app-sidebar{
                     }
                 }
             }
-            .bottom-toggler.active i {
-                transform: rotate(180deg);
+        }
+        .bottom-collapser{
+            display: block;
+            cursor: pointer;
+            .bottom-toggler{
+                background-color: $primary;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                font-size: 13px;
+                height: 28px;
+                text-align: center;
+                line-height: 28px;
                 transition-duration: .3s;
+                z-index: 11;
+                width: 50px;
+                i{
+                    color: $white;
+                    pointer-events: none;
+                }
+                &.active{
+                    width: 250px !important;
+                    i {
+                        transform: rotate(180deg);
+                        transition-duration: .3s;
+                    }
+                }
             }
         }
     }
@@ -247,15 +252,19 @@ app-sidebar{
                     }
                 }
             }
-            nav > .bottom-collapser{
-                display: none;
-            }
+        }
+        aside {
+            nav{
+                height: calc(100% - 190px);
+            }   
         }
         aside.active{
             transform: translateX(0);
             transition-duration: .3s;
         }
-
+        .bottom-collapser{
+            display: none;
+        }
     }
     .overlay {
         opacity: 0.5;

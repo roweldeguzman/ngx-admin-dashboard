@@ -18,10 +18,7 @@ declare let window;
 })
 export class LayoutComponent extends BaseComponent implements OnInit {
 
-	constructor(
-		public injector: Injector,
-		private router: Router
-	) { 
+	constructor(public injector: Injector,private router: Router) { 
 		super(injector);
 		router.events.subscribe((event: RouterEvent) => {
             this.navigationInterceptor(event);
@@ -32,7 +29,9 @@ export class LayoutComponent extends BaseComponent implements OnInit {
         if (this.router.url == '/'){
             this.router.navigate(["/home"]);
         }
-	}
+    }
+    public storageColor = this.localstorage.get("color");
+    public currentSkin = this.storageColor == null ? "primary" : this.storageColor;
 	public currentState;
 	navigationInterceptor(event: RouterEvent): void {
         if (event instanceof NavigationStart) {
@@ -69,5 +68,10 @@ export class LayoutComponent extends BaseComponent implements OnInit {
         if (event instanceof NavigationError) {
             console.info("Layout.module.ts", "NavigationError")
         }
+    }
+
+    getCurrentSkin (color){
+        this.currentSkin = color;
+        this.localstorage.add("color", color);
     }
 }
