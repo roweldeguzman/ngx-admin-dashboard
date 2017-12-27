@@ -326,10 +326,31 @@ app-header{
                 width: calc(100% - 60px);
             }
             .main-search-menu-dropdown{
-                width: calc(100% - 30px);
-                right: 15px;
+                width: calc(100% - 10px);
+                right: 5px;
             }
         }
     }
-    
+    header.header .navbar > .container-fluid {
+        padding-right: 5px;
+        padding-left: 5px;
+        .navbar-nav {
+            margin: 0;
+        }
+        .dropdown-menu {
+            width: calc(100% - 30px);
+            right: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            -webkit-transform-origin: center top;
+            -o-transform-origin: center top;
+            -ms-transform-origin: center top;
+            transform-origin: center top;
+            .dropdown-arrow{
+                display: none;
+            }
+        }
+        li.dropdown{
+            position: static;
+        }
+    }
 }

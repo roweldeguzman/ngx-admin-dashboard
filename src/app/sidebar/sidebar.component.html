@@ -1,4 +1,4 @@
-<aside>
+<aside  id="sidebarContainer">
 	<div class="aside-profile" (click)="dropHeader()">
 		<img src="./assets/images/profile.jpeg">
 		<div class="labeled">
@@ -224,11 +224,11 @@
 				</ul>
 			</li>
 		</ul>
+		<div class="bottom-collapser">
+			<div class="bottom-toggler" (click)="expandNav()">
+				<i class="zmdi zmdi-chevron-right"></i>
+			</div>
+		</div>
 	</nav>
 </aside>
-<div class="bottom-collapser">
-	<div class="bottom-toggler" (click)="expandNav()">
-		<i class="zmdi zmdi-chevron-right"></i>
-	</div>
-</div>
 <div class="overlay" (click)="expandNavHead()"></div>

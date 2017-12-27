@@ -10,7 +10,9 @@ app-sidebar{
             height: calc(100% - 189px);
             overflow: auto;
         }
-        
+        nav > .bottom-collapser{
+            display: none;
+        }
         nav ul li:not(.separation){
             cursor: pointer;
             position: relative;
@@ -152,18 +154,11 @@ app-sidebar{
             top: 150px !important;
         }
     }
-    .bottom-collapser{
-        display: none;
-    }
+
     @media screen and (max-width: 1024px){
         aside:not(.active){
             width: 52px !important;
             transition-duration: .3s;
-            pointer-events: none;
-            nav{
-                height: calc(100% - 150px);
-                overflow-x: hidden;
-            }
             nav ul li{
                 &.separation, a{
                     padding: 10px 0 10px 10px !important;
@@ -175,10 +170,44 @@ app-sidebar{
                     }
                 }                
             }
+            nav{
+                height: calc(100% - 140px);
+                overflow: auto;
+                ul {
+                    pointer-events: none;
+                }
+            }
+            .ps__rail-y{
+                top: 70px !important;
+            }
         }
         aside {
             nav{
                 height: calc(100% - 217px);
+            }
+            nav > .bottom-collapser{
+                display: block;
+                cursor: pointer;
+                .bottom-toggler{
+                    background-color: $primary;
+                    position: fixed;
+                    bottom: 0;
+                    left: 0;
+                    font-size: 13px;
+                    height: 28px;
+                    text-align: center;
+                    line-height: 28px;
+                    transition-duration: .3s;
+                    z-index: 1;
+                    width: 50px;
+                    i{
+                        color: $white;
+                        pointer-events: none;
+                    }
+                    &.active{
+                        width: 250px !important;
+                    }
+                }
             }
         }
         aside.active{
@@ -198,33 +227,9 @@ app-sidebar{
                     }
                 }
             }
-        }
-        .bottom-collapser{
-            display: block;
-            cursor: pointer;
-            .bottom-toggler{
-                background-color: $primary;
-                position: fixed;
-                bottom: 0;
-                left: 0;
-                font-size: 13px;
-                height: 28px;
-                text-align: center;
-                line-height: 28px;
+            .bottom-toggler.active i {
+                transform: rotate(180deg);
                 transition-duration: .3s;
-                z-index: 11;
-                width: 50px;
-                i{
-                    color: $white;
-                    pointer-events: none;
-                }
-                &.active{
-                    width: 250px !important;
-                    i {
-                        transform: rotate(180deg);
-                        transition-duration: .3s;
-                    }
-                }
             }
         }
     }
@@ -252,18 +257,21 @@ app-sidebar{
                     }
                 }
             }
-        }
-        aside {
-            nav{
-                height: calc(100% - 190px);
-            }   
+            nav > .bottom-collapser{
+                display: none;
+            }
         }
         aside.active{
             transform: translateX(0);
             transition-duration: .3s;
         }
-        .bottom-collapser{
-            display: none;
+        aside {
+            nav{
+                height: calc(100% - 190px);
+            }
+            nav > .bottom-collapser{
+                display: none;
+            }
         }
     }
     .overlay {

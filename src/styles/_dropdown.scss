@@ -160,3 +160,11 @@
 	border-top-right-radius: 3px !important;
 	border-bottom-right-radius: 3px !important;
 }
+
+
+@media (max-width: 767px){
+	.navbar-nav .open .dropdown-menu{
+		position: absolute;
+		background-color: #fff;
+	}
+}

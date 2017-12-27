@@ -1,7 +1,7 @@
 <header class="header">
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
-            <div class="navbar-header">
+            <div class="navbar-header" style="display: none;">
                 <button class="navbar-toggle collapsed hamburger--spring" type="button" (click)="expandNavHead()">
                     <div class="hamburger-box">
                         <div class="hamburger-inner"></div>
@@ -12,17 +12,95 @@
                     <i class="zmdi zmdi-search"></i>
                 </button>
             </div>
-            <ul class="nav navbar-nav navbar-right hidden-xs">
-                <li>
-                    <a class="no-hover">
-                    <!-- rgba(0,188,212,0.5) -->
-                        <div class="toggle-switch" switcher="cyan" switchColor="rgba(0,0,0,0.26)" switchActive="#FFF">
-                            <input type="checkbox" id="toggle-layout" hidden="hidden" (change)="changeLayout($event)" checked="checked">
-                            <label class="ts-helper" for="toggle-layout"></label>
+            <ul class="nav navbar-nav" style="width: 100%;">
+                <li class="pull-left">
+                    <button class="navbar-toggle collapsed hamburger--spring" type="button" (click)="expandNavHead()">
+                        <div class="hamburger-box">
+                            <div class="hamburger-inner"></div>
                         </div>
+                    </button>
+                </li>
+                <li class="hidden-xs">
+                    <a class="navbar-brand" routerLink="/home">Material Admin</a>
+                </li>
+                <li dropdown class="dropdown has-image pull-right">
+                    <a class="cursor-pointer" class="nav-image" dropdownToggle>
+                        <div class="notif-counter">
+                            <div class="counter">10</div>
+                        </div>
+                        <img src="./assets/images/profile.jpeg">
+                    </a>
+                    <div class="dropdown-menu pull-right profile-menu-list">
+                        <div class="dropdown-arrow"></div>
+                        <p class="p-20">
+                            You can put anything here
+                        </p>
+                    </div>
+                </li>
+                <li dropdown class="dropdown has-zmdi pull-right">
+                    <a class="icon-zmdi" dropdownToggle>
+                        <i class="tm-icon zmdi zmdi-more-vert"></i>
+                    </a>
+                    <ul class="list-unstyled dropdown-menu pull-right" style="width: 300px;">
+                        <li class="dropdown-arrow"></li>
+                        <li class="skin-switch" style="padding: 15px 0 8px; text-align: center;">
+                            <span *ngFor="let item of skinList" class="ss-skin bgm-{{ item }}" (click)="skinSwitch(item)"></span>
+                        </li>
+                        <li class="divider"></li>
+                        <li class="hidden-xs">
+                            <a (click)="fullScreen()">
+                                <i class="zmdi zmdi-fullscreen"></i> Toggle Fullscreen
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <i class="zmdi zmdi-delete"></i> Clear Local Storage
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <i class="zmdi zmdi-face"></i> Privacy Settings
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <i class="zmdi zmdi-settings"></i> Other Settings
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li dropdown class="dropdown has-zmdi pull-right">
+                    <a class="icon-zmdi" dropdownToggle>
+                        <i class="zmdi zmdi-email"></i>
+                    </a>
+                    <div class="dropdown-menu pull-right messages-list">
+                        <div class="dropdown-arrow"></div>
+                        <div class="listview">
+                            <div class="lv-header">Message</div>
+                            <div class="lv-body">
+                                <a *ngFor="let items of messageList" class="lv-item">
+                                    <div class="media">
+                                        <div class="pull-left">
+                                            <img class="lv-img-sm" src="./assets/img/profile-pics/{{items.image}}">
+                                        </div>
+                                        <div class="media-body">
+                                            <div class="lv-title"> {{ items.title }} </div>
+                                            <div class="lv-small"> {{ items.message }} </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="clearfix"></div>
+                            <a class="lv-footer">View All</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="dropdown has-zmdi pull-right visible-xs" (click)="showHideSearchMobile('show')">
+                    <a class="icon-zmdi">
+                        <i class="zmdi zmdi-search"></i>
                     </a>
                 </li>
-                <li class="search-parent">
+                <li class="search-parent pull-right hidden-xs">
                     <div class="search-div">
                         <div class="seach-container">
                             <input type="search" placeholder="Search..." class="main-search-menu-input"><!--
@@ -64,78 +142,17 @@
                         </div>
                     </div>
                 </li>
-                <li dropdown class="dropdown has-zmdi">
-                    <a class="icon-zmdi" dropdownToggle>
-                        <i class="zmdi zmdi-email"></i>
-                    </a>
-                    <div class="dropdown-menu pull-right messages-list">
-                        <div class="dropdown-arrow"></div>
-                        <div class="listview">
-                            <div class="lv-header">Message</div>
-                            <div class="lv-body">
-                                <a *ngFor="let items of messageList" class="lv-item">
-                                    <div class="media">
-                                        <div class="pull-left">
-                                            <img class="lv-img-sm" src="./assets/img/profile-pics/{{items.image}}">
-                                        </div>
-                                        <div class="media-body">
-                                            <div class="lv-title"> {{ items.title }} </div>
-                                            <div class="lv-small"> {{ items.message }} </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="clearfix"></div>
-                            <a class="lv-footer">View All</a>
-                        </div>                        
-                    </div>
-                </li>
-                <li dropdown class="dropdown has-zmdi">
-                    <a class="icon-zmdi" dropdownToggle>
-                        <i class="tm-icon zmdi zmdi-more-vert"></i>
-                    </a>                    
-                    <ul class="list-unstyled dropdown-menu pull-right" style="width: 300px;">
-                        <li class="dropdown-arrow"></li>
-                        <li class="skin-switch hidden-xs" style="padding: 15px 0 8px; text-align: center;">
-                            <span *ngFor="let item of skinList" class="ss-skin bgm-{{ item }}" (click)="skinSwitch(item)"></span>
-                        </li>
-                        <li class="divider hidden-xs"></li>
-                        <li class="hidden-xs">
-                            <a (click)="fullScreen()">
-                                <i class="zmdi zmdi-fullscreen"></i> Toggle Fullscreen
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <i class="zmdi zmdi-delete"></i> Clear Local Storage
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <i class="zmdi zmdi-face"></i> Privacy Settings
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <i class="zmdi zmdi-settings"></i> Other Settings
-                            </a>
-                        </li>
-                    </ul>                                          
-                </li>
-                <li dropdown class="dropdown has-image">
-                    <a class="cursor-pointer" class="nav-image" dropdownToggle>
-                        <div class="notif-counter">
-                            <div class="counter">10</div>
+                <li class="pull-right hidden-xs">
+                    <a class="no-hover">
+                        <!-- rgba(0,188,212,0.5) -->
+                        <div class="toggle-switch" switcher="cyan" switchColor="rgba(0,0,0,0.26)" switchActive="#FFF">
+                            <input type="checkbox" id="toggle-layout" hidden="hidden" (change)="changeLayout($event)" checked="checked">
+                            <label class="ts-helper" for="toggle-layout"></label>
                         </div>
-                        <img src="./assets/images/profile.jpeg">
                     </a>
-                    <div class="dropdown-menu pull-right profile-menu-list">
-                        <div class="dropdown-arrow"></div>
-                        <p class="p-20">
-                            You can put anything here
-                        </p>
-                    </div>
                 </li>
+                
+                
             </ul>
             <!-- <ul class="nav navbar-nav navbar-right visible-xs">
                 <li dropdown class="dropdown has-zmdi">

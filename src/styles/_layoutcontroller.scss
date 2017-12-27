@@ -108,6 +108,10 @@ body:not(.full-layout) {
             transform: translateX(0);
         }
     }
+    .bottom-collapser{
+        display: none;
+        transition-duration: .3s;
+    }
 }
 
 @media screen and (max-width: 1024px){
