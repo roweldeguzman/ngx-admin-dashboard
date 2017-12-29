@@ -25,41 +25,32 @@
                 </li>
                 <li dropdown class="dropdown has-image pull-right">
                     <a class="cursor-pointer" class="nav-image" dropdownToggle>
-                        <div class="notif-counter">
-                            <div class="counter">10</div>
-                        </div>
                         <img src="./assets/images/profile.jpeg">
                     </a>
-                    <div class="dropdown-menu pull-right profile-menu-list">
-                        <div class="dropdown-arrow"></div>
-                        <p class="p-20">
-                            You can put anything here
-                        </p>
-                    </div>
-                </li>
-                <li dropdown class="dropdown has-zmdi pull-right">
-                    <a class="icon-zmdi" dropdownToggle>
-                        <i class="tm-icon zmdi zmdi-more-vert"></i>
-                    </a>
-                    <ul class="list-unstyled dropdown-menu pull-right" style="width: 300px;">
+                    <ul class="dropdown-menu pull-right">
                         <li class="dropdown-arrow"></li>
-                        <li class="skin-switch" style="padding: 15px 0 8px; text-align: center;">
-                            <span *ngFor="let item of skinList" class="ss-skin bgm-{{ item }}" (click)="skinSwitch(item)"></span>
+                        <li>
+                            <a>
+                                <i class="zmdi zmdi-account"></i>
+                                Profile
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <i class="zmdi zmdi-swap"></i>
+                                Switch Account
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <i class="zmdi zmdi-time-restore"></i>
+                                Logout
+                            </a>
                         </li>
                         <li class="divider"></li>
                         <li class="hidden-xs">
                             <a (click)="fullScreen()">
                                 <i class="zmdi zmdi-fullscreen"></i> Toggle Fullscreen
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <i class="zmdi zmdi-delete"></i> Clear Local Storage
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <i class="zmdi zmdi-face"></i> Privacy Settings
                             </a>
                         </li>
                         <li>
@@ -71,6 +62,30 @@
                 </li>
                 <li dropdown class="dropdown has-zmdi pull-right">
                     <a class="icon-zmdi" dropdownToggle>
+                        <i class="zmdi zmdi-palette"></i>
+                    </a>
+                    <ul class="list-unstyled dropdown-menu pull-right" [stop-propagate] style="width: 230px;">
+                        <li class="dropdown-arrow"></li>
+                        <li class="skin-switch" style="padding: 15px 0 8px; text-align: center;">
+                            <span class="ss-skin bgm-primary active" (click)="skinSwitch('primary', $event)"></span>
+                            <span class="ss-skin bgm-lightblue" (click)="skinSwitch('lightblue', $event)"></span>
+                            <span class="ss-skin bgm-bluegray" (click)="skinSwitch('bluegray', $event)"></span>
+                            <span class="ss-skin bgm-cyan" (click)="skinSwitch('cyan', $event)"></span>
+                            <span class="ss-skin bgm-teal" (click)="skinSwitch('teal', $event)"></span><br>
+                            <span class="ss-skin bgm-green" (click)="skinSwitch('green', $event)"></span>
+                            <span class="ss-skin bgm-orange" (click)="skinSwitch('orange', $event)"></span>
+                            <span class="ss-skin bgm-blue" (click)="skinSwitch('blue', $event)"></span>
+                            <span class="ss-skin bgm-purple" (click)="skinSwitch('purple', $event)"></span>
+                            <span class="ss-skin bgm-indigo" (click)="skinSwitch('indigo', $event)"></span>
+                        </li>
+                        
+                    </ul>
+                </li>
+                <li dropdown class="dropdown has-zmdi pull-right">
+                    <a class="icon-zmdi" dropdownToggle>
+                        <div class="notif-counter">
+                            <div class="counter">4</div>
+                        </div>
                         <i class="zmdi zmdi-email"></i>
                     </a>
                     <div class="dropdown-menu pull-right messages-list">
@@ -154,32 +169,6 @@
                 
                 
             </ul>
-            <!-- <ul class="nav navbar-nav navbar-right visible-xs">
-                <li dropdown class="dropdown has-zmdi">
-                    <a class="icon-zmdi" dropdownToggle>
-                        <i class="zmdi zmdi-email"></i>
-                    </a>
-                    <div class="dropdown-menu pull-right messages-list">
-                        <div class="dropdown-arrow"></div>
-                        <div class="listview">
-                            <div class="lv-header">Message</div>
-                            <div class="lv-body">
-                                <a *ngFor="let items of messageList" class="lv-item">
-                                    <div class="media">
-                                        <div class="pull-left">
-                                            <img class="lv-img-sm" src="./assets/img/profile-pics/{{items.image}}">
-                                        </div>
-                                        <div class="media-body">
-                                            <div class="lv-title"> {{ items.title }} </div>
-                                            <div class="lv-small"> {{ items.message }} </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>                        
-                    </div>
-                </li>
-            </ul> -->
         </div>
         <div class="container-fluid visible-xs" id="search-mobile-container">
             <div class="seach-mobile-body">

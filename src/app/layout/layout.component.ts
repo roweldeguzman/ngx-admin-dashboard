@@ -24,15 +24,18 @@ export class LayoutComponent extends BaseComponent implements OnInit {
             this.navigationInterceptor(event);
         });
     }
+    public storageColor = this.localstorage.get("color");
+    public currentSkin = this.storageColor == null ? "primary" : this.storageColor;
+    public currentState;
+    
     ngOnInit(){
         $(".preloader-base").remove();
         if (this.router.url == '/'){
             this.router.navigate(["/home"]);
         }
+        $("body").attr("rg-skin", this.currentSkin);
     }
-    public storageColor = this.localstorage.get("color");
-    public currentSkin = this.storageColor == null ? "primary" : this.storageColor;
-	public currentState;
+    
 	navigationInterceptor(event: RouterEvent): void {
         if (event instanceof NavigationStart) {
             if (document.querySelector(".main-overlay") != null) {
@@ -54,7 +57,6 @@ export class LayoutComponent extends BaseComponent implements OnInit {
                 }                
             } else if (window.innerWidth > 768){
                 if($("aside").hasClass("active")){
-                    //this.collapseSpandedNav(true);                    
                     setTimeout(function(){
                         $("aside, .overlay, .bottom-toggler").removeClass("active");
                         $(".hamburger--spring").toggleClass("is-active");
@@ -73,5 +75,6 @@ export class LayoutComponent extends BaseComponent implements OnInit {
     getCurrentSkin (color){
         this.currentSkin = color;
         this.localstorage.add("color", color);
+        $("body").attr("rg-skin", color)
     }
 }

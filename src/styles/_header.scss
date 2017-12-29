@@ -12,10 +12,6 @@ app-header{
             }
             li a.lv-item:hover{
                 text-decoration: none !important; 
-                background: $light !important;
-            }
-            li a.lv-item:hover .lv-title{
-                color: #fff;
             }
             li a.lv-footer {
                 text-decoration: none !important; 
@@ -52,23 +48,23 @@ app-header{
                     height: 32px;
                     width: 32px;
                     vertical-align: middle;
-                }
-                div.notif-counter{
-                    position: absolute;
-                    background: rgba(173, 17, 17, 0.877);
-                    border-radius: 100%;
-                    width: 20px;
-                    height: 20px;
-                    right: 9px;
-                    top: 2px;
-                    border: 1px solid $secondary;
-                    text-align: center;
-                    user-select: none;
-                    
-                    & > .counter{
-                        margin-top: -1px;
-                        margin-right: 1px;
-                    }
+                }                
+            }
+            div.notif-counter{
+                position: absolute;
+                background: #f44336;
+                border-radius: 100%;
+                width: 20px;
+                height: 20px;
+                right: 9px;
+                top: 2px;
+                //border: 1px solid $secondary;
+                text-align: center;
+                user-select: none;
+                
+                & > .counter{
+                    margin-top: -1px;
+                    margin-right: 1px;
                 }
             }
             a.icon-zmdi{
@@ -126,10 +122,7 @@ app-header{
                     width: 			100%; 
                     top: 			40.2px; 
                     border-radius: 	0px; 
-                    border-bottom:	1px solid #e0e0e0 !important;
-                    border-right: 	1px solid #e0e0e0 !important; 
-                    border-left: 	1px solid #e0e0e0 !important; 
-                    border-top: 	1px solid #FFF !important; 
+                    border:	1px solid #e0e0e0 !important; 
                     background-color: #fff !important;
                     margin-top: 		1px;
                     font-size: 			14px;
@@ -175,18 +168,9 @@ app-header{
                 }
                 .main-search-menu-result > li.active,
                 .main-search-menu-result > li:hover{ 
-                    background-color: #455a64; 
-                    color: #fff !important;
-                }
-                .main-search-menu-result > li:hover a {
-                    color: #FFF !important;
-                }
-                .main-search-menu-result > li.active > a {
-                    color: #fff !important; 
-                }
+                    background-color: #f8f9fa; 
 
-
-
+                }
             }
             button.navbar-toggle{
                 padding: 4px 10px;

@@ -1,4 +1,3 @@
-/* CALENDAR STYLE */
 .dp-parent .well{
     padding: 0px !important;
     background-color: #fff;

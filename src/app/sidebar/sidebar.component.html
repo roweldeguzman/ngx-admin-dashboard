@@ -14,13 +14,22 @@
 			<div class="aside-dropdown" style="display: none;">
 				<ul class="list-unstyled">
 					<li>
-						<a>Profile</a>
+						<a routerLink="/sample-page/profile">
+							<i class="zmdi zmdi-account"></i>
+							<span>Profile</span>
+						</a>
 					</li>
 					<li>
-						<a>Switch account</a>
+						<a>
+							<i class="zmdi zmdi-swap"></i>
+							<span>Switch account</span>
+						</a>
 					</li>
 					<li>
-						<a>Logout</a>
+						<a>
+							<i class="zmdi zmdi-time-restore"></i>
+							<span>Logout</span>
+						</a>
 					</li>
 				</ul>
 			</div>
@@ -197,19 +206,19 @@
 					<li>
 						<a class="sub" routerLink="/sample-page/list-view" [ngClass]="{'active': contains('list-view')}">List View</a>
 					</li>
-					<li>
+					<li class="hidden">
 						<a class="sub" routerLink="/sample-page/message" [ngClass]="{'active': contains('message')}">Messages</a>
 					</li>
 					<li>
 						<a class="sub" routerLink="/sample-page/pricing-table" [ngClass]="{'active': contains('pricing-table')}">Pricing Table</a>
 					</li>
-					<li>
+					<li class="hidden">
 						<a class="sub" routerLink="/sample-page/contact" [ngClass]="{'active': contains('contact')}">Contacts</a>
 					</li>
-					<li>
+					<li class="hidden">
 						<a class="sub" routerLink="/sample-page/invoice" [ngClass]="{'active': contains('invoice')}">Invoice</a>
 					</li>
-					<li>
+					<li class="hidden">
 						<a class="sub" routerLink="/sample-page/wall" [ngClass]="{'active': contains('wall')}">Wall</a>
 					</li>
 					<li>
@@ -222,6 +231,47 @@
 						<a class="sub" routerLink="/page404" [ngClass]="{'active': contains('page404')}">Error 404</a>
 					</li>
 				</ul>
+			</li>
+			<li class="sub-menu multiple">
+				<a [toggle-submenu]>
+					<div class="icon-circle">
+						<i class="zmdi zmdi-menu"></i>
+					</div><!--
+					--><span>Multi level menu</span>
+				</a>
+				<ul class="list-unstyled">
+					<li><a class="sub">Level 2</a></li>
+					<li><a class="sub">Level 2</a></li>
+					<li class="sub-menu multiple">
+						<a [toggle-submenu] class="sub">Level 3</a>
+						<ul class="list-unstyled">
+							<li><a class="sub">Level 3</a></li>
+							<li><a class="sub">Level 3</a></li>
+							<li class="sub-menu multiple">
+								<a [toggle-submenu] class="sub">Level 4</a>
+								<ul class="list-unstyled">
+									<li><a class="sub">Level 4</a></li>
+									<li><a class="sub">Level 4</a></li>
+									<li class="sub-menu multiple">
+										<a [toggle-submenu] class="sub">Level 5</a>
+										<ul class="list-unstyled">
+											<li><a class="sub">Level 6</a></li>
+											<li><a class="sub">Level 6...</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="https://facebook.com/rowel.deguzman" target="_blank">
+					<div class="icon-circle">
+						<i class="zmdi zmdi-money"></i>
+					</div><!--
+					--><span>Buy this template</span>
+				</a>
 			</li>
 		</ul>
 		<div class="bottom-collapser">

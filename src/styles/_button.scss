@@ -88,7 +88,8 @@
 	padding: 0 !important;
 	text-align: center !important;
 }
-.btn-group:not(.bootstrap-select), .btn-group-vertical:not(.bootstrap-select) {
+.btn-group:not(.bootstrap-select), 
+.btn-group-vertical:not(.bootstrap-select) {
 	box-shadow: 0 1px 4px 0 rgba(0,0,0,0.3) !important;
 }
 .btn-group .btn, 
@@ -281,8 +282,8 @@ fieldset[disabled] .btn-default:active {
 
 .btn-primary {
 	color: #ffffff  !important;
-	background-color: #222f3c  !important;
-	border-color: #222f3c  !important;
+	background-color: #222f3c ;
+	border-color: #222f3c;
 	opacity: 0.9  !important;
 }
 
@@ -290,8 +291,8 @@ fieldset[disabled] .btn-default:active {
 .btn-primary:hover,
 .open > .dropdown-toggle.btn-primary {
 	color: #ffffff;
-	background-color: #222f3c !important;
-	border-color: #222f3c !important;
+	background-color: #222f3c;
+	border-color: #222f3c;
 	opacity: 1  !important;
 }
 .btn-primary:active:hover,

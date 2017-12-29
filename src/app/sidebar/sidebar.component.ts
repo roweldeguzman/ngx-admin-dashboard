@@ -24,7 +24,6 @@ export class SidebarComponent extends BaseComponent implements OnInit {
 	public routerState;
 	public currentSkin;
 	ngOnInit() {
-		let $this = this;
 		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 			console.log(window.innerWidth <= 1025 && window.innerWidth >= 768);
 			this.scrollbarDisableOnMobile = true;
@@ -40,36 +39,27 @@ export class SidebarComponent extends BaseComponent implements OnInit {
 		}
 
 		setTimeout(function(){
+			/**
+			 * this code will hide and show the text on sidebar when the window with is small and not in mobile mode.
+			 * 
+			*/
 			if (window.innerWidth <= 1024 && window.innerWidth >= 768){
 				$(".sub-menu.toggled").each(function (i, e) {
-					$(e).find('ul:first').find("a.sub").css("visibility", "hidden");
+					$(e).find('ul').find("a.sub").css("visibility", "hidden");
 					$(e).toggleClass("toggled");
 					$(e).addClass("toggled-hidden");
-					$(e).find('ul:first').slideToggle('fast');
+					$(e).find('ul').slideToggle('fast');
 				});
 			}
 		}, 100);
-
-		/*$("#sidebarContainer").on("mouseenter", function (event) {
-			console.log(window.innerWidth <= 1025 && window.innerWidth >= 768);
-			
-			if (window.innerWidth <= 1025 && window.innerWidth >= 768) {
-				if (!$("#sidebarContainer").hasClass("hovered") && !$("aside").hasClass("active")) {
-					$("#sidebarContainer").addClass("hovered")
-					$this.expandNav();
-				}
-			}
-		});
-		$("#sidebarContainer").on("mouseleave", function(event) {
-			if (window.innerWidth <= 1025 && window.innerWidth >= 768) {
-				if ($("#sidebarContainer").hasClass("hovered")) {
-					$("#sidebarContainer").removeClass("hovered")
-					$this.expandNav();
-				}
-			}
-		});*/
+		
 	}
 	ngOnChanges(changes: SimpleChanges) {
+		/**
+		 * this code will deternime if the state from parent module has ben change, 
+		 * this means that the user browse from to or on new
+		 * 
+		*/
 		if (changes.currentState.currentValue !== undefined){
 			this.routerState	=	changes.currentState.currentValue;
 		}

@@ -142,97 +142,517 @@ body:not(.full-layout) {
 }
 
 /* APP HEADER */
-app-header[rg-skin="primary"] nav{
-    background: $primary !important;
-    border-bottom: $primary !important;
+app-header[rg-skin="primary"] {
+    nav, #search-mobile-container{
+        background: $primary !important;
+        border-bottom: $primary !important;
+    }
 }
-app-header[rg-skin="blue"] nav{
-    background: $blue !important;
-    border-bottom: $blue !important;
+app-header[rg-skin="blue"] {
+    nav, #search-mobile-container {
+        background: $blue !important;
+        border-bottom: $blue !important;
+    }
 }
-app-header[rg-skin="lightblue"] nav{
-    background: $lightblue !important;
-    border-bottom: $lightblue !important;
+app-header[rg-skin="lightblue"] {
+    nav, #search-mobile-container {
+        background: $lightblue !important;
+        border-bottom: $lightblue !important;
+    }
 }
-app-header[rg-skin="bluegray"] nav{
-    background: $bluegray !important;
-    border-bottom: $bluegray !important;
+app-header[rg-skin="bluegray"] {
+    nav, #search-mobile-container {
+        background: $bluegray !important;
+        border-bottom: $bluegray !important;
+    }
 }
-app-header[rg-skin="cyan"] nav{
-    background: $cyan !important;
-    border-bottom: $cyan !important;
+app-header[rg-skin="cyan"] {
+    nav, #search-mobile-container {
+        background: $cyan !important;
+        border-bottom: $cyan !important;
+    }
 }
-app-header[rg-skin="teal"] nav{
-    background: $teal !important;
-    border-bottom: $teal !important;
+app-header[rg-skin="teal"] {
+    nav, #search-mobile-container {
+        background: $teal !important;
+        border-bottom: $teal !important;
+    }
 }
-app-header[rg-skin="green"] nav{
-    background: $green !important;
-    border-bottom: $green !important;
+app-header[rg-skin="green"] {
+    nav, #search-mobile-container {
+        background: $green !important;
+        border-bottom: $green !important;
+    }
 }
-app-header[rg-skin="orange"] nav{
-    background: $orange !important;
-    border-bottom: $orange !important;
+app-header[rg-skin="orange"] {
+    nav, #search-mobile-container {
+        background: $orange !important;
+        border-bottom: $orange !important;
+    }
 }
-app-header[rg-skin="purple"] nav{
-    background: $purple !important;
-    border-bottom: $purple !important;
+app-header[rg-skin="purple"] {
+    nav, #search-mobile-container {
+        background: $purple !important;
+        border-bottom: $purple !important;
+    }
 }
+app-header[rg-skin="indigo"] {
+    nav, #search-mobile-container {
+        background: $indigo !important;
+        border-bottom: $indigo !important;
+    }
+}
+
 /* APP SIDEBAR */
 app-sidebar[rg-skin="primary"] aside {
+    background: $primary;
     .aside-profile{
-        //background: $primary !important;
+        background: $primary !important;
     }
 
-    
 }
 app-sidebar[rg-skin="blue"] aside {
+    background: #f3f3f3;
     .aside-profile{
-        //background: $blue !important;
+        background: $blue !important;
     }
-    nav ul li:not(.separation){
+    nav ul li {
         & > a{
-            &.active{
-                //background-color:#2196F3 !important;
+            .icon-circle{
+                border: none !important;
+                background: transparent !important;
+            }
+            &.active, &:hover{
+                color: $blue !important;
                 i { 
-                    //color: $cyan; 
+                    color: $blue !important; 
                 }
             }
         }
+        &.sub-menu:not(.toggled) > a,
+        &.sub-menu.toggled > a{
+            &:hover::after,
+            &.active::after{
+                color: $blue !important;
+            }
+        }
+    }
+    nav > .bottom-collapser .bottom-toggler{
+        background-color: $blue;
     }
 }
 app-sidebar[rg-skin="lightblue"] aside {
+    background: #f3f3f3;
     .aside-profile{
-        //background: $lightblue !important;
+        background: $lightblue !important;
+    }
+    nav ul li {
+        & > a{
+            .icon-circle{
+                border: none !important;
+                background: transparent !important;
+            }
+            &.active, &:hover{
+                color: $lightblue !important;
+                i { 
+                    color: $lightblue !important; 
+                }
+            }
+        }
+        &.sub-menu:not(.toggled) > a,
+        &.sub-menu.toggled > a{
+            &:hover::after,
+            &.active::after{
+                color: $lightblue !important;
+            }
+        }
+    }
+    nav > .bottom-collapser .bottom-toggler{
+        background-color: $lightblue;
     }
 }
 app-sidebar[rg-skin="bluegray"] aside {
+    background: #f3f3f3;
     .aside-profile{
-        //background: #bluegray !important;
+        background: $bluegray !important;
+    }
+    nav ul li {
+        & > a{
+            .icon-circle{
+                border: none !important;
+                background: transparent !important;
+            }
+            &.active, &:hover{
+                color: $bluegray !important;
+                i { 
+                    color: $bluegray !important; 
+                }
+            }
+        }
+        &.sub-menu:not(.toggled) > a,
+        &.sub-menu.toggled > a{
+            &:hover::after,
+            &.active::after{
+                color: $bluegray !important;
+            }
+        }
+    }
+    nav > .bottom-collapser .bottom-toggler{
+        background-color: $bluegray;
     }
 }
 app-sidebar[rg-skin="cyan"] aside {
+    background: #f3f3f3;
     .aside-profile{
-        //background: $cyan !important;
+        background: $cyan !important;
+    }
+    nav ul li {
+        & > a{
+            .icon-circle{
+                border: none !important;
+                background: transparent !important;
+            }
+            &.active, &:hover{
+                color: $cyan !important;
+                i { 
+                    color: $cyan !important; 
+                }
+            }
+        }
+        &.sub-menu:not(.toggled) > a,
+        &.sub-menu.toggled > a{
+            &:hover::after,
+            &.active::after{
+                color: $cyan !important;
+            }
+        }
+    }
+    nav > .bottom-collapser .bottom-toggler{
+        background-color: $cyan;
     }
 }
 app-sidebar[rg-skin="teal"] aside {
+    background: #f3f3f3;
     .aside-profile{
-        //background: $teal !important;
+        background: $teal !important;
+    }
+    nav ul li {
+        & > a{
+            .icon-circle{
+                border: none !important;
+                background: transparent !important;
+            }
+            &.active, &:hover{
+                color: $teal !important;
+                i { 
+                    color: $teal !important; 
+                }
+            }
+        }
+        &.sub-menu:not(.toggled) > a,
+        &.sub-menu.toggled > a{
+            &:hover::after,
+            &.active::after{
+                color: $teal !important;
+            }
+        }
+    }
+    nav > .bottom-collapser .bottom-toggler{
+        background-color: $teal;
     }
 }
 app-sidebar[rg-skin="green"] aside {
+    background: #f3f3f3;
     .aside-profile{
-        //background: $green !important;
+        background: $green !important;
+    }
+    nav ul li {
+        & > a{
+            .icon-circle{
+                border: none !important;
+                background: transparent !important;
+            }
+            &.active, &:hover{
+                color: $green !important;
+                i { 
+                    color: $green !important; 
+                }
+            }
+        }
+        &.sub-menu:not(.toggled) > a,
+        &.sub-menu.toggled > a{
+            &:hover::after,
+            &.active::after{
+                color: $green !important;
+            }
+        }
+    }
+    nav > .bottom-collapser .bottom-toggler{
+        background-color: $green;
     }
 }
 app-sidebar[rg-skin="orange"] aside {
+    background: #f3f3f3;
     .aside-profile{
-        //background: $orange !important;
+        background: $orange !important;
+    }
+    nav ul li {
+        & > a{
+            .icon-circle{
+                border: none !important;
+                background: transparent !important;
+            }
+            &.active, &:hover{
+                color: $orange !important;
+                i { 
+                    color: $orange !important; 
+                }
+            }
+        }
+        &.sub-menu:not(.toggled) > a,
+        &.sub-menu.toggled > a{
+            &:hover::after,
+            &.active::after{
+                color: $orange !important;
+            }
+        }
+    }
+    nav > .bottom-collapser .bottom-toggler{
+        background-color: $orange;
     }
 }
 app-sidebar[rg-skin="purple"] aside {
+    background: #f3f3f3;
     .aside-profile{
-        //background: $purple !important;
+        background: $purple !important;
+    }
+    nav ul li {
+        & > a{
+            .icon-circle{
+                border: none !important;
+                background: transparent !important;
+            }
+            &.active, &:hover{
+                color: $purple !important;
+                i { 
+                    color: $purple !important; 
+                }
+            }
+        }
+        &.sub-menu:not(.toggled) > a,
+        &.sub-menu.toggled > a{
+            &:hover::after,
+            &.active::after{
+                color: $purple !important;
+            }
+        }
+    }
+    nav > .bottom-collapser .bottom-toggler{
+        background-color: $purple;
+    }
+}
+app-sidebar[rg-skin="indigo"] aside {
+    background: #f3f3f3;
+    .aside-profile{
+        background: $indigo !important;
+    }
+    nav ul li {
+        & > a{
+            .icon-circle{
+                border: none !important;
+                background: transparent !important;
+            }
+            &.active, &:hover{
+                color: $indigo !important;
+                i { 
+                    color: $indigo !important; 
+                }
+            }
+        }
+        &.sub-menu:not(.toggled) > a,
+        &.sub-menu.toggled > a{
+            &:hover::after,
+            &.active::after{
+                color: $indigo !important;
+            }
+        }
+    }
+    nav > .bottom-collapser .bottom-toggler{
+        background-color: $indigo;
+    }
+}
+
+
+/* APP MAIN */
+
+body[rg-skin="primary"] {
+    button.btn.btn-primary{
+        background-color: $primary !important;
+        border-color: $primary !important;
+    }
+    .tab-nav:not(.tn-vertical):not([data-tab-color]) > li > a::before,
+    .profile .right-pane .extra-nav ul li a::after{
+        background: $primary;
+    }
+    .search-div .main-search-menu-result > li.active, 
+    .search-div .main-search-menu-result > li:hover {
+        background-color: $primary;
+        a {
+            color: #ffffff !important;
+        }
+    }
+}
+body[rg-skin="blue"] {
+    button.btn.btn-primary{
+        background-color: $blue !important;
+        border-color: $blue !important;
+    }
+    .tab-nav:not(.tn-vertical):not([data-tab-color]) > li > a::before,
+    .profile .right-pane .extra-nav ul li a::after{
+        background: $blue;
+    }
+    .search-div .main-search-menu-result > li.active, 
+    .search-div .main-search-menu-result > li:hover {
+        background-color: $blue;
+        a {
+            color: #ffffff !important;
+        }
+    }
+}
+body[rg-skin="lightblue"] {
+    button.btn.btn-primary{
+        background-color: $lightblue !important;
+        border-color: $lightblue !important;
+    }
+    .tab-nav:not(.tn-vertical):not([data-tab-color]) > li > a::before,
+    .profile .right-pane .extra-nav ul li a::after{
+        background: $lightblue;
+    }
+    .search-div .main-search-menu-result > li.active, 
+    .search-div .main-search-menu-result > li:hover {
+        background-color: $lightblue;
+        a {
+            color: #ffffff !important;
+        }
+    }
+}
+body[rg-skin="bluegray"] {
+    button.btn.btn-primary{
+        background-color: $bluegray !important;
+        border-color: $bluegray !important;
+    }
+    .tab-nav:not(.tn-vertical):not([data-tab-color]) > li > a::before,
+    .profile .right-pane .extra-nav ul li a::after{
+        background: $bluegray;
+    }
+    .search-div .main-search-menu-result > li.active, 
+    .search-div .main-search-menu-result > li:hover {
+        background-color: $bluegray;
+        a {
+            color: #ffffff !important;
+        }
+    }
+}
+body[rg-skin="cyan"] {
+    button.btn.btn-primary{
+        background-color: $cyan !important;
+        border-color: $cyan !important;
+    }
+    .tab-nav:not(.tn-vertical):not([data-tab-color]) > li > a::before,
+    .profile .right-pane .extra-nav ul li a::after{
+        background: $cyan;
+    }
+    .search-div .main-search-menu-result > li.active, 
+    .search-div .main-search-menu-result > li:hover {
+        background-color: $cyan;
+        a {
+            color: #ffffff !important;
+        }
+    }
+}
+body[rg-skin="teal"] {
+    button.btn.btn-primary{
+        background-color: $teal !important;
+        border-color: $teal !important;
+    }
+    .tab-nav:not(.tn-vertical):not([data-tab-color]) > li > a::before,
+    .profile .right-pane .extra-nav ul li a::after{
+        background: $teal;
+    }
+    .search-div .main-search-menu-result > li.active, 
+    .search-div .main-search-menu-result > li:hover {
+        background-color: $teal;
+        a {
+            color: #ffffff !important;
+        }
+    }
+}
+body[rg-skin="green"] {
+    button.btn.btn-primary{
+        background-color: $green !important;
+        border-color: $green !important;
+    }
+    .tab-nav:not(.tn-vertical):not([data-tab-color]) > li > a::before,
+    .profile .right-pane .extra-nav ul li a::after{
+        background: $green;
+    }
+    .search-div .main-search-menu-result > li.active, 
+    .search-div .main-search-menu-result > li:hover {
+        background-color: $green;
+        a {
+            color: #ffffff !important;
+        }
+    }
+}
+body[rg-skin="orange"] {
+    button.btn.btn-primary{
+        background-color: $orange !important;
+        border-color: $orange !important;
+    }
+    .tab-nav:not(.tn-vertical):not([data-tab-color]) > li > a::before,
+    .profile .right-pane .extra-nav ul li a::after{
+        background: $orange;
+    }
+    .search-div .main-search-menu-result > li.active, 
+    .search-div .main-search-menu-result > li:hover {
+        background-color: $orange;
+        a {
+            color: #ffffff !important;
+        }
+    }
+}
+body[rg-skin="purple"] {
+    button.btn.btn-primary{
+        background-color: $purple !important;
+        border-color: $purple !important;
+    }
+    .tab-nav:not(.tn-vertical):not([data-tab-color]) > li > a::before,
+    .profile .right-pane .extra-nav ul li a::after{
+        background: $purple;
+    }
+    .search-div .main-search-menu-result > li.active, 
+    .search-div .main-search-menu-result > li:hover {
+        background-color: $purple;
+        a {
+            color: #ffffff !important;
+        }
+    }
+}
+body[rg-skin="indigo"] {
+    button.btn.btn-primary{
+        background-color: $indigo !important;
+        border-color: $indigo !important;
+    }
+    .tab-nav:not(.tn-vertical):not([data-tab-color]) > li > a::before,
+    .profile .right-pane .extra-nav ul li a::after{
+        background: $indigo;
+    }
+    .search-div .main-search-menu-result > li.active, 
+    .search-div .main-search-menu-result > li:hover {
+        background-color: $indigo;
+        a {
+            color: #ffffff !important;
+        }
+        
     }
 }

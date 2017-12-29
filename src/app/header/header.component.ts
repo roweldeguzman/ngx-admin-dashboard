@@ -31,7 +31,7 @@ export class HeaderComponent extends BaseComponent implements OnInit {
 				},300);				
 			}
 		});
-		$(".main-search-menu-input").on("keypress", function(event){
+		$(".main-search-menu-input").on("keydown", function(event){
 			var self = $(this);
 			if(event.keyCode == 38 || event.keyCode == 40){
 				var li			=	self.parents(".seach-container").find('.search-scroll').find('ul > li');
@@ -132,15 +132,13 @@ export class HeaderComponent extends BaseComponent implements OnInit {
 	}
 
 	public changeLayout(ev){
-		if (ev.target.checked){
-			$("body").addClass("full-layout");
-		} else {
-			$("body").removeClass("full-layout");
-		}
+		ev.target.checked ? $("body").addClass("full-layout") : $("body").removeClass("full-layout");
 	}
 	/* This method will push the color variable to layout component */
-	public skinSwitch(color) {
+	public skinSwitch(color, event) {
 		this.pushSkinToLayout.emit(color);
+		$(".skin-switch").find(".active").removeClass("active");
+		event.target.classList.add("active");
 	}
 	public showHideSearchMobile(type: String) {
 		if (type == "show") {

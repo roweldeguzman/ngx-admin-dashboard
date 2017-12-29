@@ -1,3 +1,4 @@
+/* DROPDOWN */
 .dropdown{
 	&.dropdown-menu-lg{
 		width: 300px;
@@ -145,14 +146,15 @@
 .btn-group.open .dropdown-toggle {
 	box-shadow: none;
 }
+.dropdown-menu > li > a{
+	color: #6d6d6d;
+}
 .dropdown-menu > li > a:focus, 
 .dropdown-menu > li > a:hover {
-	background-color: $secondary;
+	background-color: rgba(0, 0, 0, 0.075);
+	color: #6d6d6d;
 }
-.dropdown-menu > li > a:hover,
-.dropdown-menu > li > a:hover *{
-	color: #ffffff;
-}
+
 .btn-group-radius,
 .btn-group-radius.open,
 .btn-group.btn-group-radius > .btn:first-child:not(:last-child):not(.dropdown-toggle){

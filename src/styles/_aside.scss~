@@ -1,4 +1,3 @@
-/* ASIDE/SIDEBAR STYLES */
 app-sidebar{
     aside{
         background: $primary;
@@ -56,9 +55,6 @@ app-sidebar{
                     }
                 }
             }
-            &.sub-menu.multiple > ul {
-                display: none;                
-            }
             &.sub-menu:not(.toggled) > a{
                 &::after{
                     font-family: 'Material-Design-Iconic-Font';
@@ -102,9 +98,6 @@ app-sidebar{
             }
             a.sub.active{
                 background: none !important;
-            }
-            a.sub + ul {
-                padding-left: 20px;
             }
         }
         nav ul li.separation{
@@ -157,16 +150,6 @@ app-sidebar{
                 }
             }
         }
-        .aside-dropdown {
-            border-bottom: 1px solid #DDD;
-        }
-        .aside-dropdown ul li > a > i{
-            font-size: 22px !important;
-            vertical-align: top;
-            padding-bottom: 4px;
-            padding-top: 4px;
-            margin-top: 0;
-        }
         .ps__rail-y{
             top: 150px !important;
         }
@@ -188,9 +171,8 @@ app-sidebar{
                 }                
             }
             nav{
-                height: calc(100% - 145px);
+                height: calc(100% - 140px);
                 overflow: auto;
-                overflow-x: hidden;
                 ul {
                     pointer-events: none;
                 }
@@ -201,7 +183,7 @@ app-sidebar{
         }
         aside {
             nav{
-                height: calc(100% - 225px);
+                height: calc(100% - 217px);
             }
             nav > .bottom-collapser{
                 display: block;

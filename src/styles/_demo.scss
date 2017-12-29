@@ -136,10 +136,20 @@
 
 
 .ss-skin {
-    width: 16px;
-    height: 16px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     cursor: pointer;
     display: inline-block;
     margin: 2px 5px;
+    &.active{
+        &::before{
+            font-family: 'Material-Design-Iconic-Font';
+            content: "\F26B";
+            position: absolute;
+            color: #fff;
+            font-size: 19px;
+            margin-left: -6px;
+        }
+    }
 }

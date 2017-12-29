@@ -49,12 +49,19 @@ export class BaseComponent{
 			this.collapseSpandedNav(true);
 		}
 	}
-
+	/**
+	 * 
+	 * @param isClose boolean 
+	 * 
+	 * 
+	 * @returns void
+	 */
 	public collapseSpandedNav(isClose: boolean){
-		$(".hamburger--spring").toggleClass("is-active");
+		console.log(isClose)
+		$(".hamburger--spring").toggleClass("is-active");		
 		if (isClose) {
 			$(".sub-menu.toggled").each(function(i, e){
-				$(e).find('ul:first').find("a.sub").css("visibility","hidden");
+				$(e).find('ul').find("a.sub").css("visibility","hidden");
 				$(e).toggleClass("toggled");
 				$(e).addClass("toggled-hidden");
 				$(e).find('ul:first').slideToggle('fast');
@@ -67,5 +74,6 @@ export class BaseComponent{
 				$(e).find('ul:first').find("a.sub").css("visibility", "visible");
 			})
 		}
+		
 	}
 }

@@ -1,6 +1,6 @@
 <app-header (pushSkinToLayout)="getCurrentSkin($event)" attr.rg-skin="{{ currentSkin }}"></app-header>
 <app-sidebar [currentState]="currentState" attr.rg-skin="{{ currentSkin }}"></app-sidebar>
-<main class="container">
+<main class="container" attr.rg-skin="{{ currentSkin }}">
 	<router-outlet></router-outlet>
 	<footer class="text-center" id="footer">
 		<span class="ng-scope">Copyright &copy; 2017 Material Admin</span>
