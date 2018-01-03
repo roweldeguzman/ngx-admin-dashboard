@@ -531,6 +531,9 @@ body[rg-skin="blue"] {
         background-color: $blue !important;
         border-color: $blue !important;
     }
+    .full-round{
+        background: $blue !important;
+    }
 }
 body[rg-skin="lightblue"] {
     button.btn.btn-primary{
@@ -561,7 +564,9 @@ body[rg-skin="lightblue"] {
         background-color: $lightblue !important;
         border-color: $lightblue !important;
     }
-
+    .full-round{
+        background: $lightblue !important;
+    }
 }
 body[rg-skin="bluegray"] {
     button.btn.btn-primary{
@@ -591,6 +596,9 @@ body[rg-skin="bluegray"] {
     .pagination > .active > a:hover {
         background-color: $bluegray !important;
         border-color: $bluegray !important;
+    }
+    .full-round{
+        background: $bluegray !important;
     }
 }
 body[rg-skin="cyan"] {
@@ -622,6 +630,9 @@ body[rg-skin="cyan"] {
         background-color: $cyan !important;
         border-color: $cyan !important;
     }
+    .full-round{
+        background: $cyan !important;
+    }
 }
 body[rg-skin="teal"] {
     button.btn.btn-primary{
@@ -651,6 +662,9 @@ body[rg-skin="teal"] {
     .pagination > .active > a:hover {
         background-color: $teal !important;
         border-color: $teal !important;
+    }
+    .full-round{
+        background: $teal !important;
     }
 }
 body[rg-skin="green"] {
@@ -682,6 +696,9 @@ body[rg-skin="green"] {
         background-color: $green !important;
         border-color: $green !important;
     }
+    .full-round{
+        background: $green !important;
+    }
 }
 body[rg-skin="orange"] {
     button.btn.btn-primary{
@@ -711,6 +728,9 @@ body[rg-skin="orange"] {
     .pagination > .active > a:hover {
         background-color: $orange !important;
         border-color: $orange !important;
+    }
+    .full-round{
+        background: $orange !important;
     }
 }
 body[rg-skin="purple"] {
@@ -742,6 +762,9 @@ body[rg-skin="purple"] {
         background-color: $purple !important;
         border-color: $purple !important;
     }
+    .full-round{
+        background: $purple !important;
+    }
 }
 body[rg-skin="indigo"] {
     button.btn.btn-primary{
@@ -772,5 +795,8 @@ body[rg-skin="indigo"] {
     .pagination > .active > a:hover {
         background-color: $indigo !important;
         border-color: $indigo !important;
+    }
+    .full-round{
+        background: $indigo !important;
     }
 }

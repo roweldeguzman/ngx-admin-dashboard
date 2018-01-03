@@ -19,7 +19,28 @@ hr{
     margin-top: 10px !important;
     margin-bottom: 10px !important;
 }
-
+.full-round{
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+    background: $primary;
+    background-size: auto auto;
+    background-size: auto auto;
+    border-radius: 50%;
+    box-shadow: 0 1px 0 rgba(0,0,0,.15);
+    background-size: 32px 32px;
+    position: relative;
+    display: inline-block;
+}
+.full-round-txt{
+    padding-top: 17%;
+    color: #FFF;
+    text-align: center;
+    padding-right: 1px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+}
 /* Perfect Scrollbar override attributes */
 .ps__rail-y {
     width: 5px;

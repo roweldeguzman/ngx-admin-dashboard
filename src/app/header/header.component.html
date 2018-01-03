@@ -67,7 +67,7 @@
                     <ul class="list-unstyled dropdown-menu pull-right" [stop-propagate] style="width: 230px;">
                         <li class="dropdown-arrow"></li>
                         <li class="skin-switch" style="padding: 15px 0 8px; text-align: center;">
-                            <span class="ss-skin bgm-primary active" (click)="skinSwitch('primary', $event)"></span>
+                            <span class="ss-skin bgm-primary" (click)="skinSwitch('primary', $event)"></span>
                             <span class="ss-skin bgm-lightblue" (click)="skinSwitch('lightblue', $event)"></span>
                             <span class="ss-skin bgm-bluegray" (click)="skinSwitch('bluegray', $event)"></span>
                             <span class="ss-skin bgm-cyan" (click)="skinSwitch('cyan', $event)"></span>
@@ -91,22 +91,30 @@
                     <div class="dropdown-menu pull-right messages-list">
                         <div class="dropdown-arrow"></div>
                         <div class="listview">
-                            <div class="lv-header">Message</div>
+                            <!-- <div class="lv-header">Message</div> -->
                             <div class="lv-body">
                                 <a *ngFor="let items of messageList" class="lv-item">
                                     <div class="media">
                                         <div class="pull-left">
-                                            <img class="lv-img-sm" src="./assets/img/profile-pics/{{items.image}}">
+                                            <div class="full-round">
+                                                <div class="full-round-txt">
+                                                    {{ items.title.substr(0, 1).toUpperCase() }}
+                                                </div>
+                                            </div>
+                                            <!-- <img class="lv-img-sm" src="./assets/img/profile-pics/{{items.image}}"> -->
                                         </div>
                                         <div class="media-body">
-                                            <div class="lv-title"> {{ items.title }} </div>
-                                            <div class="lv-small"> {{ items.message }} </div>
+                                            <div class="lv-title"> {{ items.message }} </div>
+                                            <div class="lv-small"> 
+                                                <span>{{ items.title }} </span> - 
+                                                <span> 2hrs ago</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </a>
                             </div>
                             <div class="clearfix"></div>
-                            <a class="lv-footer">View All</a>
+                            <a class="lv-footer">More message</a>
                         </div>
                     </div>
                 </li>
@@ -152,7 +160,7 @@
                                         <li><a (click)="testExpress($event)" class="no-hover search-result">Content 24</a></li>
                                     </ul>
                                 </div>
-                                <div class="search-footer" tabindex="0">see all</div>
+                                <div class="search-footer" tabindex="0">More result</div>
                             </div>
                         </div>
                     </div>
