@@ -532,21 +532,29 @@
 				<pre class="card card-block card-header">Page: {{bigCurrentPage}} / {{numPages}}</pre>
 				<br>
 				<br>
-				<p class="c-black">Pager</p>
-
 				<div class="row">
-					<div class="col-xs-12 col-12 col-md-6">
-						<pagination [directionLinks]="false" [totalItems]="totalItems" [(ngModel)]="currentPage" (numPages)="smallnumPages = $event">
+					<div class="col-sm-12">
+						<p class="c-black">Pager</p>
+						<div class="col-xs-12 col-12 col-md-6">
+							<pagination [directionLinks]="false" [totalItems]="totalItems" [(ngModel)]="currentPage" (numPages)="smallnumPages = $event">
+							</pagination>
+						</div>
+					</div>
+					<br>
+					<br>
+					<div class="col-sm-12">
+						<p class="c-black">Custom</p>
+						<pagination [directionLinks]="false" [totalItems]="totalItems" [(ngModel)]="currentPage" (numPages)="smallnumPages = $event"
+						class="pagination-sm custom">
 						</pagination>
 					</div>
-
 					<div class="col-xs-12 col-12 col-md-6">
 						<pager [totalItems]="totalItems" [(ngModel)]="currentPage" (pageChanged)="pageChanged($event)" pageBtnClass="btn" [itemsPerPage]="10"
 						class="pull-left">
 						</pager>
 					</div>
 				</div>
-
+				
 			</div>
 		</div>
 		<!-- POP OVER -->

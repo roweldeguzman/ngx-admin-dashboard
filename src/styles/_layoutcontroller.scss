@@ -518,6 +518,19 @@ body[rg-skin="blue"] {
             color: #ffffff !important;
         }
     }
+    .checkbox .input-helper::after{
+        border-bottom: 2px solid $blue !important;
+        border-left: 2px solid $blue !important;
+    }
+    .radio .input-helper::after {
+        background: $blue;
+    }
+    .pagination > .active > a, 
+    .pagination > .active > a:focus, 
+    .pagination > .active > a:hover {
+        background-color: $blue !important;
+        border-color: $blue !important;
+    }
 }
 body[rg-skin="lightblue"] {
     button.btn.btn-primary{
@@ -535,6 +548,20 @@ body[rg-skin="lightblue"] {
             color: #ffffff !important;
         }
     }
+    .checkbox .input-helper::after{
+        border-bottom: 2px solid $lightblue !important;
+        border-left: 2px solid $lightblue !important;
+    }
+    .radio .input-helper::after {
+        background: $lightblue;
+    }
+    .pagination > .active > a, 
+    .pagination > .active > a:focus, 
+    .pagination > .active > a:hover {
+        background-color: $lightblue !important;
+        border-color: $lightblue !important;
+    }
+
 }
 body[rg-skin="bluegray"] {
     button.btn.btn-primary{
@@ -551,6 +578,19 @@ body[rg-skin="bluegray"] {
         a {
             color: #ffffff !important;
         }
+    }
+    .checkbox .input-helper::after{
+        border-bottom: 2px solid $bluegray !important;
+        border-left: 2px solid $bluegray !important;
+    }
+    .radio .input-helper::after {
+        background: $bluegray;
+    }
+    .pagination > .active > a, 
+    .pagination > .active > a:focus, 
+    .pagination > .active > a:hover {
+        background-color: $bluegray !important;
+        border-color: $bluegray !important;
     }
 }
 body[rg-skin="cyan"] {
@@ -569,6 +609,19 @@ body[rg-skin="cyan"] {
             color: #ffffff !important;
         }
     }
+    .checkbox .input-helper::after{
+        border-bottom: 2px solid $cyan !important;
+        border-left: 2px solid $cyan !important;
+    }
+    .radio .input-helper::after {
+        background: $cyan;
+    }
+    .pagination > .active > a, 
+    .pagination > .active > a:focus, 
+    .pagination > .active > a:hover {
+        background-color: $cyan !important;
+        border-color: $cyan !important;
+    }
 }
 body[rg-skin="teal"] {
     button.btn.btn-primary{
@@ -585,6 +638,19 @@ body[rg-skin="teal"] {
         a {
             color: #ffffff !important;
         }
+    }
+    .checkbox .input-helper::after{
+        border-bottom: 2px solid $teal !important;
+        border-left: 2px solid $teal !important;
+    }
+    .radio .input-helper::after {
+        background: $teal;
+    }
+    .pagination > .active > a, 
+    .pagination > .active > a:focus, 
+    .pagination > .active > a:hover {
+        background-color: $teal !important;
+        border-color: $teal !important;
     }
 }
 body[rg-skin="green"] {
@@ -603,6 +669,19 @@ body[rg-skin="green"] {
             color: #ffffff !important;
         }
     }
+    .checkbox .input-helper::after{
+        border-bottom: 2px solid $green !important;
+        border-left: 2px solid $green !important;
+    }
+    .radio .input-helper::after {
+        background: $green;
+    }
+    .pagination > .active > a, 
+    .pagination > .active > a:focus, 
+    .pagination > .active > a:hover {
+        background-color: $green !important;
+        border-color: $green !important;
+    }
 }
 body[rg-skin="orange"] {
     button.btn.btn-primary{
@@ -619,6 +698,19 @@ body[rg-skin="orange"] {
         a {
             color: #ffffff !important;
         }
+    }
+    .checkbox .input-helper::after{
+        border-bottom: 2px solid $orange !important;
+        border-left: 2px solid $orange !important;
+    }
+    .radio .input-helper::after {
+        background: $orange;
+    }
+    .pagination > .active > a, 
+    .pagination > .active > a:focus, 
+    .pagination > .active > a:hover {
+        background-color: $orange !important;
+        border-color: $orange !important;
     }
 }
 body[rg-skin="purple"] {
@@ -637,6 +729,19 @@ body[rg-skin="purple"] {
             color: #ffffff !important;
         }
     }
+    .checkbox .input-helper::after{
+        border-bottom: 2px solid $purple !important;
+        border-left: 2px solid $purple !important;
+    }
+    .radio .input-helper::after {
+        background: $purple;
+    }
+    .pagination > .active > a, 
+    .pagination > .active > a:focus, 
+    .pagination > .active > a:hover {
+        background-color: $purple !important;
+        border-color: $purple !important;
+    }
 }
 body[rg-skin="indigo"] {
     button.btn.btn-primary{
@@ -654,5 +759,18 @@ body[rg-skin="indigo"] {
             color: #ffffff !important;
         }
         
+    }
+    .checkbox .input-helper::after{
+        border-bottom: 2px solid $indigo !important;
+        border-left: 2px solid $indigo !important;
+    }
+    .radio .input-helper::after {
+        background: $indigo;
+    }
+    .pagination > .active > a, 
+    .pagination > .active > a:focus, 
+    .pagination > .active > a:hover {
+        background-color: $indigo !important;
+        border-color: $indigo !important;
     }
 }
