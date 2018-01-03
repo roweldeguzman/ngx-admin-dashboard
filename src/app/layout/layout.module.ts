@@ -30,7 +30,8 @@ const routes: Routes = [
 			{ path: 'gallery', loadChildren: './gallery/gallery.module#GalleryModule' },
 			{ path: 'calendar', loadChildren: './calendar/calendar.module#CalendarModule' },
 			{ path: 'generic-classes', loadChildren: './generic/generic.module#GenericModule' },
-			{ path: 'sample-page', loadChildren: './sample-page/sample-page.module#SamplePageModule' }
+			{ path: 'sample-page', loadChildren: './sample-page/sample-page.module#SamplePageModule' },
+			{ path: 'reference', loadChildren: './reference/reference.module#ReferenceModule' }
 		]
 	},{
 		path: 'login',

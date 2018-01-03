@@ -56,7 +56,7 @@
 				<a [toggle-submenu] [ngClass]="{'active': contains('widgets')}">
 					<div class="icon-circle">
 						<!-- <i class="fa fa-cube"></i> -->
-						<i class="zmdi zmdi-widgets"></i>
+						<i class="zmdi zmdi-lamp"></i>
 					</div><!--
 					--><span>Widgets</span>
 				</a>
@@ -73,7 +73,7 @@
 				<a [toggle-submenu] [ngClass]="{'active': contains('tables')}">
 					<div class="icon-circle">
 						<!-- <i class="fa fa-th-list"></i> -->
-						<i class="zmdi zmdi zmdi-view-list"></i>
+						<i class="zmdi zmdi zmdi-dialpad"></i>
 					</div><!--
 					--><span>Tables</span>
 				</a>
@@ -90,7 +90,7 @@
 				<a [toggle-submenu] [ngClass]="{'active': contains('forms')}">
 					<div class="icon-circle">
 						<!-- <i class="fa fa-file-text"></i> -->
-						<i class="zmdi zmdi-collection-text"></i>
+						<i class="zmdi zmdi-badge-check"></i>
 					</div><!--
 					--><span>Forms</span>
 				</a>
@@ -113,7 +113,7 @@
 				<a [toggle-submenu] [ngClass]="{'active': contains('user-interface')}">
 					<div class="icon-circle">
 						<!-- <i class="fa fa-exchange"></i> -->
-						<i class="zmdi zmdi-swap-alt"></i>
+						<i class="zmdi zmdi-desktop-mac"></i>
 					</div><!--
 					--><span>User Interface</span>
 				</a>
@@ -162,8 +162,7 @@
 			<li class="sub-menu" [ngClass]="{'toggled': contains('gallery')}">
 				<a [toggle-submenu] [ngClass]="{'active': contains('gallery')}">
 					<div class="icon-circle">
-						<!-- <i class="fa fa-image"></i> -->
-						<i class="zmdi zmdi-image"></i>
+						<i class="zmdi zmdi-image-alt"></i>
 					</div><!--
 					--><span>Photo Gallery</span>
 				</a>
@@ -176,7 +175,7 @@
 					</li>
 				</ul>
 			</li>
-			<li>
+			<li class="hidden">
 				<a routerLink="/calendar" [ngClass]="{'active': contains('calendar')}">
 					<div class="icon-circle">
 						<i class="zmdi zmdi-calendar"></i>
@@ -189,15 +188,15 @@
 					<div class="icon-circle">
 						<i class="zmdi zmdi-layers"></i>
 					</div><!--
-					--><span>Generic Classes</span>
+					--><span>Utilities</span>
 				</a>
 			</li>
 			<li class="sub-menu" [ngClass]="{'toggled': contains('sample-page')}">
 				<a [toggle-submenu] [ngClass]="{'active': contains('sample-page')}">
 					<div class="icon-circle">
-						<i class="zmdi zmdi-collection-item"></i>
+						<i class="zmdi zmdi-collection-bookmark"></i>
 					</div><!--
-					--><span>Sample Pages</span>
+					--><span>Pages</span>
 				</a>
 				<ul class="list-unstyled" [ngStyle]="{'display': contains('sample-page') ? '': 'none'}">
 					<li>
@@ -270,7 +269,15 @@
 					<div class="icon-circle">
 						<i class="zmdi zmdi-money"></i>
 					</div><!--
-					--><span>Buy this template</span>
+					--><span>Grab it for $12</span>
+				</a>
+			</li>
+			<li>
+				<a routerLink="/reference" [ngClass]="{'active': contains('reference')}">
+					<div class="icon-circle">
+						<i class="zmdi zmdi-info"></i>
+					</div><!--
+					--><span>Reference</span>
 				</a>
 			</li>
 		</ul>
