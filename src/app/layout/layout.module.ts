@@ -37,6 +37,9 @@ const routes: Routes = [
 		path: 'login',
         loadChildren: '../login/login.module#LoginModule',
 	},{
+		path: 'loginSecond',
+		loadChildren: '../loginSecond/loginSecond.module#LoginSecondModule',
+	},{
 		path: 'signup',
         loadChildren: '../signup/signup.module#SignupModule',
 	}, {

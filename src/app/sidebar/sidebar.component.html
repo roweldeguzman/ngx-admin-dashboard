@@ -32,12 +32,10 @@
 						</a>
 					</li>
 				</ul>
-			</div>
-			<!-- <li class="separation">Main</li> -->
+			</div> 			
 			<li>
 				<a routerLink="/home" [ngClass]="{'active': contains('home')}">
 					<div class="icon-circle">
-						<!-- <i class="fa fa-home"></i> -->
 						<i class="zmdi zmdi-home"></i>
 					</div><!--
 					--><span>Home</span>
@@ -45,8 +43,7 @@
 			</li>
 			<li>
 				<a routerLink="/typography" [ngClass]="{'active': contains('typography')}">
-					<div class="icon-circle">
-						<!-- <i class="fa fa-underline"></i> -->
+					<div class="icon-circle">						
 						<i class="zmdi zmdi-format-underlined"></i>
 					</div><!--
 					--><span>Typography</span>
@@ -55,7 +52,6 @@
 			<li class="sub-menu" [ngClass]="{'toggled': contains('widgets')}">
 				<a [toggle-submenu] [ngClass]="{'active': contains('widgets')}">
 					<div class="icon-circle">
-						<!-- <i class="fa fa-cube"></i> -->
 						<i class="zmdi zmdi-lamp"></i>
 					</div><!--
 					--><span>Widgets</span>
@@ -72,7 +68,6 @@
 			<li class="sub-menu" [ngClass]="{'toggled': contains('tables')}">
 				<a [toggle-submenu] [ngClass]="{'active': contains('tables')}">
 					<div class="icon-circle">
-						<!-- <i class="fa fa-th-list"></i> -->
 						<i class="zmdi zmdi zmdi-dialpad"></i>
 					</div><!--
 					--><span>Tables</span>
@@ -89,7 +84,6 @@
 			<li class="sub-menu" [ngClass]="{'toggled': contains('forms')}">
 				<a [toggle-submenu] [ngClass]="{'active': contains('forms')}">
 					<div class="icon-circle">
-						<!-- <i class="fa fa-file-text"></i> -->
 						<i class="zmdi zmdi-badge-check"></i>
 					</div><!--
 					--><span>Forms</span>
@@ -112,10 +106,9 @@
 			<li class="sub-menu" [ngClass]="{'toggled': contains('user-interface')}">
 				<a [toggle-submenu] [ngClass]="{'active': contains('user-interface')}">
 					<div class="icon-circle">
-						<!-- <i class="fa fa-exchange"></i> -->
 						<i class="zmdi zmdi-desktop-mac"></i>
 					</div><!--
-					--><span>User Interface</span>
+					--><span>UI Element</span>
 				</a>
 				<ul class="list-unstyled" [ngStyle]="{'display': contains('user-interface') ? '': 'none'}">
 					<li>
@@ -221,7 +214,16 @@
 						<a class="sub" routerLink="/sample-page/wall" [ngClass]="{'active': contains('wall')}">Wall</a>
 					</li>
 					<li>
-						<a class="sub" routerLink="/login">Login and Sign Up</a>
+						<a class="sub" routerLink="/login">Login</a>
+					</li>
+					<li>
+						<a class="sub" routerLink="/signup">Sign Up</a>
+					</li>
+					<li>
+						<a class="sub" routerLink="/forgot-password">Forgot Password</a>
+					</li>
+					<li>
+						<a class="sub" routerLink="/loginSecond">Login 2 and Sign Up 2 </a>
 					</li>
 					<li>
 						<a class="sub" routerLink="/lock-screen">Lock Screen</a>
@@ -263,14 +265,6 @@
 						</ul>
 					</li>
 				</ul>
-			</li>
-			<li>
-				<a href="https://facebook.com/rowel.deguzman" target="_blank">
-					<div class="icon-circle">
-						<i class="zmdi zmdi-money"></i>
-					</div><!--
-					--><span>Grab it for $12</span>
-				</a>
 			</li>
 			<li>
 				<a routerLink="/reference" [ngClass]="{'active': contains('reference')}">

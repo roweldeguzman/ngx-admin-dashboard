@@ -519,8 +519,8 @@ body[rg-skin="blue"] {
         }
     }
     .checkbox .input-helper::after{
-        border-bottom: 2px solid $blue !important;
-        border-left: 2px solid $blue !important;
+        border-bottom: 2px solid $blue;
+        border-left: 2px solid $blue;
     }
     .radio .input-helper::after {
         background: $blue;
@@ -552,8 +552,8 @@ body[rg-skin="lightblue"] {
         }
     }
     .checkbox .input-helper::after{
-        border-bottom: 2px solid $lightblue !important;
-        border-left: 2px solid $lightblue !important;
+        border-bottom: 2px solid $lightblue;
+        border-left: 2px solid $lightblue;
     }
     .radio .input-helper::after {
         background: $lightblue;
@@ -585,8 +585,8 @@ body[rg-skin="bluegray"] {
         }
     }
     .checkbox .input-helper::after{
-        border-bottom: 2px solid $bluegray !important;
-        border-left: 2px solid $bluegray !important;
+        border-bottom: 2px solid $bluegray;
+        border-left: 2px solid $bluegray;
     }
     .radio .input-helper::after {
         background: $bluegray;
@@ -618,8 +618,8 @@ body[rg-skin="cyan"] {
         }
     }
     .checkbox .input-helper::after{
-        border-bottom: 2px solid $cyan !important;
-        border-left: 2px solid $cyan !important;
+        border-bottom: 2px solid $cyan;
+        border-left: 2px solid $cyan;
     }
     .radio .input-helper::after {
         background: $cyan;
@@ -651,8 +651,8 @@ body[rg-skin="teal"] {
         }
     }
     .checkbox .input-helper::after{
-        border-bottom: 2px solid $teal !important;
-        border-left: 2px solid $teal !important;
+        border-bottom: 2px solid $teal;
+        border-left: 2px solid $teal;
     }
     .radio .input-helper::after {
         background: $teal;
@@ -684,8 +684,8 @@ body[rg-skin="green"] {
         }
     }
     .checkbox .input-helper::after{
-        border-bottom: 2px solid $green !important;
-        border-left: 2px solid $green !important;
+        border-bottom: 2px solid $green;
+        border-left: 2px solid $green;
     }
     .radio .input-helper::after {
         background: $green;
@@ -717,8 +717,8 @@ body[rg-skin="orange"] {
         }
     }
     .checkbox .input-helper::after{
-        border-bottom: 2px solid $orange !important;
-        border-left: 2px solid $orange !important;
+        border-bottom: 2px solid $orange;
+        border-left: 2px solid $orange;
     }
     .radio .input-helper::after {
         background: $orange;
@@ -750,8 +750,8 @@ body[rg-skin="purple"] {
         }
     }
     .checkbox .input-helper::after{
-        border-bottom: 2px solid $purple !important;
-        border-left: 2px solid $purple !important;
+        border-bottom: 2px solid $purple;
+        border-left: 2px solid $purple;
     }
     .radio .input-helper::after {
         background: $purple;
@@ -784,8 +784,8 @@ body[rg-skin="indigo"] {
         
     }
     .checkbox .input-helper::after{
-        border-bottom: 2px solid $indigo !important;
-        border-left: 2px solid $indigo !important;
+        border-bottom: 2px solid $indigo;
+        border-left: 2px solid $indigo;
     }
     .radio .input-helper::after {
         background: $indigo;

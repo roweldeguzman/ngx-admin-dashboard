@@ -1,11 +1,14 @@
-import { Directive,HostListener , ElementRef} from '@angular/core';
+import { Directive, HostListener, ElementRef, OnInit} from '@angular/core';
 
 declare let $:any
 
 @Directive({ selector: '[rg-line]' })
 
-export class RgLineDirective {
+export class RgLineDirective implements OnInit{
 	constructor(private el: ElementRef) { }
+	ngOnInit() {
+		
+	}
 	@HostListener('focus', ['$event']) onFocus(event:Event){
 		let classes  = this.el.nativeElement.parentElement.classList;
 
