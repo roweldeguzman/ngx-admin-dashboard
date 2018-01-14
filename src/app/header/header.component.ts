@@ -145,7 +145,6 @@ export class HeaderComponent extends BaseComponent implements OnInit {
 		if (active.querySelector(".active") !== null){
 			active.querySelector(".active").classList.remove("active")
 		}
-		
 		event.target.classList.add("active");
 	}
 	public showHideSearchMobile(type: String) {
