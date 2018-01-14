@@ -1,0 +1,257 @@
+<div class="block-header">
+	<h2>Pure CSS3 Animations</h2>
+
+	<ul class="actions">
+		<li>
+			<a href="">
+				<i class="zmdi zmdi-trending-up"></i>
+			</a>
+		</li>
+		<li>
+			<a href="">
+				<i class="zmdi zmdi-check-all"></i>
+			</a>
+		</li>
+		<li class="dropdown" dropdown>
+			<a dropdownToggle>
+				<i class="zmdi zmdi-more-vert"></i>
+			</a>
+
+			<ul *dropdownMenu class="dropdown-menu dropdown-menu-right">
+				<li class="dropdown-arrow"></li>
+				<li>
+					<a>Refresh</a>
+				</li>
+				<li>
+					<a>Manage Widgets</a>
+				</li>
+				<li>
+					<a>Widgets Settings</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+
+</div>
+
+<div class="row">
+	<div class="col-md-4 col-sm-6">
+		<div class="card animation-demo">
+			<div class="card-header">
+				<h2>Attention Seekers
+					<small>Click on the buttons below to start the animation</small>
+				</h2>
+			</div>
+	
+			<div class="card-body card-padding">
+				<img src="./assets/img/headers/sm/1.png" alt="" class="animated" id="attentionSeeker">
+	
+				<div class="row">
+					<div class="col-xs-6" *ngFor="let w of attentionSeekers">
+						<button (click)="setAnimation(w.animation, w.target)" class="btn btn-primary" waves-effect>{{w.animation }}</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<div class="card animation-demo">
+			<div class="card-header">
+				<h2>Flippers
+					<small>Click on the buttons below to start the animation</small>
+				</h2>
+			</div>
+	
+			<div class="card-body card-padding">
+				<img src="./assets/img/headers/sm/6.png" alt="" class="animated" id="flippers">
+	
+				<div class="row">
+					<div class="col-xs-6" *ngFor="let w of flippers">
+						<button (click)="setAnimation(w.animation, w.target)" class="btn btn-primary" waves-effect>{{ w.animation }}</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<div class="card animation-demo">
+			<div class="card-header">
+				<h2>Light Speed
+					<small>Click on the buttons below to start the animation</small>
+				</h2>
+			</div>
+	
+			<div class="card-body card-padding">
+				<img src="./assets/img/headers/sm/7.png" alt="" class="animated" id="lightSpeed">
+	
+				<div class="row">
+					<div class="col-xs-6" *ngFor="let w of lightSpeed">
+						<button (click)="setAnimation(w.animation, w.target)" class="btn btn-primary" waves-effect>{{ w.animation }}</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<div class="card animation-demo">
+			<div class="card-header">
+				<h2>Specials
+					<small>Click on the buttons below to start the animation</small>
+				</h2>
+			</div>
+	
+			<div class="card-body card-padding">
+				<img src="./assets/img/headers/sm/1.png" alt="" class="animated" id="special">
+	
+				<div class="row">
+					<div class="col-xs-6" *ngFor="let w of special">
+						<button (click)="setAnimation(w.animation, w.target)" class="btn btn-primary" waves-effect>{{ w.animation }}</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-4 col-sm-6">
+		<div class="card animation-demo">
+			<div class="card-header">
+				<h2>Bouncing Entrances
+					<small>Click on the buttons below to start the animation</small>
+				</h2>
+			</div>
+	
+			<div class="card-body card-padding">
+				<img src="./assets/img/headers/sm/2.png" alt="" class="animated" id="bouncingEntrance">
+	
+				<div class="row">
+					<div class="col-xs-6" *ngFor="let w of bouncingEntrance">
+						<button (click)="setAnimation(w.animation, w.target)" class="btn btn-primary" waves-effect>{{ w.animation }}</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<div class="card animation-demo">
+			<div class="card-header">
+				<h2>Bouncing Exits
+					<small>Click on the buttons below to start the animation</small>
+				</h2>
+			</div>
+	
+			<div class="card-body card-padding">
+				<img src="./assets/img/headers/sm/3.png" alt="" class="animated" id="bouncingExits">
+	
+				<div class="row">
+					<div class="col-xs-6" *ngFor="let w of bouncingExits">
+						<button (click)="setAnimation(w.animation, w.target)" class="btn btn-primary" waves-effect>{{ w.animation }}</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<div class="card animation-demo">
+			<div class="card-header">
+				<h2>Rotating Entrances
+					<small>Click on the buttons below to start the animation</small>
+				</h2>
+			</div>
+	
+			<div class="card-body card-padding">
+				<img src="./assets/img/headers/sm/8.png" alt="" class="animated" id="rotatingEntrances">
+	
+				<div class="row">
+					<div class="col-xs-6" *ngFor="let w of rotatingEntrances">
+						<button (click)="setAnimation(w.animation, w.target)" class="btn btn-primary" waves-effect>{{ w.animation }}</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<div class="card animation-demo">
+			<div class="card-header">
+				<h2>Rotating Exits
+					<small>Click on the buttons below to start the animation</small>
+				</h2>
+			</div>
+	
+			<div class="card-body card-padding">
+				<img src="./assets/img/headers/sm/9.png" alt="" class="animated" id="rotatingExits">
+	
+				<div class="row">
+					<div class="col-xs-6" *ngFor="let w of rotatingExits">
+						<button (click)="setAnimation(w.animation, w.target)" class="btn btn-primary" waves-effect>{{ w.animation }}</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-4 col-sm-6">
+		<div class="card animation-demo">
+			<div class="card-header">
+				<h2>Fadeing Entrances
+					<small>Click on the buttons below to start the animation</small>
+				</h2>
+			</div>
+	
+			<div class="card-body card-padding">
+				<img src="./assets/img/headers/sm/4.png" alt="" class="animated" id="fadeingEntrances">
+	
+				<div class="row">
+					<div class="col-xs-6" *ngFor="let w of fadeingEntrances">
+						<button (click)="setAnimation(w.animation, w.target)" class="btn btn-primary" waves-effect>{{ w.animation }}</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<div class="card animation-demo">
+			<div class="card-header">
+				<h2>Fadeing Exits
+					<small>Click on the buttons below to start the animation</small>
+				</h2>
+			</div>
+	
+			<div class="card-body card-padding">
+				<img src="./assets/img/headers/sm/5.png" alt="" class="animated" id="fadeingExits">
+	
+				<div class="row">
+					<div class="col-xs-6" *ngFor="let w of fadeingExits">
+						<button (click)="setAnimation(w.animation, w.target)" class="btn btn-primary" waves-effect>{{ w.animation }}</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<div class="card animation-demo">
+			<div class="card-header">
+				<h2>Zoom Entrances
+					<small>Click on the buttons below to start the animation</small>
+				</h2>
+			</div>
+	
+			<div class="card-body card-padding">
+				<img src="./assets/img/headers/sm/4.png" alt="" class="animated" id="zoomEntrances">
+	
+				<div class="row">
+					<div class="col-xs-6" *ngFor="let w of zoomEntrances">
+						<button (click)="setAnimation(w.animation, w.target)" class="btn btn-primary" waves-effect>{{ w.animation }}</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<div class="card animation-demo">
+			<div class="card-header">
+				<h2>Zoom Exits
+					<small>Click on the buttons below to start the animation</small>
+				</h2>
+			</div>
+	
+			<div class="card-body card-padding">
+				<img src="./assets/img/headers/sm/3.png" alt="" class="animated" id="zoomExits">
+	
+				<div class="row">
+					<div class="col-xs-6" *ngFor="let w of zoomExits">
+						<button (click)="setAnimation(w.animation, w.target)" class="btn btn-primary" waves-effect>{{ w.animation }}</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

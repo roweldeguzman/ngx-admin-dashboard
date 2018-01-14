@@ -1,0 +1,226 @@
+<div class="block-header">
+	<h2>Overview</h2>
+
+	<ul class="actions">
+		<li>
+			<a>
+				<i class="zmdi zmdi-trending-up"></i>
+			</a>
+		</li>
+		<li>
+			<a>
+				<i class="zmdi zmdi-check-all"></i>
+			</a>
+		</li>
+		<li class="dropdown" dropdown>
+			<a dropdownToggle>
+				<i class="zmdi zmdi-more-vert"></i>
+			</a>
+
+			<ul *dropdownMenu class="dropdown-menu dropdown-menu-right">
+				<li class="dropdown-arrow"></li>
+				<li>
+					<a>Refresh</a>
+				</li>
+				<li>
+					<a>Manage Widgets</a>
+				</li>
+				<li>
+					<a>Widgets Settings</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<div class="row">
+	<div class="col-sm-12">
+		<!-- <div class="card">
+			<div class="card-header">
+				<h2>Sales Statistics 
+					<small>Vestibulum purus quam scelerisque, mollis nonummy metus</small>
+				</h2>
+			</div>
+			<div class="card-body card-padding">
+				<button class="btn btn-primary" waves-effect (click)="randomVal()">Random Value</button>
+			</div>			
+		</div> -->
+		<div class="mini-charts">
+			<div class="row">
+				<div class="col-sm-6 col-md-3">
+					<div class="mini-charts-item bgm-cyan">
+						<div class="clearfix">
+							<div class="chart stats-bar" sparkline sparklineType="bar" sparklineValue="{{ sparkValueBar1 }}" sparklineWidth=""></div>
+							<div class="count">
+								<small>Website Traffics</small>
+								<h2>987,459</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+		
+				<div class="col-sm-6 col-md-3">
+					<div class="mini-charts-item bgm-lightgreen">
+						<div class="clearfix">
+							<div class="chart stats-bar-2" sparkline sparklineType="bar" sparklineValue="{{ sparkValueBar2 }}" sparklineWidth=""></div>
+							<div class="count">
+								<small>Website Impressions</small>
+								<h2>356,785K</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+		
+				<div class="col-sm-6 col-md-3">
+					<div class="mini-charts-item bgm-orange">
+						<div class="clearfix">
+							<div class="chart stats-line" sparkline sparklineType="line" sparklineValue="{{ sparkValueLine1 }}" sparklineWidth="85px" sparkLineHeight="45"></div>
+							<div class="count">
+								<small>Total Sales</small>
+								<h2>$ 458,778</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+		
+				<div class="col-sm-6 col-md-3">
+					<div class="mini-charts-item bgm-bluegray">
+						<div class="clearfix">
+							<div class="chart stats-line-2" sparkline sparklineType="line" sparklineValue="{{ sparkValueLine2 }}" sparklineWidth="85px" sparkLineHeight="45"></div>
+							<div class="count">
+								<small>Support Tickets</small>
+								<h2>23,856</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="dash-widgets">
+			<div class="row">
+				<div class="col-md-3 col-sm-6">
+					<div id="site-visits" class="dash-widget-item bgm-teal">
+						<div class="dash-widget-header">
+							<div class="p-20">
+								<div class="dash-widget-visits" sparkline sparklineType="line" sparklineValue="{{ sparkValueLine1 }}" sparklineWidth="100%" sparkLineHeight="95px"></div>
+							</div>
+				
+							<div class="dash-widget-title">For the past 30 days</div>
+				
+							<ul class="actions actions-alt">
+								<li class="dropdown" dropdown>
+									<a dropdownToggle>
+										<i class="zmdi zmdi-more-vert"></i>
+									</a>
+				
+									<ul *dropdownMenu class="dropdown-menu dropdown-menu-right">
+										<li class="dropdown-arrow"></li>
+										<li>
+											<a>Refresh</a>
+										</li>
+										<li>
+											<a>Manage Widgets</a>
+										</li>
+										<li>
+											<a>Widgets Settings</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+				
+						<div class="p-20">
+				
+							<small>Page Views</small>
+							<h3 class="m-0 f-400">47,896,536</h3>
+				
+							<br/>
+				
+							<small>Site Visitors</small>
+							<h3 class="m-0 f-400">24,456,799</h3>
+				
+							<br/>
+				
+							<small>Total Clicks</small>
+							<h3 class="m-0 f-400">13,965</h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6">
+					<div id="best-selling" class="dash-widget-item">
+						<div class="dash-widget-header">
+							<div class="dash-widget-title">Best Sellings</div>
+							<img src="./assets/img/widgets/alpha.jpg" alt="">
+							<div class="main-item">
+								<small>Samsung Galaxy Alpha</small>
+								<h2>$799.99</h2>
+							</div>
+						</div>
+				
+						<div class="listview p-t-5">
+							<a class="lv-item" *ngFor="let item of bestSelling">
+								<div class="media">
+									<div class="pull-left">
+										<img class="lv-img-sm" src="./assets/img/widgets/{{ item.img }}">
+									</div>
+									<div class="media-body">
+										<div class="lv-title">{{ item.name }}</div>
+										<small class="lv-small">{{ item.range }}</small>
+									</div>
+								</div>
+							</a>
+				
+							<div class="clearfix"></div>
+				
+							<a class="lv-footer">
+								View All
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-12 col-md-6 col-lg-6">
+					<!-- Recent Items -->
+					<div class="card">
+						<div class="card-header bgm-teal">
+							<h2>Recent Items
+								<small>Phasellus condimentum ipsum id auctor imperdie</small>
+							</h2>
+							<ul class="actions">
+								<li class="dropdown" dropdown>
+									<a dropdownToggle>
+										<i class="zmdi zmdi-more-vert"></i>
+									</a>
+				
+									<ul *dropdownMenu class="dropdown-menu dropdown-menu-right">
+										<li class="dropdown-arrow"></li>
+										<li><a>Refresh</a></li>
+										<li><a>Settings</a></li>
+										<li><a>Other Settings</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<div class="card-body m-t-0">
+							<table class="table table-inner table-vmiddle">
+								<thead>
+									<tr>
+										<th>ID</th>
+										<th>Name</th>
+										<th style="width: 60px">Price</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr *ngFor="let item of resentItems">
+										<td class="f-500 c-cyan">{{ item.id }}</td>
+										<td>{{ item.name }}</td>
+										<td class="f-500 c-cyan">{{ item.price }}</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div id="recent-items-chart" class="flot-chart" data-line-chart></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

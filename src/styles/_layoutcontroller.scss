@@ -1,0 +1,978 @@
+main{
+	margin-top: 70px;
+	.block-header{
+        padding: 0 22px;
+        margin-bottom: 25px;
+        position: relative;
+        h2{
+            font-size: 17px;
+            color: #777;
+            margin-top: 0px !important;
+            margin-bottom: 0px !important;
+        }
+        .actions {
+            position: absolute;
+            right: 10px;
+            top: -5px;
+            z-index: 5;
+        }
+    }
+    .main-overlay{
+        width: 100%;
+        position: fixed;
+        height: 100%;
+        top: 50px;
+        bottom: 0;
+        background: pink;
+        left: 250px;
+        visibility: hidden;
+        z-index: 8;
+        &.active{
+            visibility: visible;
+        }
+    }
+    
+    footer{
+        ul li {
+            display: inline;
+            padding: 10px;
+        }
+    }
+}
+a {
+    cursor: pointer;
+    &:hover{ text-decoration:  none;  }
+}
+body.full-layout {
+	@media (min-width: 1025px){
+		main.container{
+			width: calc(100% - 250px);
+			margin-left: 250px !important;
+        }
+    }
+    @media (min-width: 768px) and (max-width: 1024px){
+        main.container{
+			width: calc(100% - 50px);
+			margin-left: 50px !important;
+        }
+        .aside-profile{
+            pointer-events: none;
+            height: 70px;
+            transition: height .3s;
+            img {
+                height: 32px;
+                width: 32px;
+                left: 10px;
+                transition: width .3s , height .3s, left .3s;
+            }
+            .labeled, .header-dropdown-icon {
+                opacity: 0;
+                transition: opacity .3s;
+            }
+        }
+
+        aside.active{
+            .aside-profile{
+                pointer-events: auto;
+                height: 150px;
+                transition: height .3s;
+                img {
+                    height: 50px !important;
+                    width: 50px !important;
+                    left: 16px !important;
+                    transition: width .3s , height .3s, left .3s;
+                }
+                .labeled, .header-dropdown-icon {
+                    opacity: 1;
+                    transition: opacity .3s;
+                }
+            }
+        }
+    }
+}
+
+body:not(.full-layout) {
+    @media (min-width: 768px){
+        header button.navbar-toggle.collapsed:not(.search-small){
+            display: block !important;
+            float: left;
+        }
+    }
+	aside{
+        //display: none;
+        transition-duration: .3s;
+        transform: translateX(-250px);
+
+        &.active{
+            transition-duration: .3s;
+            transform: translateX(0);
+        }
+    }
+    .bottom-collapser{
+        display: none;
+        transition-duration: .3s;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    main{
+        //margin-left: 52px !important;
+        transition-duration: .3s;
+        .main-overlay{
+            left: 52px !important;
+        }
+    }
+    main.aside-active{
+        //margin-left: 250px !important;
+        transition-duration: .3s;
+    }
+}
+@media screen and (max-width: 767px){
+    main{
+        margin-left: 0px !important;
+        .main-overlay{
+            left: 0 !important;
+        }
+    }
+    body:not(.full-layout) {
+        aside{
+            display: block;
+        }
+    }
+}
+
+body[rg-skin="primary"]{
+    /* APP HEADER */
+    app-header {
+        nav, #search-mobile-container{
+            background: $primary !important;
+            border-bottom: $primary !important;
+        }
+    }
+    /* APP SIDEBAR */
+    app-sidebar aside {
+        background: $primary;
+        .aside-profile{
+            background: $primary !important;
+        }
+
+    }
+    /* APP MAIN */
+    button.btn.btn-primary{
+        background-color: $primary !important;
+        border-color: $primary !important;
+    }
+    .tab-nav:not(.tn-vertical):not([data-tab-color]) > li > a::before,
+    .profile .right-pane .extra-nav ul li a::after{
+        background: $primary;
+    }
+    .search-div .main-search-menu-result > li.active, 
+    .search-div .main-search-menu-result > li:hover {
+        background-color: $primary;
+        a {
+            color: #ffffff !important;
+        }
+    }
+}
+body[rg-skin="blue"]{
+    /* APP HEADER */
+    app-header {
+        nav, #search-mobile-container {
+            background: $blue !important;
+            border-bottom: $blue !important;
+        }
+    }
+    /* APP SIDEBAR */
+    app-sidebar aside {
+        background: #f3f3f3;
+        .aside-profile{
+            background: $blue !important;
+        }
+        nav ul li {
+            & > a{
+                .icon-circle{
+                    border: none !important;
+                    background: transparent !important;
+                }
+                &.active, &:hover{
+                    color: $blue !important;
+                    i { 
+                        color: $blue !important; 
+                    }
+                }
+            }
+            &.sub-menu:not(.toggled) > a,
+            &.sub-menu.toggled > a{
+                &:hover::after,
+                &.active::after{
+                    color: $blue !important;
+                }
+            }
+        }
+        nav > .bottom-collapser .bottom-toggler{
+            background-color: $blue;
+        }
+    }
+    /* APP MAIN */
+    button.btn.btn-primary{
+        background-color: $blue !important;
+        border-color: $blue !important;
+    }
+    .tab-nav:not(.tn-vertical):not([data-tab-color]) > li > a::before,
+    .profile .right-pane .extra-nav ul li a::after{
+        background: $blue;
+    }
+    .search-div .main-search-menu-result > li.active, 
+    .search-div .main-search-menu-result > li:hover {
+        background-color: $blue;
+        a {
+            color: #ffffff !important;
+        }
+    }
+    .checkbox .input-helper::after{
+        border-bottom: 2px solid $blue;
+        border-left: 2px solid $blue;
+    }
+    .radio .input-helper::after {
+        background: $blue;
+    }
+    .pagination > .active > a, 
+    .pagination > .active > a:focus, 
+    .pagination > .active > a:hover {
+        background-color: $blue !important;
+        border-color: $blue !important;
+    }
+    .full-round{
+        background: $blue !important;
+    }
+    .modal.custom .modal-header {
+        background: $blue;
+    }
+    .ps__thumb-x, .ps__thumb-y,.ps__thumb-x:focus, .ps__thumb-x:hover, .ps__thumb-y:focus, .ps__thumb-y:hover,.ps__rail-y:focus>.ps__thumb-y, .ps__rail-y:hover>.ps__thumb-y,.ps__rail-y:focus>.ps__thumb-x, .ps__rail-y:hover>.ps__thumb-x{
+        background-color: $blue;
+    }
+    .rg-input-ripple{
+        background-color: $blue;
+    }
+    /* Selectize */
+    .selectize-input.focus::after, .selectize-input.has-items::after{
+        border-color: $blue !important;
+    }
+    .selectize-dropdown .active,
+    .selectize-control.multi .selectize-input > div{
+        background-color: $blue;
+    }
+}
+body[rg-skin="lightblue"]{
+    /* APP HEADER */
+    app-header {
+        nav, #search-mobile-container {
+            background: $lightblue !important;
+            border-bottom: $lightblue !important;
+        }
+    }
+    /* APP SIDEBAR */
+    app-sidebar aside {
+        background: #f3f3f3;
+        .aside-profile{
+            background: $lightblue !important;
+        }
+        nav ul li {
+            & > a{
+                .icon-circle{
+                    border: none !important;
+                    background: transparent !important;
+                }
+                &.active, &:hover{
+                    color: $lightblue !important;
+                    i { 
+                        color: $lightblue !important; 
+                    }
+                }
+            }
+            &.sub-menu:not(.toggled) > a,
+            &.sub-menu.toggled > a{
+                &:hover::after,
+                &.active::after{
+                    color: $lightblue !important;
+                }
+            }
+        }
+        nav > .bottom-collapser .bottom-toggler{
+            background-color: $lightblue;
+        }
+    }
+    /* APP MAIN */
+    button.btn.btn-primary{
+        background-color: $lightblue !important;
+        border-color: $lightblue !important;
+    }
+    .tab-nav:not(.tn-vertical):not([data-tab-color]) > li > a::before,
+    .profile .right-pane .extra-nav ul li a::after{
+        background: $lightblue;
+    }
+    .search-div .main-search-menu-result > li.active, 
+    .search-div .main-search-menu-result > li:hover {
+        background-color: $lightblue;
+        a {
+            color: #ffffff !important;
+        }
+    }
+    .checkbox .input-helper::after{
+        border-bottom: 2px solid $lightblue;
+        border-left: 2px solid $lightblue;
+    }
+    .radio .input-helper::after {
+        background: $lightblue;
+    }
+    .pagination > .active > a, 
+    .pagination > .active > a:focus, 
+    .pagination > .active > a:hover {
+        background-color: $lightblue !important;
+        border-color: $lightblue !important;
+    }
+    .full-round{
+        background: $lightblue !important;
+    }
+    .modal.custom .modal-header {
+        background: $lightblue;
+    }
+    .ps__thumb-x, .ps__thumb-y,.ps__thumb-x:focus, .ps__thumb-x:hover, .ps__thumb-y:focus, .ps__thumb-y:hover,.ps__rail-y:focus>.ps__thumb-y, .ps__rail-y:hover>.ps__thumb-y,.ps__rail-y:focus>.ps__thumb-x, .ps__rail-y:hover>.ps__thumb-x {
+        background-color: $lightblue;
+    }
+    .rg-input-ripple{
+        background-color: $lightblue;
+    }
+    /* Selectize */
+    .selectize-input.focus::after, .selectize-input.has-items::after{
+        border-color: $lightblue !important;
+    }
+    .selectize-dropdown .active,
+    .selectize-control.multi .selectize-input > div{
+        background-color: $lightblue;
+    }
+}
+body[rg-skin="bluegray"]{
+    /* APP HEADER */
+    app-header {
+        nav, #search-mobile-container {
+            background: $bluegray !important;
+            border-bottom: $bluegray !important;
+        }
+    }
+    /* APP SIDEBAR */
+    app-sidebar aside {
+        background: #f3f3f3;
+        .aside-profile{
+            background: $bluegray !important;
+        }
+        nav ul li {
+            & > a{
+                .icon-circle{
+                    border: none !important;
+                    background: transparent !important;
+                }
+                &.active, &:hover{
+                    color: $bluegray !important;
+                    i { 
+                        color: $bluegray !important; 
+                    }
+                }
+            }
+            &.sub-menu:not(.toggled) > a,
+            &.sub-menu.toggled > a{
+                &:hover::after,
+                &.active::after{
+                    color: $bluegray !important;
+                }
+            }
+        }
+        nav > .bottom-collapser .bottom-toggler{
+            background-color: $bluegray;
+        }
+    }
+    /* APP MAIN */
+    button.btn.btn-primary{
+        background-color: $bluegray !important;
+        border-color: $bluegray !important;
+    }
+    .tab-nav:not(.tn-vertical):not([data-tab-color]) > li > a::before,
+    .profile .right-pane .extra-nav ul li a::after{
+        background: $bluegray;
+    }
+    .search-div .main-search-menu-result > li.active, 
+    .search-div .main-search-menu-result > li:hover {
+        background-color: $bluegray;
+        a {
+            color: #ffffff !important;
+        }
+    }
+    .checkbox .input-helper::after{
+        border-bottom: 2px solid $bluegray;
+        border-left: 2px solid $bluegray;
+    }
+    .radio .input-helper::after {
+        background: $bluegray;
+    }
+    .pagination > .active > a, 
+    .pagination > .active > a:focus, 
+    .pagination > .active > a:hover {
+        background-color: $bluegray !important;
+        border-color: $bluegray !important;
+    }
+    .full-round{
+        background: $bluegray !important;
+    }
+    .modal.custom .modal-header {
+        background: $bluegray;
+    }
+    .ps__thumb-x, .ps__thumb-y,.ps__thumb-x:focus, .ps__thumb-x:hover, .ps__thumb-y:focus, .ps__thumb-y:hover,.ps__rail-y:focus>.ps__thumb-y, .ps__rail-y:hover>.ps__thumb-y,.ps__rail-y:focus>.ps__thumb-x, il-y:hover>.ps__thumb-x {
+        background-color: $bluegray;
+    }
+    .rg-input-ripple{
+        background-color: $bluegray;
+    }
+    /* Selectize */
+    .selectize-input.focus::after, .selectize-input.has-items::after{
+        border-color: $bluegray !important;
+    }
+    .selectize-dropdown .active,
+    .selectize-control.multi .selectize-input > div{
+        background-color: $bluegray;
+    }
+}
+body[rg-skin="cyan"]{
+    /* APP HEADER */
+    app-header {
+        nav, #search-mobile-container {
+            background: $cyan !important;
+            border-bottom: $cyan !important;
+        }
+    }
+    /* APP SIDEBAR */
+    app-sidebar aside {
+        background: #f3f3f3;
+        .aside-profile{
+            background: $cyan !important;
+        }
+        nav ul li {
+            & > a{
+                .icon-circle{
+                    border: none !important;
+                    background: transparent !important;
+                }
+                &.active, &:hover{
+                    color: $cyan !important;
+                    i { 
+                        color: $cyan !important; 
+                    }
+                }
+            }
+            &.sub-menu:not(.toggled) > a,
+            &.sub-menu.toggled > a{
+                &:hover::after,
+                &.active::after{
+                    color: $cyan !important;
+                }
+            }
+        }
+        nav > .bottom-collapser .bottom-toggler{
+            background-color: $cyan;
+        }
+    }
+    /* APP MAIN */
+    button.btn.btn-primary{
+        background-color: $cyan !important;
+        border-color: $cyan !important;
+    }
+    .tab-nav:not(.tn-vertical):not([data-tab-color]) > li > a::before,
+    .profile .right-pane .extra-nav ul li a::after{
+        background: $cyan;
+    }
+    .search-div .main-search-menu-result > li.active, 
+    .search-div .main-search-menu-result > li:hover {
+        background-color: $cyan;
+        a {
+            color: #ffffff !important;
+        }
+    }
+    .checkbox .input-helper::after{
+        border-bottom: 2px solid $cyan;
+        border-left: 2px solid $cyan;
+    }
+    .radio .input-helper::after {
+        background: $cyan;
+    }
+    .pagination > .active > a, 
+    .pagination > .active > a:focus, 
+    .pagination > .active > a:hover {
+        background-color: $cyan !important;
+        border-color: $cyan !important;
+    }
+    .full-round{
+        background: $cyan !important;
+    }
+    .modal.custom .modal-header {
+        background: $cyan;
+    }
+    .ps__thumb-x, .ps__thumb-y,.ps__thumb-x:focus, .ps__thumb-x:hover, .ps__thumb-y:focus, .ps__thumb-y:hover,.ps__rail-y:focus>.ps__thumb-y, .ps__rail-y:hover>.ps__thumb-y,.ps__rail-y:focus>.ps__thumb-x, .ps__rail-y:hover>.ps__thumb-x {
+        background-color: $cyan;
+    }
+    .rg-input-ripple{
+        background-color: $cyan;
+    }
+    /* Selectize */
+    .selectize-input.focus::after, .selectize-input.has-items::after{
+        border-color: $cyan !important;
+    }
+    .selectize-dropdown .active,
+    .selectize-control.multi .selectize-input > div{
+        background-color: $cyan;
+    }
+}
+body[rg-skin="teal"]{
+    /* APP HEADER */
+    app-header {
+        nav, #search-mobile-container {
+            background: $teal !important;
+            border-bottom: $teal !important;
+        }
+    }
+    /* APP SIDEBAR */
+    app-sidebar aside {
+        background: #f3f3f3;
+        .aside-profile{
+            background: $teal !important;
+        }
+        nav ul li {
+            & > a{
+                .icon-circle{
+                    border: none !important;
+                    background: transparent !important;
+                }
+                &.active, &:hover{
+                    color: $teal !important;
+                    i { 
+                        color: $teal !important; 
+                    }
+                }
+            }
+            &.sub-menu:not(.toggled) > a,
+            &.sub-menu.toggled > a{
+                &:hover::after,
+                &.active::after{
+                    color: $teal !important;
+                }
+            }
+        }
+        nav > .bottom-collapser .bottom-toggler{
+            background-color: $teal;
+        }
+    }
+    /* APP MAIN */
+    button.btn.btn-primary{
+        background-color: $teal !important;
+        border-color: $teal !important;
+    }
+    .tab-nav:not(.tn-vertical):not([data-tab-color]) > li > a::before,
+    .profile .right-pane .extra-nav ul li a::after{
+        background: $teal;
+    }
+    .search-div .main-search-menu-result > li.active, 
+    .search-div .main-search-menu-result > li:hover {
+        background-color: $teal;
+        a {
+            color: #ffffff !important;
+        }
+    }
+    .checkbox .input-helper::after{
+        border-bottom: 2px solid $teal;
+        border-left: 2px solid $teal;
+    }
+    .radio .input-helper::after {
+        background: $teal;
+    }
+    .pagination > .active > a, 
+    .pagination > .active > a:focus, 
+    .pagination > .active > a:hover {
+        background-color: $teal !important;
+        border-color: $teal !important;
+    }
+    .full-round{
+        background: $teal !important;
+    }
+    .modal.custom .modal-header {
+        background: $teal;
+    }
+    .ps__thumb-x, .ps__thumb-y,.ps__thumb-x:focus, .ps__thumb-x:hover, .ps__thumb-y:focus, .ps__thumb-y:hover,.ps__rail-y:focus>.ps__thumb-y, .ps__rail-y:hover>.ps__thumb-y,.ps__rail-y:focus>.ps__thumb-x, .ps__rail-y:hover>.ps__thumb-x {
+        background-color: $teal;
+    }
+    .rg-input-ripple{
+        background-color: $teal;
+    }
+    /* Selectize */
+    .selectize-input.focus::after, .selectize-input.has-items::after{
+        border-color: $teal !important;
+    }
+    .selectize-dropdown .active,
+    .selectize-control.multi .selectize-input > div{
+        background-color: $teal;
+    }
+}
+body[rg-skin="green"]{
+    /* APP HEADER */
+    app-header {
+        nav, #search-mobile-container {
+            background: $green !important;
+            border-bottom: $green !important;
+        }
+    }
+    /* APP SIDEBAR */
+    app-sidebar aside {
+        background: #f3f3f3;
+        .aside-profile{
+            background: $green !important;
+        }
+        nav ul li {
+            & > a{
+                .icon-circle{
+                    border: none !important;
+                    background: transparent !important;
+                }
+                &.active, &:hover{
+                    color: $green !important;
+                    i { 
+                        color: $green !important; 
+                    }
+                }
+            }
+            &.sub-menu:not(.toggled) > a,
+            &.sub-menu.toggled > a{
+                &:hover::after,
+                &.active::after{
+                    color: $green !important;
+                }
+            }
+        }
+        nav > .bottom-collapser .bottom-toggler{
+            background-color: $green;
+        }
+    }
+    /* APP MAIN */
+    button.btn.btn-primary{
+        background-color: $green !important;
+        border-color: $green !important;
+    }
+    .tab-nav:not(.tn-vertical):not([data-tab-color]) > li > a::before,
+    .profile .right-pane .extra-nav ul li a::after{
+        background: $green;
+    }
+    .search-div .main-search-menu-result > li.active, 
+    .search-div .main-search-menu-result > li:hover {
+        background-color: $green;
+        a {
+            color: #ffffff !important;
+        }
+    }
+    .checkbox .input-helper::after{
+        border-bottom: 2px solid $green;
+        border-left: 2px solid $green;
+    }
+    .radio .input-helper::after {
+        background: $green;
+    }
+    .pagination > .active > a, 
+    .pagination > .active > a:focus, 
+    .pagination > .active > a:hover {
+        background-color: $green !important;
+        border-color: $green !important;
+    }
+    .full-round{
+        background: $green !important;
+    }
+    .modal.custom .modal-header {
+        background: $green;
+    }
+    .ps__thumb-x, .ps__thumb-y,.ps__thumb-x:focus, .ps__thumb-x:hover, .ps__thumb-y:focus, .ps__thumb-y:hover,.ps__rail-y:focus>.ps__thumb-y, .ps__rail-y:hover>.ps__thumb-y,.ps__rail-y:focus>.ps__thumb-x, .ps__rail-y:hover>.ps__thumb-x {
+        background-color: $green;
+    }
+    .rg-input-ripple{
+        background-color: $green;
+    }
+    /* Selectize */
+    .selectize-input.focus::after, .selectize-input.has-items::after{
+        border-color: $green !important;
+    }
+    .selectize-dropdown .active,
+    .selectize-control.multi .selectize-input > div{
+        background-color: $green;
+    }
+}
+body[rg-skin="orange"]{
+    /* APP HEADER */
+    app-header {
+        nav, #search-mobile-container {
+            background: $orange !important;
+            border-bottom: $orange !important;
+        }
+    }
+    /* APP SIDEBAR */
+    app-sidebar aside {
+        background: #f3f3f3;
+        .aside-profile{
+            background: $orange !important;
+        }
+        nav ul li {
+            & > a{
+                .icon-circle{
+                    border: none !important;
+                    background: transparent !important;
+                }
+                &.active, &:hover{
+                    color: $orange !important;
+                    i { 
+                        color: $orange !important; 
+                    }
+                }
+            }
+            &.sub-menu:not(.toggled) > a,
+            &.sub-menu.toggled > a{
+                &:hover::after,
+                &.active::after{
+                    color: $orange !important;
+                }
+            }
+        }
+        nav > .bottom-collapser .bottom-toggler{
+            background-color: $orange;
+        }
+    }
+    /* APP MAIN */
+    button.btn.btn-primary{
+        background-color: $orange !important;
+        border-color: $orange !important;
+    }
+    .tab-nav:not(.tn-vertical):not([data-tab-color]) > li > a::before,
+    .profile .right-pane .extra-nav ul li a::after{
+        background: $orange;
+    }
+    .search-div .main-search-menu-result > li.active, 
+    .search-div .main-search-menu-result > li:hover {
+        background-color: $orange;
+        a {
+            color: #ffffff !important;
+        }
+    }
+    .checkbox .input-helper::after{
+        border-bottom: 2px solid $orange;
+        border-left: 2px solid $orange;
+    }
+    .radio .input-helper::after {
+        background: $orange;
+    }
+    .pagination > .active > a, 
+    .pagination > .active > a:focus, 
+    .pagination > .active > a:hover {
+        background-color: $orange !important;
+        border-color: $orange !important;
+    }
+    .full-round{
+        background: $orange !important;
+    }
+    .modal.custom .modal-header {
+        background: $orange;
+    }
+    .ps__thumb-x, .ps__thumb-y,.ps__thumb-x:focus, .ps__thumb-x:hover, .ps__thumb-y:focus, .ps__thumb-y:hover,.ps__rail-y:focus>.ps__thumb-y, .ps__rail-y:hover>.ps__thumb-y,.ps__rail-y:focus>.ps__thumb-x, .ps__rail-y:hover>.ps__thumb-x {
+        background-color: $orange;
+    }
+    .rg-input-ripple{
+        background-color: $orange;
+    }
+    /* Selectize */
+    .selectize-input.focus::after, .selectize-input.has-items::after{
+        border-color: $orange !important;
+    }
+    .selectize-dropdown .active,
+    .selectize-control.multi .selectize-input > div{
+        background-color: $orange;
+    }
+}
+body[rg-skin="purple"]{
+    /* APP HEADER */
+    app-header {
+        nav, #search-mobile-container {
+            background: $purple !important;
+            border-bottom: $purple !important;
+        }
+    }
+    /* APP SIDEBAR */
+    app-sidebar aside {
+        background: #f3f3f3;
+        .aside-profile{
+            background: $purple !important;
+        }
+        nav ul li {
+            & > a{
+                .icon-circle{
+                    border: none !important;
+                    background: transparent !important;
+                }
+                &.active, &:hover{
+                    color: $purple !important;
+                    i { 
+                        color: $purple !important; 
+                    }
+                }
+            }
+            &.sub-menu:not(.toggled) > a,
+            &.sub-menu.toggled > a{
+                &:hover::after,
+                &.active::after{
+                    color: $purple !important;
+                }
+            }
+        }
+        nav > .bottom-collapser .bottom-toggler{
+            background-color: $purple;
+        }
+    }
+    /* APP MAIN */
+    button.btn.btn-primary{
+        background-color: $purple !important;
+        border-color: $purple !important;
+    }
+    .tab-nav:not(.tn-vertical):not([data-tab-color]) > li > a::before,
+    .profile .right-pane .extra-nav ul li a::after{
+        background: $purple;
+    }
+    .search-div .main-search-menu-result > li.active, 
+    .search-div .main-search-menu-result > li:hover {
+        background-color: $purple;
+        a {
+            color: #ffffff !important;
+        }
+    }
+    .checkbox .input-helper::after{
+        border-bottom: 2px solid $purple;
+        border-left: 2px solid $purple;
+    }
+    .radio .input-helper::after {
+        background: $purple;
+    }
+    .pagination > .active > a, 
+    .pagination > .active > a:focus, 
+    .pagination > .active > a:hover {
+        background-color: $purple !important;
+        border-color: $purple !important;
+    }
+    .full-round{
+        background: $purple !important;
+    }
+    .modal.custom .modal-header {
+        background: $purple;
+    }
+    .ps__thumb-x, .ps__thumb-y,.ps__thumb-x:focus, .ps__thumb-x:hover, .ps__thumb-y:focus, .ps__thumb-y:hover,.ps__rail-y:focus>.ps__thumb-y, .ps__rail-y:hover>.ps__thumb-y,.ps__rail-y:focus>.ps__thumb-x, .ps__rail-y:hover>.ps__thumb-x {
+        background-color: $purple;
+    }
+    .rg-input-ripple{
+        background-color: $purple;
+    }
+    /* Selectize */
+    .selectize-input.focus::after, .selectize-input.has-items::after{
+        border-color: $purple !important;
+    }
+    .selectize-dropdown .active,
+    .selectize-control.multi .selectize-input > div{
+        background-color: $purple;
+    }
+}
+body[rg-skin="indigo"]{
+    /* APP HEADER */
+    app-header {
+        nav, #search-mobile-container {
+            background: $indigo !important;
+            border-bottom: $indigo !important;
+        }
+    }
+    /* APP SIDEBAR */
+    app-sidebar aside {
+        background: #f3f3f3;
+        .aside-profile{
+            background: $indigo !important;
+        }
+        nav ul li {
+            & > a{
+                .icon-circle{
+                    border: none !important;
+                    background: transparent !important;
+                }
+                &.active, &:hover{
+                    color: $indigo !important;
+                    i { 
+                        color: $indigo !important; 
+                    }
+                }
+            }
+            &.sub-menu:not(.toggled) > a,
+            &.sub-menu.toggled > a{
+                &:hover::after,
+                &.active::after{
+                    color: $indigo !important;
+                }
+            }
+        }
+        nav > .bottom-collapser .bottom-toggler{
+            background-color: $indigo;
+        }
+    }
+    /* APP MAIN */
+    button.btn.btn-primary{
+        background-color: $indigo !important;
+        border-color: $indigo !important;
+    }
+    .tab-nav:not(.tn-vertical):not([data-tab-color]) > li > a::before,
+    .profile .right-pane .extra-nav ul li a::after{
+        background: $indigo;
+    }
+    .search-div .main-search-menu-result > li.active, 
+    .search-div .main-search-menu-result > li:hover {
+        background-color: $indigo;
+        a {
+            color: #ffffff !important;
+        }
+        
+    }
+    .checkbox .input-helper::after{
+        border-bottom: 2px solid $indigo;
+        border-left: 2px solid $indigo;
+    }
+    .radio .input-helper::after {
+        background: $indigo;
+    }
+    .pagination > .active > a, 
+    .pagination > .active > a:focus, 
+    .pagination > .active > a:hover {
+        background-color: $indigo !important;
+        border-color: $indigo !important;
+    }
+    .full-round{
+        background: $indigo !important;
+    }
+    .modal.custom .modal-header {
+        background: $indigo;
+    }
+    .ps__thumb-x, .ps__thumb-y,.ps__thumb-x:focus, .ps__thumb-x:hover, .ps__thumb-y:focus, .ps__thumb-y:hover,.ps__rail-y:focus>.ps__thumb-y, .ps__rail-y:hover>.ps__thumb-y,.ps__rail-y:focus>.ps__thumb-x, .ps__rail-y:hover>.ps__thumb-x {
+        background-color: $indigo;
+    }
+    .rg-input-ripple{
+        background-color: $indigo;
+    }
+    /* Selectize */
+    .selectize-input.focus::after, .selectize-input.has-items::after{
+        border-color: $indigo !important;
+    }
+    .selectize-dropdown .active,
+    .selectize-control.multi .selectize-input > div{
+        background-color: $indigo;
+    }
+}

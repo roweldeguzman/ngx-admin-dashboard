@@ -1,0 +1,177 @@
+<div>
+	<div class="container-fluid">
+		<div class="container-absolute">
+			<div class="container-flexbox">
+				<div class="left container-flex">
+					<div class="header-txt">NGX Admin Dashboard</div>
+					<div class="container-holder">
+						<div class="container-box">
+							<div class="owl-carousel owl-theme">
+								<div class="slide">
+									<div class="slide-1 clearfix">
+										<div class="carousel-content">
+											<!-- <img class="banner-img" src="./img/bg.gif"> -->
+											<div class="content-text">
+												<h2>Welcome</h2>
+												<p>
+													Pellentesque lacinia sagittis libero et feugiat. Etiam volutpat adipiscing tortor non luctus. Vivamus venenatis vitae metus
+													et aliquet. Praesent vitae justo purus. In hendrerit lorem nisl, ac lacinia urna aliquet non. Quisque nisi tellus, rhoncus
+													quis est sit amet, lacinia euismod nunc. Aenean nec nibh velit. Fusce quis ante in nisl molestie fringilla. Nunc vitae
+													ante id magna feugiat condimentum. Maecenas sit amet urna massa. Integer eu lectus sollicitudin, hendrerit est ac, sollicitudin
+													nisl. Quisque viverra sodales lectus nec ultrices. Fusce elit dolor, dignissim a nunc id, varius suscipit turpis. Cras
+													porttitor turpis vitae leo accumsan molestie. Morbi vitae luctus leo. Sed nec scelerisque magna, et adipiscing est. Proin
+													lobortis lectus eu sem ullamcorper, commodo malesuada quam fringilla. Curabitur ac nunc dui. Class aptent taciti sociosqu
+													ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sagittis enim eu est lacinia, ut egestas ligula imperdiet.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="slide">
+									<div class="slide-2 clearfix">
+										<div class="carousel-content">
+											<div class="content-text">
+												<h2>Welcome</h2>
+												<p>
+													Pellentesque lacinia sagittis libero et feugiat. Etiam volutpat adipiscing tortor non luctus. Vivamus venenatis vitae metus
+													et aliquet. Praesent vitae justo purus. In hendrerit lorem nisl, ac lacinia urna aliquet non. Quisque
+													nisi tellus, rhoncus quis est sit amet, lacinia euismod nunc. Aenean nec nibh velit. Fusce quis
+													ante in nisl molestie fringilla. Nunc vitae ante id magna feugiat condimentum. Maecenas sit amet
+													urna massa. Integer eu lectus sollicitudin, hendrerit est ac, sollicitudin nisl. Quisque viverra
+													sodales lectus nec ultrices. Fusce elit dolor, dignissim a nunc id, varius suscipit turpis. Cras
+													porttitor turpis vitae leo accumsan molestie. Morbi vitae luctus leo. Sed nec scelerisque magna,
+													et adipiscing est. Proin lobortis lectus eu sem ullamcorper, commodo malesuada quam fringilla.
+													Curabitur ac nunc dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+													inceptos himenaeos. Fusce sagittis enim eu est lacinia, ut egestas ligula imperdiet.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="right container-flex">
+					<div class="container-holder">
+						<div class="container-box">
+							<!-- Login -->
+							<div class="box-block" id="l-login" *ngIf="config.login" style="padding: 29px !important;">
+								<div class="block-txt">NGX Admin Dashboard</div>
+								<div class="input-group m-b-20">
+									<span class="input-group-addon">
+										<i class="zmdi zmdi-account"></i>
+									</span>
+									<div class="rg-line" >
+										<input class="form-control" placeholder="Email" rg-line type="text" [(ngModel)]="username">
+										<div class="rg-input-underline">
+											<span class="rg-input-ripple"></span>
+										</div>
+									</div>
+								</div>
+								<div class="input-group m-b-20">
+									<span class="input-group-addon">
+										<i class="zmdi zmdi-male"></i>
+									</span>
+									<div class="rg-line">
+										<input class="form-control" placeholder="Password" rg-line type="password" [(ngModel)]="password">
+										<div class="rg-input-underline">
+											<span class="rg-input-ripple"></span>
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-8 col-sm-6 col-md-6 col-lg-6">
+									<a class="pull-left m-t-5 p-r-10" (click)="showTab('forgot')">Forgot Password?</a>
+									<a class="pull-left m-t-5 p-r-10" (click)="showTab('register')">Not registered?</a>
+								</div>
+								<div class="col-xs-4 col-sm-6 col-md-6 col-lg-6 p-r-0">
+									<button class="btn btn-block login-btn btn-primary" waves-effect (click)="login()">LOGIN</button>
+								</div>
+							</div>
+							<!-- Register -->
+							<div class="box-block" *ngIf="config.register" style="padding: 29px !important;">
+								<div class="block-txt">NGX Admin Dashboard</div>
+								<div class="input-group m-b-20">
+									<span class="input-group-addon">
+										<i class="zmdi zmdi-account"></i>
+									</span>
+									<div class="rg-line">
+										<input type="text" class="form-control" placeholder="First name" rg-line>
+										<div class="rg-input-underline">
+											<span class="rg-input-ripple"></span>
+										</div>
+									</div>
+								</div>
+
+								<div class="input-group m-b-20">
+									<span class="input-group-addon">
+										<i class="zmdi zmdi-account"></i>
+									</span>
+									<div class="rg-line">
+										<input type="text" class="form-control" placeholder="Last Name" rg-line>
+										<div class="rg-input-underline">
+											<span class="rg-input-ripple"></span>
+										</div>
+									</div>
+								</div>
+
+								<div class="input-group m-b-20">
+									<span class="input-group-addon">
+										<i class="zmdi zmdi-email"></i>
+									</span>
+									<div class="rg-line">
+										<input type="text" class="form-control" placeholder="Email Address" rg-line>
+										<div class="rg-input-underline">
+											<span class="rg-input-ripple"></span>
+										</div>
+									</div>
+								</div>
+
+								<div class="input-group m-b-20">
+									<span class="input-group-addon">
+										<i class="zmdi zmdi-lock"></i>
+									</span>
+									<div class="rg-line">
+										<input type="password" class="form-control" placeholder="Password" rg-line>
+										<div class="rg-input-underline">
+											<span class="rg-input-ripple"></span>
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-8 col-sm-6 col-md-6 col-lg-6">
+									<a id="to-login" class="pull-left m-t-5 p-r-10" (click)="showTab('login')">Login</a>
+								</div>
+								<div class="col-xs-4 col-sm-6 col-md-6 col-lg-6 p-r-0">
+									<button class="btn btn-block login-btn btn-primary" waves-effect>REGISTER</button>
+								</div>
+							</div>
+							<!-- Forgot Password -->
+							<div class="box-block" *ngIf="config.forgot" style="padding: 29px !important;">
+								<div class="block-txt">NGX Admin Dashboard</div>
+								<div class="input-group m-b-20">
+									<span class="input-group-addon">
+										<i class="zmdi zmdi-email"></i>
+									</span>
+									<div class="rg-line">
+										<input class="form-control" placeholder="Email Address" rg-line type="text">
+										<div class="rg-input-underline">
+											<span class="rg-input-ripple"></span>
+										</div>
+									</div>
+								</div>
+								<div class="clear"></div>
+								<div class="col-xs-8 col-sm-6 col-md-6 col-lg-6" style="margin-top:-5px;">
+									<a id="to-login" class="pull-left m-t-5 p-r-10" (click)="showTab('login')">Login</a>
+								</div>
+
+								<div class="col-xs-4 col-sm-6 col-md-6 col-lg-6 p-r-0">
+									<button class="btn btn-block login-btn waves-effect" style="background-color: #222f3c; color: #FFF;">SUBMIT</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

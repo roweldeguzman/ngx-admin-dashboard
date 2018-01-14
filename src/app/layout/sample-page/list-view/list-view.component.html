@@ -1,0 +1,463 @@
+<div class="block-header">
+	<h2>Listview</h2>
+
+	<ul class="actions">
+		<li>
+			<a>
+				<i class="zmdi zmdi-trending-up"></i>
+			</a>
+		</li>
+		<li>
+			<a>
+				<i class="zmdi zmdi-check-all"></i>
+			</a>
+		</li>
+		<li class="dropdown" dropdown>
+			<a dropdownToggle>
+				<i class="zmdi zmdi-more-vert"></i>
+			</a>
+
+			<ul class="dropdown-menu dropdown-menu-right">
+				<li class="dropdown-arrow"></li>
+				<li>
+					<a>Refresh</a>
+				</li>
+				<li>
+					<a>Manage Widgets</a>
+				</li>
+				<li>
+					<a>Widgets Settings</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<div class="row">
+	<div class="col-sm-12">
+		<div class="card">
+			<div class="listview lv-bordered lv-lg">
+				<div class="lv-header-alt clearfix m-b-5">
+					<h2 class="lvh-label hidden-xs">Add text here...</h2>
+			
+					<div class="lvh-search" *ngIf="listviewSearchStat" data-ng-click="listviewSearchStat">
+						<input type="text" placeholder="Start typing..." class="lvhs-input">
+			
+						<i class="lvh-search-close" (click)="listviewSearchStat = false">&times;</i>
+					</div>
+			
+					<ul class="lv-actions actions">
+						<li>
+							<a (click)="listviewSearchStat = true">
+								<i class="zmdi zmdi-search"></i>
+							</a>
+						</li>
+						<li>
+							<a>
+								<i class="zmdi zmdi-time"></i>
+							</a>
+						</li>
+			
+						<li class="dropdown" dropdown>
+							<a dropdownToggle aria-expanded="false" aria-haspopup="true">
+								<i class="zmdi zmdi-sort"></i>
+							</a>
+			
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li class="dropdown-arrow"></li>
+								<li>
+									<a>Last Modified</a>
+								</li>
+								<li>
+									<a>Last Edited</a>
+								</li>
+								<li>
+									<a>Name</a>
+								</li>
+								<li>
+									<a>Date</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a>
+								<i class="zmdi zmdi-info"></i>
+							</a>
+						</li>
+						<li class="dropdown" dropdown>
+							<a dropdownToggle aria-expanded="false" aria-haspopup="true">
+								<i class="zmdi zmdi-more-vert"></i>
+							</a>
+			
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li class="dropdown-arrow"></li>
+								<li>
+									<a>Refresh</a>
+								</li>
+								<li>
+									<a>Settings</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="lv-body">
+					<div class="lv-item media">
+						<div class="checkbox pull-left">
+							<label>
+								<input value="" type="checkbox">
+								<i class="input-helper"></i>
+							</label>
+						</div>
+						<div class="media-body">
+							<div class="lv-title">Per an error perpetua, fierent fastidii recteque ad pro. Mei id brute intellegam</div>
+
+							<div class="lv-actions actions dropdown" dropdown>
+								<a dropdownToggle aria-expanded="false" class="dropdown-toggle" aria-haspopup="true">
+									<i class="zmdi zmdi-more-vert"></i>
+								</a>
+
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li>
+										<a>Edit</a>
+									</li>
+									<li>
+										<a>Delete</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="lv-item media">
+						<div class="checkbox pull-left">
+							<label>
+								<input value="" type="checkbox">
+								<i class="input-helper"></i>
+							</label>
+						</div>
+						<div class="media-body">
+							<div class="lv-title">Dulla vel metus scelerisque ante sollicitudin commodo purus odio</div>
+							<small class="lv-small">Nunc quis diam diamurabitur at dolor elementum, dictum turpis vel</small>
+
+							<div class="lv-actions actions dropdown" dropdown>
+								<a dropdownToggle="" aria-expanded="false" class="dropdown-toggle" aria-haspopup="true">
+									<i class="zmdi zmdi-more-vert"></i>
+								</a>
+
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li>
+										<a>Edit</a>
+									</li>
+									<li>
+										<a>Delete</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="lv-item media">
+						<div class="checkbox pull-left">
+							<label>
+								<input value="" type="checkbox">
+								<i class="input-helper"></i>
+							</label>
+						</div>
+						<div class="media-body">
+							<div class="lv-title">Per an error perpetua, fierent fastidii recteque ad pro. Mei id brute intellegam</div>
+							<ul class="lv-attrs">
+								<li>Date Created: 09/06/1988</li>
+								<li>Members: 78954</li>
+								<li>Published: No</li>
+							</ul>
+
+							<div class="lv-actions actions dropdown" dropdown>
+								<a dropdownToggle aria-expanded="false" class="dropdown-toggle" aria-haspopup="true">
+									<i class="zmdi zmdi-more-vert"></i>
+								</a>
+
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li>
+										<a>Edit</a>
+									</li>
+									<li>
+										<a>Delete</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="lv-item media">
+						<div class="checkbox pull-left">
+							<label>
+								<input value="" type="checkbox">
+								<i class="input-helper"></i>
+							</label>
+						</div>
+						<div class="media-body">
+							<div class="lv-title">Per an error perpetua, fierent fastidii recteque ad pro. Mei id brute intellegam</div>
+							<small class="lv-small">An erant explicari salutatus duo, sumo doming delicata in cum. Eos at augue viderer principes</small>
+
+							<ul class="lv-attrs">
+								<li>Date Created: 09/06/1988</li>
+								<li>Members: 78954</li>
+								<li>Published: No</li>
+							</ul>
+
+							<div class="lv-actions actions dropdown" dropdown>
+								<a dropdownToggle="" aria-expanded="false" class="dropdown-toggle" aria-haspopup="true">
+									<i class="zmdi zmdi-more-vert"></i>
+								</a>
+
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li>
+										<a>Edit</a>
+									</li>
+									<li>
+										<a>Delete</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="lv-item media">
+						<div class="checkbox pull-left">
+							<label>
+								<input value="" type="checkbox">
+								<i class="input-helper"></i>
+							</label>
+						</div>
+						<div class="pull-left">
+							<img class="lv-img-sm" src="./assets/img/profile-pics/1.jpg" alt="">
+						</div>
+						<div class="media-body">
+							<div class="lv-title">Per an error perpetua, fierent fastidii recteque ad pro. Mei id brute intellegam</div>
+							<small class="lv-small">Phasellus a ante et est ornare accumsan at vel magnauis blandit turpis at augue ultricies</small>
+
+							<div class="lv-actions actions dropdown" dropdown>
+								<a dropdownToggle aria-expanded="false" class="dropdown-toggle" aria-haspopup="true">
+									<i class="zmdi zmdi-more-vert"></i>
+								</a>
+
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li>
+										<a>Edit</a>
+									</li>
+									<li>
+										<a>Delete</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="lv-item media">
+						<div class="checkbox pull-left">
+							<label>
+								<input value="" type="checkbox">
+								<i class="input-helper"></i>
+							</label>
+						</div>
+						<div class="pull-left">
+							<img class="lv-img-sm" src="./assets/img/profile-pics/2.jpg" alt="">
+						</div>
+						<div class="media-body">
+							<div class="lv-title">Wel ea elit iuvaret. Mea labitur definitiones ex, id atqui accusata vix, vim nibh mandamus ad</div>
+							<small class="lv-small">Wendy create ipsum dolor sit amet, per cu solet docendi ntoenstion</small>
+
+							<ul class="lv-attrs">
+								<li>Date Created: 09/06/1988</li>
+								<li>Members: 78954</li>
+								<li>Published: No</li>
+							</ul>
+
+							<div class="lv-actions actions dropdown" dropdown>
+								<a dropdownToggle="" aria-expanded="false" class="dropdown-toggle" aria-haspopup="true">
+									<i class="zmdi zmdi-more-vert"></i>
+								</a>
+
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li>
+										<a>Edit</a>
+									</li>
+									<li>
+										<a>Delete</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="lv-item media">
+						<div class="checkbox pull-left">
+							<label>
+								<input value="" type="checkbox">
+								<i class="input-helper"></i>
+							</label>
+						</div>
+						<div class="pull-left">
+							<img class="lv-img-sm" src="img/profile-pics/3.jpg" alt="">
+						</div>
+						<div class="media-body">
+							<div class="lv-title">Per an error perpetua, fierent fastidii recteque ad pro. Mei id brute intellegam</div>
+
+							<ul class="lv-attrs">
+								<li>Date Created: 11/06/1988</li>
+								<li>Members: 212</li>
+								<li>Published: Yes</li>
+							</ul>
+
+							<div class="lv-actions actions dropdown" dropdown>
+								<a dropdownToggle aria-expanded="false" class="dropdown-toggle" aria-haspopup="true">
+									<i class="zmdi zmdi-more-vert"></i>
+								</a>
+
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li>
+										<a>Edit</a>
+									</li>
+									<li>
+										<a>Delete</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="lv-item media">
+						<div class="checkbox pull-left">
+							<label>
+								<input value="" type="checkbox">
+								<i class="input-helper"></i>
+							</label>
+						</div>
+						<div class="pull-left">
+							<img class="lv-img-sm" src="img/profile-pics/4.jpg" alt="">
+						</div>
+						<div class="media-body">
+							<div class="lv-title">Per an error perpetua, fierent fastidii recteque ad pro. Mei id brute intellegam</div>
+							<small class="lv-small">Phasellus a ante et est ornare accumsan at vel magnauis blandit turpis at augue ultricies</small>
+
+							<div class="lv-actions actions dropdown" dropdown>
+								<a dropdownToggle aria-expanded="false" class="dropdown-toggle" aria-haspopup="true">
+									<i class="zmdi zmdi-more-vert"></i>
+								</a>
+
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li>
+										<a>Edit</a>
+									</li>
+									<li>
+										<a>Delete</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="lv-item media">
+						<div class="checkbox pull-left">
+							<label>
+								<input value="" type="checkbox">
+								<i class="input-helper"></i>
+							</label>
+						</div>
+						<div class="media-body">
+							<div class="lv-title">Dulla vel metus scelerisque ante sollicitudin commodo purus odio</div>
+							<small class="lv-small">Nunc quis diam diamurabitur at dolor elementum, dictum turpis vel</small>
+
+							<div class="lv-actions actions dropdown" dropdown>
+								<a dropdownToggle aria-expanded="false" class="dropdown-toggle" aria-haspopup="true">
+									<i class="zmdi zmdi-more-vert"></i>
+								</a>
+
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li>
+										<a>Edit</a>
+									</li>
+									<li>
+										<a>Delete</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="lv-item media">
+						<div class="checkbox pull-left">
+							<label>
+								<input value="" type="checkbox">
+								<i class="input-helper"></i>
+							</label>
+						</div>
+						<div class="media-body">
+							<div class="lv-title">Per an error perpetua, fierent fastidii recteque ad pro. Mei id brute intellegam</div>
+							<ul class="lv-attrs">
+								<li>Date Created: 09/06/1988</li>
+								<li>Members: 78954</li>
+								<li>Published: No</li>
+							</ul>
+
+							<div class="lv-actions actions dropdown" dropdown>
+								<a dropdownToggle aria-expanded="false" class="dropdown-toggle" aria-haspopup="true">
+									<i class="zmdi zmdi-more-vert"></i>
+								</a>
+
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li>
+										<a>Edit</a>
+									</li>
+									<li>
+										<a>Delete</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="lv-item media">
+						<div class="checkbox pull-left">
+							<label>
+								<input value="" type="checkbox">
+								<i class="input-helper"></i>
+							</label>
+						</div>
+						<div class="media-body">
+							<div class="lv-title">Per an error perpetua, fierent fastidii recteque ad pro. Mei id brute intellegam</div>
+							<small class="lv-small">An erant explicari salutatus duo, sumo doming delicata in cum. Eos at augue viderer principes</small>
+
+							<ul class="lv-attrs">
+								<li>Date Created: 09/06/1988</li>
+								<li>Members: 78954</li>
+								<li>Published: No</li>
+							</ul>
+
+							<div class="lv-actions actions dropdown" dropdown>
+								<a dropdownToggle aria-expanded="false" class="dropdown-toggle" aria-haspopup="true">
+									<i class="zmdi zmdi-more-vert"></i>
+								</a>
+
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li>
+										<a>Edit</a>
+									</li>
+									<li>
+										<a>Delete</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="lv-pagination">
+				<pagination 
+					[totalItems]="totalItems" 
+					[(ngModel)]="currentPage" 
+					[maxSize]="maxSize"
+					[boundaryLinks]="true" 
+					(pageChanged)="pageChanged($event)"
+					[rotate]="false"
+					previousText="&lsaquo;"
+					nextText="&rsaquo;"
+					firstText="&laquo;" 
+					lastText="&raquo;"
+					class="pagination-sm custom"
+				></pagination>
+
+			</div>
+		</div>
+	</div>
+</div>

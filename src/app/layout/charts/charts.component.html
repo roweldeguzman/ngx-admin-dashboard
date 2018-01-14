@@ -1,0 +1,304 @@
+<div class="block-header">
+	<h2>Charts</h2>
+
+	<ul class="actions">
+		<li>
+			<a>
+				<i class="zmdi zmdi-trending-up"></i>
+			</a>
+		</li>
+		<li>
+			<a>
+				<i class="zmdi zmdi-check-all"></i>
+			</a>
+		</li>
+		<li class="dropdown" dropdown>
+			<a dropdownToggle>
+				<i class="zmdi zmdi-more-vert"></i>
+			</a>
+
+			<ul *dropdownMenu class="dropdown-menu dropdown-menu-right">
+				<li class="dropdown-arrow"></li>
+				<li>
+					<a>Refresh</a>
+				</li>
+				<li>
+					<a>Manage Widgets</a>
+				</li>
+				<li>
+					<a>Widgets Settings</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<div class="row">
+	<div class="col-sm-12">
+		<div class="card">
+			<div class="card-header">
+				<h2>Sparkline Charts					
+					<small>
+						This plugin generates small inline charts using data supplied either inline in the HTML, or via javascript.
+						<a href="https://omnipotent.net/jquery.sparkline/">Read more...</a>
+					</small>
+					<small>
+						For configuration, Please refer to
+						<code>directives/spark-line.directive.ts</code>
+					</small>
+				</h2>
+				<ul class="actions">
+					<li>
+						<a (click)="updateSparkLine()">
+							<i class="zmdi zmdi-refresh-alt"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="card-body card-padding">
+				<div class="mini-charts">
+					<div class="row">
+						<div class="col-sm-6 col-md-3">
+							<div class="mini-charts-item bgm-cyan">
+								<div class="clearfix">
+									<div class="chart stats-bar" sparkline sparklineType="bar" sparklineValue="{{ sparkValueBar1 }}" sparklineWidth=""></div>
+									<div class="count">
+										<small>Website Traffics</small>
+										<h2>987,459</h2>
+									</div>
+								</div>
+							</div>
+						</div>
+				
+						<div class="col-sm-6 col-md-3">
+							<div class="mini-charts-item bgm-lightgreen">
+								<div class="clearfix">
+									<div class="chart stats-bar-2" sparkline sparklineType="bar" sparklineValue="{{ sparkValueBar2 }}" sparklineWidth=""></div>
+									<div class="count">
+										<small>Website Impressions</small>
+										<h2>356,785K</h2>
+									</div>
+								</div>
+							</div>
+						</div>
+				
+						<div class="col-sm-6 col-md-3">
+							<div class="mini-charts-item bgm-orange">
+								<div class="clearfix">
+									<div class="chart stats-line" sparkline sparklineType="line" sparklineValue="{{ sparkValueLine1 }}" sparklineWidth="85px" sparkLineHeight="45"></div>
+									<div class="count">
+										<small>Total Sales</small>
+										<h2>$ 458,778</h2>
+									</div>
+								</div>
+							</div>
+						</div>
+				
+						<div class="col-sm-6 col-md-3">
+							<div class="mini-charts-item bgm-bluegray">
+								<div class="clearfix">
+									<div class="chart stats-line-2" sparkline sparklineType="line" sparklineValue="{{ sparkValueLine2 }}" sparklineWidth="85px" sparkLineHeight="45"></div>
+									<div class="count">
+										<small>Support Tickets</small>
+										<h2>23,856</h2>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-3">
+							<div class="mini-charts-item bgm-teal">
+								<div class="clearfix">
+									<div class="chart chart-pie stats-pie" sparkline sparklineType="pie" sparklineValue="{{ sparkPie1 }}" sparklineWidth="85px" sparkLineHeight="45"></div>
+									<div class="count">
+										<small>Percentage</small>
+										<h2>99.87%</h2>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-sm-3">
+							<div class="mini-charts-item bgm-red">
+								<div class="clearfix">
+									<div class="chart stats-line" sparkline sparklineType="line" sparklineValue="{{ sparkValueLine1 }}" sparklineWidth="85px" sparkLineHeight="45"></div>
+									<div class="count">
+										<small>Total Sales</small>
+										<h2>$ 458,778</h2>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-sm-3">
+							<div class="mini-charts-item bgm-blue">
+								<div class="clearfix">
+									<div class="chart chart-pie stats-pie" sparkline sparklineType="pie" sparklineValue="{{ sparkPie2 }}" sparklineWidth="85px" sparkLineHeight="45"></div>
+									<div class="count">
+										<small>Percentage</small>
+										<h2>99.87%</h2>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-sm-3">
+							<div class="mini-charts-item bgm-pink">
+								<div class="clearfix">
+									<div class="chart stats-bar" sparkline sparklineType="bar" sparklineValue="{{ sparkValueBar1 }}" sparklineWidth=""></div>
+									<div class="count">
+										<small>Website Traffics</small>
+										<h2>987,459</h2>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-12">
+		<div class="card">
+			<div class="card-header">
+				<h2>EASY PIE CHART
+					<br>
+					<small>
+						Lightweight jQuery plugin to render and animate nice pie charts with the HTML5 canvas element.
+						<a href="https://rendro.github.io/easy-pie-chart/">Read more...</a>
+					</small>
+					<br>
+					<small>
+						For configuration, Please refer to
+						<code>directives/easy-pie.directive.ts</code>
+					</small>
+				</h2>
+				<ul class="actions">
+					<li>
+						<a (click)="updatePie()">
+							<i class="zmdi zmdi-refresh-alt"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="card-body card-padding">
+				<div class="row">
+					<div class="col-sm-3">
+						<div class="epc-item bgm-pink">
+							<div class="easy-pie main-pie" id="pie1" data-percent="45" easypie>
+								<div class="percent">45</div>
+								<div class="pie-title">Total Emails Sent</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-3">
+						<div class="epc-item bgm-orange">
+							<div class="easy-pie main-pie" data-percent="88" easypie>
+								<div class="percent">88</div>
+								<div class="pie-title">Sold Items</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-3">
+						<div class="epc-item bgm-green">
+							<div class="easy-pie main-pie" data-percent="25" easypie>
+								<div class="percent">25</div>
+								<div class="pie-title">Spam Mails</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-3">
+						<div class="epc-item bgm-purple">
+							<div class="easy-pie main-pie" data-percent="89" easypie>
+								<div class="percent">89</div>
+								<div class="pie-title">Profit Rate</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="block-header">
+	<h2>Flot Charts
+		<br>
+		<small>
+			Flot is a pure JavaScript plotting library for jQuery, with a focus on simple usage, attractive looks and interactive features.
+			<a href="http://www.flotcharts.org/flot/examples/series-pie/index.html">Read more...</a>
+		</small>
+		<br>
+	</h2>
+</div>
+<div class="row">
+	<div class="col-sm-6">
+		<div class="card">
+			<div class="card-header">
+				<h2>Bar Chart</h2>
+				<ul class="actions">
+					<li>
+						<a (click)="refreshBarChart()">
+							<i class="zmdi zmdi-refresh-alt"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="card-body card-padding">
+				<div id="bar-chart" class="flot-chart"></div>
+				<div class="flc-bar"></div>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-6">
+		<div class="card">
+			<div class="card-header">
+				<h2>Dynamic Chart</h2>
+			</div>
+			<div class="card-body card-padding">
+				<div id="dynamic-chart" class="flot-chart"></div>
+				<div class="flc-dynamic"></div>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-6">
+		<div class="card">
+			<div class="card-header">
+				<h2>Pie Chart</h2>
+				<ul class="actions">
+					<li>
+						<a (click)="refreshPieChart()">
+							<i class="zmdi zmdi-refresh-alt"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="card-body card-padding">
+				<div id="pie-chart" class="flot-chart-pie"></div>
+				<div class="flc-pie hidden-xs"></div>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-6">
+		<div class="card">
+			<div class="card-header">
+				<h2>Donut Chart</h2>
+				<ul class="actions">
+					<li>
+						<a (click)="refreshDonutChart()">
+							<i class="zmdi zmdi-refresh-alt"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="card-body card-padding">
+				<div id="donut-chart" class="flot-chart-pie"></div>
+				<div class="flc-donut hidden-xs"></div>
+			</div>
+		</div>
+	</div>
+</div>

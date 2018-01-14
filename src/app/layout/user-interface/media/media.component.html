@@ -1,0 +1,212 @@
+<div class="block-header">
+	<h2>Media</h2>
+
+	<ul class="actions">
+		<li>
+			<a>
+				<i class="zmdi zmdi-trending-up"></i>
+			</a>
+		</li>
+		<li>
+			<a>
+				<i class="zmdi zmdi-check-all"></i>
+			</a>
+		</li>
+		<li class="dropdown" dropdown>
+			<a dropdownToggle>
+				<i class="zmdi zmdi-more-vert"></i>
+			</a>
+
+			<ul *dropdownMenu class="dropdown-menu dropdown-menu-right">
+				<li class="dropdown-arrow"></li>
+				<li>
+					<a>Refresh</a>
+				</li>
+				<li>
+					<a>Manage Widgets</a>
+				</li>
+				<li>
+					<a>Widgets Settings</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+
+<div class="row">
+	<div class="col-sm-12">
+		<div class="card">
+			<div class="card-header">
+				<h2>Thumbnail
+					<small>Extend Bootstrap's grid system with the thumbnail component to easily display grids of images, videos, text, and more.</small>
+				</h2>
+		
+				<ul class="actions">
+					<li class="dropdown action-show" dropdown>
+						<a dropdownToggle>
+							<i class="zmdi zmdi-more-vert"></i>
+						</a>
+		
+						<div *dropdownMenu class="dropdown-menu pull-right">
+							<p class="p-20">
+								You can put anything here
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		
+			<div class="card-body card-padding">
+				<p class="f-500 c-black m-b-5">Basic Example</p>
+				<small>By default, thumbnails are designed to showcase linked images with minimal required markup.</small>
+				<br/>
+				<br/>
+		
+				<div class="row">
+					<div class="col-xs-6 col-md-2">
+						<a class="thumbnail">
+							<img src="./assets/img/300x200.gif" alt="">
+						</a>
+					</div>
+		
+					<div class="col-xs-6 col-md-2">
+						<a class="thumbnail">
+							<img src="./assets/img/300x200.gif" alt="">
+						</a>
+					</div>
+		
+					<div class="col-xs-6 col-md-2">
+						<a class="thumbnail">
+							<img src="./assets/img/300x200.gif" alt="">
+						</a>
+					</div>
+		
+					<div class="col-xs-6 col-md-2">
+						<a class="thumbnail">
+							<img src="./assets/img/300x200.gif" alt="">
+						</a>
+					</div>
+				</div>
+		
+				<br/>
+		
+				<p class="f-500 c-black m-b-5">Custom content</p>
+				<small>With a bit of extra markup, it's possible to add any kind of HTML content like headings, paragraphs, or buttons into thumbnails.</small>
+		
+				<br/>
+				<br/>
+		
+				<div class="row">
+					<div class="col-sm-6 col-md-3">
+						<div class="thumbnail">
+							<img src="./assets/img/300x200.gif" alt="">
+							<div class="caption">
+								<h4>Thumbnail label</h4>
+								<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam
+									id dolor id nibh ultricies vehicula ut id elit.</p>
+		
+								<div class="m-b-5">
+									<button waves-effect class="btn btn-sm btn-primary m-r-5" role="button">Button</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-3">
+						<div class="thumbnail">
+							<img src="./assets/img/300x200.gif" alt="">
+							<div class="caption">
+								<h4>Thumbnail label</h4>
+								<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam
+									id dolor id nibh ultricies vehicula ut id elit.</p>
+		
+								<div class="m-b-5">
+									<button waves-effect class="btn btn-sm btn-primary m-r-5" role="button">Button</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-3">
+						<div class="thumbnail">
+							<img src="./assets/img/300x200.gif" alt="">
+							<div class="caption">
+								<h4>Thumbnail label</h4>
+								<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam
+									id dolor id nibh ultricies vehicula ut id elit.</p>
+		
+								<div class="m-b-5">
+									<button waves-effect class="btn btn-sm btn-primary m-r-5" role="button">Button</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-3">
+						<div class="thumbnail">
+							<img src="./assets/img/300x200.gif" alt="">
+							<div class="caption">
+								<h4>Thumbnail label</h4>
+								<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam
+									id dolor id nibh ultricies vehicula ut id elit.</p>
+		
+								<div class="m-b-5">
+									<button waves-effect class="btn btn-sm btn-primary m-r-5" role="button">Button</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-header">
+				<h2>Lightbox
+					<small>JQuery lightGallery is a lightweight jQuery lightbox gallery for displaying image and video gallery</small>
+				</h2>
+			</div>
+		
+			<div class="card-body card-padding">
+				<p class="f-500 c-black m-b-20">Images</p>
+		
+				<div class="row lightbox" #lightbox>
+					<div data-src="./assets/media/gallery/1.jpg" class="col-sm-2 col-xs-6">
+						<div class="lightbox-item">
+							<img src="./assets/media/gallery/thumbs/1.jpg" alt="" />
+						</div>
+					</div>
+		
+					<div data-src="./assets/media/gallery/2.jpg" class="col-sm-2 col-xs-6" data-sub-html="<em><h3>This is a caption heading</h3><p>Here goes the description...</p></em>">
+						<div class="lightbox-item">
+							<img src="./assets/media/gallery/thumbs/2.jpg" alt="" />
+						</div>
+					</div>
+		
+					<div data-src="./assets/media/gallery/3.jpg" class="col-sm-2 col-xs-6">
+						<div class="lightbox-item">
+							<img src="./assets/media/gallery/thumbs/3.jpg" alt="" />
+						</div>
+					</div>
+		
+					<div data-src="./assets/media/gallery/4.jpg" class="col-sm-2 col-xs-6" data-sub-html="<em><h3>This is a caption heading</h3><p>Here goes the description...</p></em>">
+						<div class="lightbox-item">
+							<img src="./assets/media/gallery/thumbs/4.jpg" alt="" />
+						</div>
+					</div>
+		
+					<div data-src="./assets/media/gallery/5.jpg" class="col-sm-2 col-xs-6">
+						<div class="lightbox-item">
+							<img src="./assets/media/gallery/thumbs/5.jpg" alt="" />
+						</div>
+					</div>
+		
+					<div data-src="./assets/media/gallery/1.jpg" class="col-sm-2 col-xs-6" data-sub-html="<em><h3>This is a caption heading</h3><p>Here goes the description...</p></em>">
+						<div class="lightbox-item">
+							<img src="./assets/media/gallery/thumbs/6.jpg" alt="" />
+						</div>
+					</div>
+				</div>
+		
+				<br/>
+				<br/>
+			</div>
+		</div>
+	</div>
+</div>

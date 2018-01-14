@@ -1,0 +1,93 @@
+<div class="block-header">
+	<h2>Colors</h2>
+
+	<ul class="actions">
+		<li>
+			<a>
+				<i class="zmdi zmdi-trending-up"></i>
+			</a>
+		</li>
+		<li>
+			<a>
+				<i class="zmdi zmdi-check-all"></i>
+			</a>
+		</li>
+		<li class="dropdown" dropdown>
+			<a dropdownToggle>
+				<i class="zmdi zmdi-more-vert"></i>
+			</a>
+
+			<ul *dropdownMenu class="dropdown-menu dropdown-menu-right">
+				<li class="dropdown-arrow"></li>
+				<li>
+					<a>Refresh</a>
+				</li>
+				<li>
+					<a>Manage Widgets</a>
+				</li>
+				<li>
+					<a>Widgets Settings</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+
+<div class="row">
+	<div class="col-sm-12">
+		<div class="card">
+			<div class="card-header">
+				<h2>Basic Example
+					<small>Wrap any text and an optional dismiss button in '.alert' and one of the four contextual classes (e.g., .alert-success) for basic alert messages.</small>
+				</h2>
+			</div>
+			<div class="card-body card-padding">
+				<alert type="success">
+					<strong>Well done!</strong> You successfully read
+					<a href="#" class="alert-link">this important alert message</a>.
+				</alert>
+				<alert type="info">
+					<strong>Heads up!</strong> This
+					<a href="#" class="alert-link">alert needs your attention</a>, but it's not super important.
+				</alert>
+				<alert type="warning">
+					<strong>Warning!</strong> Better check yourself, you're
+					<a href="#" class="alert-link">not looking too good</a>.
+				</alert>
+				<alert type="danger">
+					<strong>Oh snap!</strong>
+					<a href="#" class="alert-link">Change a few things up</a> and try submitting again.
+				</alert>
+			</div>
+		</div>	
+		<div class="card">
+			<div class="card-header">
+				<h2>Dismissing
+					<small>Alerts have <code>dismiss</code> option. Enabling it will show close button to the right of the alert.</small>
+				</h2>
+			</div>
+			<div class="card-body card-padding">
+				<div *ngFor="let alert of alerts">
+					<alert [type]="alert.type" [dismissible]="dismissible">{{ alert.msg }}</alert>
+				</div>
+				<button type="button" class="btn btn-primary" (click)="dismissible = !dismissible" waves-effect>Toggle dismissible</button>
+				<button type="button" class="btn btn-primary" (click)="reset()" waves-effect>Reset</button>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-header">
+				<h2>Dynamic html
+					<small>Sometimes you will need to show dynamically generated html in alerts, here is how you can make it. And don't forget to sanitize
+					your html.</small>
+				</h2>
+			</div>
+			<div class="card-body card-padding">
+				 <div *ngFor="let alert of alerts">
+					<alert [type]="alert.type">
+						<span [innerHtml]="alert.msg"></span>
+					</alert>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
