@@ -112,11 +112,18 @@
   -webkit-box-sizing: border-box;
 	 -moz-box-sizing: border-box;
 		  box-sizing: border-box;
+<<<<<<< HEAD
   opacity: 0.5;
 }
 
 .selectize-control.plugin-remove_button [data-value] .remove:hover {
   opacity: 1;
+=======
+}
+
+.selectize-control.plugin-remove_button [data-value] .remove:hover {
+  background: var(--header-backgound);
+>>>>>>> 273ff2c3ffd1893c5eff60f439b4fa3a703a7b3a
 }
 
 .selectize-control.plugin-remove_button [data-value].active .remove {
@@ -203,7 +210,11 @@
   margin: 4px 3px 3px 0;
   color: #FFFFFF;
   cursor: pointer;
+<<<<<<< HEAD
   background-color: var(--primary-color);
+=======
+  background: var(--primary-color);
+>>>>>>> 273ff2c3ffd1893c5eff60f439b4fa3a703a7b3a
   border: 0 solid var(--primary-color);
 }
 

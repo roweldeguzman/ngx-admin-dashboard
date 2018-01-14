@@ -141,6 +141,7 @@ body:not(.full-layout) {
     }
 }
 
+<<<<<<< HEAD
 body[rg-skin="primary"]{
     /* APP HEADER */
     app-header {
@@ -214,6 +215,370 @@ body[rg-skin="blue"]{
         }
     }
     /* APP MAIN */
+=======
+/* APP HEADER */
+app-header[rg-skin="primary"] {
+    nav, #search-mobile-container{
+        background: $primary !important;
+        border-bottom: $primary !important;
+    }
+}
+app-header[rg-skin="blue"] {
+    nav, #search-mobile-container {
+        background: $blue !important;
+        border-bottom: $blue !important;
+    }
+}
+app-header[rg-skin="lightblue"] {
+    nav, #search-mobile-container {
+        background: $lightblue !important;
+        border-bottom: $lightblue !important;
+    }
+}
+app-header[rg-skin="bluegray"] {
+    nav, #search-mobile-container {
+        background: $bluegray !important;
+        border-bottom: $bluegray !important;
+    }
+}
+app-header[rg-skin="cyan"] {
+    nav, #search-mobile-container {
+        background: $cyan !important;
+        border-bottom: $cyan !important;
+    }
+}
+app-header[rg-skin="teal"] {
+    nav, #search-mobile-container {
+        background: $teal !important;
+        border-bottom: $teal !important;
+    }
+}
+app-header[rg-skin="green"] {
+    nav, #search-mobile-container {
+        background: $green !important;
+        border-bottom: $green !important;
+    }
+}
+app-header[rg-skin="orange"] {
+    nav, #search-mobile-container {
+        background: $orange !important;
+        border-bottom: $orange !important;
+    }
+}
+app-header[rg-skin="purple"] {
+    nav, #search-mobile-container {
+        background: $purple !important;
+        border-bottom: $purple !important;
+    }
+}
+app-header[rg-skin="indigo"] {
+    nav, #search-mobile-container {
+        background: $indigo !important;
+        border-bottom: $indigo !important;
+    }
+}
+
+/* APP SIDEBAR */
+app-sidebar[rg-skin="primary"] aside {
+    background: $primary;
+    .aside-profile{
+        background: $primary !important;
+    }
+
+}
+app-sidebar[rg-skin="blue"] aside {
+    background: #f3f3f3;
+    .aside-profile{
+        background: $blue !important;
+    }
+    nav ul li {
+        & > a{
+            .icon-circle{
+                border: none !important;
+                background: transparent !important;
+            }
+            &.active, &:hover{
+                color: $blue !important;
+                i { 
+                    color: $blue !important; 
+                }
+            }
+        }
+        &.sub-menu:not(.toggled) > a,
+        &.sub-menu.toggled > a{
+            &:hover::after,
+            &.active::after{
+                color: $blue !important;
+            }
+        }
+    }
+    nav > .bottom-collapser .bottom-toggler{
+        background-color: $blue;
+    }
+}
+app-sidebar[rg-skin="lightblue"] aside {
+    background: #f3f3f3;
+    .aside-profile{
+        background: $lightblue !important;
+    }
+    nav ul li {
+        & > a{
+            .icon-circle{
+                border: none !important;
+                background: transparent !important;
+            }
+            &.active, &:hover{
+                color: $lightblue !important;
+                i { 
+                    color: $lightblue !important; 
+                }
+            }
+        }
+        &.sub-menu:not(.toggled) > a,
+        &.sub-menu.toggled > a{
+            &:hover::after,
+            &.active::after{
+                color: $lightblue !important;
+            }
+        }
+    }
+    nav > .bottom-collapser .bottom-toggler{
+        background-color: $lightblue;
+    }
+}
+app-sidebar[rg-skin="bluegray"] aside {
+    background: #f3f3f3;
+    .aside-profile{
+        background: $bluegray !important;
+    }
+    nav ul li {
+        & > a{
+            .icon-circle{
+                border: none !important;
+                background: transparent !important;
+            }
+            &.active, &:hover{
+                color: $bluegray !important;
+                i { 
+                    color: $bluegray !important; 
+                }
+            }
+        }
+        &.sub-menu:not(.toggled) > a,
+        &.sub-menu.toggled > a{
+            &:hover::after,
+            &.active::after{
+                color: $bluegray !important;
+            }
+        }
+    }
+    nav > .bottom-collapser .bottom-toggler{
+        background-color: $bluegray;
+    }
+}
+app-sidebar[rg-skin="cyan"] aside {
+    background: #f3f3f3;
+    .aside-profile{
+        background: $cyan !important;
+    }
+    nav ul li {
+        & > a{
+            .icon-circle{
+                border: none !important;
+                background: transparent !important;
+            }
+            &.active, &:hover{
+                color: $cyan !important;
+                i { 
+                    color: $cyan !important; 
+                }
+            }
+        }
+        &.sub-menu:not(.toggled) > a,
+        &.sub-menu.toggled > a{
+            &:hover::after,
+            &.active::after{
+                color: $cyan !important;
+            }
+        }
+    }
+    nav > .bottom-collapser .bottom-toggler{
+        background-color: $cyan;
+    }
+}
+app-sidebar[rg-skin="teal"] aside {
+    background: #f3f3f3;
+    .aside-profile{
+        background: $teal !important;
+    }
+    nav ul li {
+        & > a{
+            .icon-circle{
+                border: none !important;
+                background: transparent !important;
+            }
+            &.active, &:hover{
+                color: $teal !important;
+                i { 
+                    color: $teal !important; 
+                }
+            }
+        }
+        &.sub-menu:not(.toggled) > a,
+        &.sub-menu.toggled > a{
+            &:hover::after,
+            &.active::after{
+                color: $teal !important;
+            }
+        }
+    }
+    nav > .bottom-collapser .bottom-toggler{
+        background-color: $teal;
+    }
+}
+app-sidebar[rg-skin="green"] aside {
+    background: #f3f3f3;
+    .aside-profile{
+        background: $green !important;
+    }
+    nav ul li {
+        & > a{
+            .icon-circle{
+                border: none !important;
+                background: transparent !important;
+            }
+            &.active, &:hover{
+                color: $green !important;
+                i { 
+                    color: $green !important; 
+                }
+            }
+        }
+        &.sub-menu:not(.toggled) > a,
+        &.sub-menu.toggled > a{
+            &:hover::after,
+            &.active::after{
+                color: $green !important;
+            }
+        }
+    }
+    nav > .bottom-collapser .bottom-toggler{
+        background-color: $green;
+    }
+}
+app-sidebar[rg-skin="orange"] aside {
+    background: #f3f3f3;
+    .aside-profile{
+        background: $orange !important;
+    }
+    nav ul li {
+        & > a{
+            .icon-circle{
+                border: none !important;
+                background: transparent !important;
+            }
+            &.active, &:hover{
+                color: $orange !important;
+                i { 
+                    color: $orange !important; 
+                }
+            }
+        }
+        &.sub-menu:not(.toggled) > a,
+        &.sub-menu.toggled > a{
+            &:hover::after,
+            &.active::after{
+                color: $orange !important;
+            }
+        }
+    }
+    nav > .bottom-collapser .bottom-toggler{
+        background-color: $orange;
+    }
+}
+app-sidebar[rg-skin="purple"] aside {
+    background: #f3f3f3;
+    .aside-profile{
+        background: $purple !important;
+    }
+    nav ul li {
+        & > a{
+            .icon-circle{
+                border: none !important;
+                background: transparent !important;
+            }
+            &.active, &:hover{
+                color: $purple !important;
+                i { 
+                    color: $purple !important; 
+                }
+            }
+        }
+        &.sub-menu:not(.toggled) > a,
+        &.sub-menu.toggled > a{
+            &:hover::after,
+            &.active::after{
+                color: $purple !important;
+            }
+        }
+    }
+    nav > .bottom-collapser .bottom-toggler{
+        background-color: $purple;
+    }
+}
+app-sidebar[rg-skin="indigo"] aside {
+    background: #f3f3f3;
+    .aside-profile{
+        background: $indigo !important;
+    }
+    nav ul li {
+        & > a{
+            .icon-circle{
+                border: none !important;
+                background: transparent !important;
+            }
+            &.active, &:hover{
+                color: $indigo !important;
+                i { 
+                    color: $indigo !important; 
+                }
+            }
+        }
+        &.sub-menu:not(.toggled) > a,
+        &.sub-menu.toggled > a{
+            &:hover::after,
+            &.active::after{
+                color: $indigo !important;
+            }
+        }
+    }
+    nav > .bottom-collapser .bottom-toggler{
+        background-color: $indigo;
+    }
+}
+
+
+/* APP MAIN */
+
+body[rg-skin="primary"] {
+    button.btn.btn-primary{
+        background-color: $primary !important;
+        border-color: $primary !important;
+    }
+    .tab-nav:not(.tn-vertical):not([data-tab-color]) > li > a::before,
+    .profile .right-pane .extra-nav ul li a::after{
+        background: $primary;
+    }
+    .search-div .main-search-menu-result > li.active, 
+    .search-div .main-search-menu-result > li:hover {
+        background-color: $primary;
+        a {
+            color: #ffffff !important;
+        }
+    }
+}
+body[rg-skin="blue"] {
+>>>>>>> 273ff2c3ffd1893c5eff60f439b4fa3a703a7b3a
     button.btn.btn-primary{
         background-color: $blue !important;
         border-color: $blue !important;
@@ -245,6 +610,7 @@ body[rg-skin="blue"]{
     .full-round{
         background: $blue !important;
     }
+<<<<<<< HEAD
     .modal.custom .modal-header {
         background: $blue;
     }
@@ -303,6 +669,10 @@ body[rg-skin="lightblue"]{
         }
     }
     /* APP MAIN */
+=======
+}
+body[rg-skin="lightblue"] {
+>>>>>>> 273ff2c3ffd1893c5eff60f439b4fa3a703a7b3a
     button.btn.btn-primary{
         background-color: $lightblue !important;
         border-color: $lightblue !important;
@@ -334,6 +704,7 @@ body[rg-skin="lightblue"]{
     .full-round{
         background: $lightblue !important;
     }
+<<<<<<< HEAD
     .modal.custom .modal-header {
         background: $lightblue;
     }
@@ -392,6 +763,10 @@ body[rg-skin="bluegray"]{
         }
     }
     /* APP MAIN */
+=======
+}
+body[rg-skin="bluegray"] {
+>>>>>>> 273ff2c3ffd1893c5eff60f439b4fa3a703a7b3a
     button.btn.btn-primary{
         background-color: $bluegray !important;
         border-color: $bluegray !important;
@@ -423,6 +798,7 @@ body[rg-skin="bluegray"]{
     .full-round{
         background: $bluegray !important;
     }
+<<<<<<< HEAD
     .modal.custom .modal-header {
         background: $bluegray;
     }
@@ -481,6 +857,10 @@ body[rg-skin="cyan"]{
         }
     }
     /* APP MAIN */
+=======
+}
+body[rg-skin="cyan"] {
+>>>>>>> 273ff2c3ffd1893c5eff60f439b4fa3a703a7b3a
     button.btn.btn-primary{
         background-color: $cyan !important;
         border-color: $cyan !important;
@@ -512,6 +892,7 @@ body[rg-skin="cyan"]{
     .full-round{
         background: $cyan !important;
     }
+<<<<<<< HEAD
     .modal.custom .modal-header {
         background: $cyan;
     }
@@ -570,6 +951,10 @@ body[rg-skin="teal"]{
         }
     }
     /* APP MAIN */
+=======
+}
+body[rg-skin="teal"] {
+>>>>>>> 273ff2c3ffd1893c5eff60f439b4fa3a703a7b3a
     button.btn.btn-primary{
         background-color: $teal !important;
         border-color: $teal !important;
@@ -601,6 +986,7 @@ body[rg-skin="teal"]{
     .full-round{
         background: $teal !important;
     }
+<<<<<<< HEAD
     .modal.custom .modal-header {
         background: $teal;
     }
@@ -659,6 +1045,10 @@ body[rg-skin="green"]{
         }
     }
     /* APP MAIN */
+=======
+}
+body[rg-skin="green"] {
+>>>>>>> 273ff2c3ffd1893c5eff60f439b4fa3a703a7b3a
     button.btn.btn-primary{
         background-color: $green !important;
         border-color: $green !important;
@@ -690,6 +1080,7 @@ body[rg-skin="green"]{
     .full-round{
         background: $green !important;
     }
+<<<<<<< HEAD
     .modal.custom .modal-header {
         background: $green;
     }
@@ -748,6 +1139,10 @@ body[rg-skin="orange"]{
         }
     }
     /* APP MAIN */
+=======
+}
+body[rg-skin="orange"] {
+>>>>>>> 273ff2c3ffd1893c5eff60f439b4fa3a703a7b3a
     button.btn.btn-primary{
         background-color: $orange !important;
         border-color: $orange !important;
@@ -779,6 +1174,7 @@ body[rg-skin="orange"]{
     .full-round{
         background: $orange !important;
     }
+<<<<<<< HEAD
     .modal.custom .modal-header {
         background: $orange;
     }
@@ -837,6 +1233,10 @@ body[rg-skin="purple"]{
         }
     }
     /* APP MAIN */
+=======
+}
+body[rg-skin="purple"] {
+>>>>>>> 273ff2c3ffd1893c5eff60f439b4fa3a703a7b3a
     button.btn.btn-primary{
         background-color: $purple !important;
         border-color: $purple !important;
@@ -868,6 +1268,7 @@ body[rg-skin="purple"]{
     .full-round{
         background: $purple !important;
     }
+<<<<<<< HEAD
     .modal.custom .modal-header {
         background: $purple;
     }
@@ -926,6 +1327,10 @@ body[rg-skin="indigo"]{
         }
     }
     /* APP MAIN */
+=======
+}
+body[rg-skin="indigo"] {
+>>>>>>> 273ff2c3ffd1893c5eff60f439b4fa3a703a7b3a
     button.btn.btn-primary{
         background-color: $indigo !important;
         border-color: $indigo !important;
@@ -958,6 +1363,7 @@ body[rg-skin="indigo"]{
     .full-round{
         background: $indigo !important;
     }
+<<<<<<< HEAD
     .modal.custom .modal-header {
         background: $indigo;
     }
@@ -976,3 +1382,6 @@ body[rg-skin="indigo"]{
         background-color: $indigo;
     }
 }
+=======
+}
+>>>>>>> 273ff2c3ffd1893c5eff60f439b4fa3a703a7b3a
